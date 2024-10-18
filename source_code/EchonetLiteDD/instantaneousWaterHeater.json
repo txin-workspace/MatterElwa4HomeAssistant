@@ -1,0 +1,669 @@
+{
+  "deviceType": "instantaneousWaterHeater",
+  "metaData": {
+    "version": "1.4.1"
+  },
+  "eoj": "0x0272",
+  "descriptions": {
+    "ja": "瞬間式給湯器",
+    "en": "Instantaneous water heater"
+  },
+  "properties": {
+    "onTimerReservation": {
+      "epc": "0x90",
+      "descriptions": {
+        "ja": "風呂自動ONタイマ予約設定",
+        "en": "ON timer reservation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "予約入",
+              "en": "Reservation ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "予約切",
+              "en": "Reservation OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "onTimerTime": {
+      "epc": "0x91",
+      "descriptions": {
+        "ja": "ONタイマ時刻設定値",
+        "en": "ON timer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "onTimerRelativeTimeSettingValue": {
+      "epc": "0x92",
+      "descriptions": {
+        "ja": "風呂自動ONタイマ相対時間設定値",
+        "en": "Set value of ON timer relative time"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "hotWaterHeatingStatus": {
+      "epc": "0xD0",
+      "descriptions": {
+        "ja": "給湯器燃焼状態",
+        "en": "Hot water heating status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "給湯燃焼状態有",
+              "en": "Hot water heating status found"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "無",
+              "en": "Hot water heating status not found"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "targetSuppliedWaterTemperature": {
+      "epc": "0xD1",
+      "descriptions": {
+        "ja": "給湯温度設定値",
+        "en": "Set value of hot water temperature"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "Celsius",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "hotWaterWarmerSetting": {
+      "epc": "0xD2",
+      "descriptions": {
+        "ja": "給湯保温設定",
+        "en": "Hot water warmer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "給湯保温動作",
+              "en": "Hot water warmer operation"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "給湯保温動作解除",
+              "en": "Hot water warmer operation resetting"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "bathWaterVolume4": {
+      "epc": "0xD4",
+      "descriptions": {
+        "ja": "風呂湯量設定4",
+        "en": "Bath water volume setting 4"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 255
+      }
+    },
+    "maximumAllowableWaterVolume4": {
+      "epc": "0xD5",
+      "descriptions": {
+        "ja": "風呂湯量設定4 設定可能最大レベル",
+        "en": "Bath water volume setting 4 Maximum settable level"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 255
+      }
+    },
+    "volume": {
+      "epc": "0xD6",
+      "descriptions": {
+        "ja": "音量設定値",
+        "en": "Volume setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "mute": {
+      "epc": "0xD7",
+      "descriptions": {
+        "ja": "ミュート設定",
+        "en": "Mute setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "ミュートON",
+              "en": "Mute ON"
+            },
+            "edt": "0x30"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "ミュートOFF",
+              "en": "Mute OFF"
+            },
+            "edt": "0x31"
+          }
+        ]
+      }
+    },
+    "targetAutomaticOeprationTime": {
+      "epc": "0xDA",
+      "descriptions": {
+        "ja": "自動運転時間設定値",
+        "en": "Duration of Automatic operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "time"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "limitless"
+            ],
+            "values": [
+              {
+                "value": "limitless",
+                "descriptions": {
+                  "ja": "無限",
+                  "en": "Limitless"
+                },
+                "edt": "0xFFFF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "remainingAutomaticOperationTime": {
+      "epc": "0xDB",
+      "descriptions": {
+        "ja": "自動運転残時間",
+        "en": "Remaining Automatic operation time"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "time"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "limitless"
+            ],
+            "values": [
+              {
+                "value": "limitless",
+                "descriptions": {
+                  "ja": "無限",
+                  "en": "Limitless"
+                },
+                "edt": "0xFFFF"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "targetBathWaterTemperature": {
+      "epc": "0xE1",
+      "descriptions": {
+        "ja": "風呂温度設定値",
+        "en": "Set value of bath temperature"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "Celsius",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "bathWaterHeatingStatus": {
+      "epc": "0xE2",
+      "descriptions": {
+        "ja": "風呂給湯器燃焼状態",
+        "en": "Bath water heater status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "燃焼状態有",
+              "en": "Heating"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "燃焼状態無",
+              "en": "Not Heating"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "automaticBathOperation": {
+      "epc": "0xE3",
+      "descriptions": {
+        "ja": "風呂自動モード設定",
+        "en": "Bath Auto mode setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "自動入",
+              "en": "Auto ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "自動切",
+              "en": "Auto OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "targetBathAdditionalBoilupOperation": {
+      "epc": "0xE4",
+      "descriptions": {
+        "ja": "風呂追い炊き動作設定",
+        "en": "Bath additional boil-up operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "追い焚き入",
+              "en": "Additional boil-up ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "追い焚き切",
+              "en": "Additional boil-up OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "bathHotWaterAddition": {
+      "epc": "0xE5",
+      "descriptions": {
+        "ja": "風呂足し湯動作設定",
+        "en": "Bath hot water adding operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "足し湯入",
+              "en": "Hot water addition ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "足し湯切",
+              "en": "Hot water addition OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "bathLukewarmWaterFunction": {
+      "epc": "0xE6",
+      "descriptions": {
+        "ja": "風呂ぬるめ動作設定",
+        "en": "Bath water temperature lowering operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "ぬるめ入",
+              "en": "Hot water temperature lowering ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "ぬるめ切",
+              "en": "Hot water temperature lowering OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "bathWaterVolume1": {
+      "epc": "0xE7",
+      "descriptions": {
+        "ja": "風呂湯量設定1",
+        "en": "Bath hot water volume setting 1"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "L",
+        "minimum": 0,
+        "maximum": 253
+      }
+    },
+    "bathWaterVolume2": {
+      "epc": "0xE8",
+      "descriptions": {
+        "ja": "風呂湯量設定2",
+        "en": "Bath hot water volume setting 2"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 8,
+        "multipleOf": 1
+      }
+    },
+    "bathroomPriority": {
+      "epc": "0xE9",
+      "descriptions": {
+        "ja": "浴室優先設定",
+        "en": "Bathroom priority setting"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "浴室優先入",
+              "en": "Bathroom priority ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "入浴優先切",
+              "en": "Bathroom priority OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "showerHotWaterSupplyStatus": {
+      "epc": "0xEA",
+      "descriptions": {
+        "ja": "シャワー給湯状態",
+        "en": "Shower hot water supply status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "シャワー給湯状態有",
+              "en": "Shower hot water supply ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "シャワー給湯状態無",
+              "en": "Shower hot water supply OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "kitchenHotWaterSupplyStatus": {
+      "epc": "0xEB",
+      "descriptions": {
+        "ja": "台所給湯状態",
+        "en": "Kitchen hot water supply status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "台所湯量状態有",
+              "en": "Kitchen hot water supply ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "台所湯量状態無",
+              "en": "Kitchen hot water supply OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "hotWaterWarmerOnTimerReservationSetting": {
+      "epc": "0xEC",
+      "descriptions": {
+        "ja": "給湯保温ONタイマ予約設定",
+        "en": "Hot water warmer ON timer reservation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "予約入",
+              "en": "Reservation ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "予約無",
+              "en": "Reservation OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "targetHotWaterWarmerOnTimerTime": {
+      "epc": "0xED",
+      "descriptions": {
+        "ja": "給湯保温ONタイマ時刻設定値",
+        "en": "Set value of hot water warmer ON timer time"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "bathWaterVolume3": {
+      "epc": "0xEE",
+      "descriptions": {
+        "ja": "風呂湯量設定3",
+        "en": "Bath hot water volume setting 3"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "L",
+        "minimum": 0,
+        "maximum": 65533
+      }
+    },
+    "bathOperationStatus": {
+      "epc": "0xEF",
+      "descriptions": {
+        "ja": "風呂動作状態監視",
+        "en": "Bath operation status monitor"
+      },
+      "writable": false,
+      "observable": true,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "runningHotWater",
+          "noOperation",
+          "keepingTemperature"
+        ],
+        "values": [
+          {
+            "value": "runningHotWater",
+            "descriptions": {
+              "ja": "湯張り中",
+              "en": "Supplying hot water"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "noOperation",
+            "descriptions": {
+              "ja": "停止中",
+              "en": "Stopped"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "keepingTemperature",
+            "descriptions": {
+              "ja": "保温中",
+              "en": "Keeping bath temperature"
+            },
+            "edt": "0x43"
+          }
+        ]
+      }
+    }
+  }
+}

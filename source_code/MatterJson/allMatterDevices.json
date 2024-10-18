@@ -1,0 +1,2614 @@
+{
+    "data": [
+        {
+            "name": "MA-orphan",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0xF001",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Proxy Configuration",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Proxy Discovery",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Proxy Valid",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Pulse Width Modulation",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-powersource",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0011",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Power Source",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-otarequestor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0012",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "OTA Software Update Requestor",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "OTA Software Update Provider",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-otaprovider",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0014",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "OTA Software Update Provider",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "OTA Software Update Requestor",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-onofflight",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0100",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF",
+                        "GLOBAL_SCENE_CONTROL",
+                        "ON_TIME",
+                        "OFF_WAIT_TIME",
+                        "START_UP_ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle",
+                        "OffWithEffect",
+                        "OnWithRecallGlobalScene",
+                        "OnWithTimedOff"
+                    ]
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [
+                        "CURRENT_LEVEL",
+                        "OPTIONS",
+                        "LEVEL_CONTROL_REMAINING_TIME",
+                        "START_UP_CURRENT_LEVEL"
+                    ],
+                    "requireCommands": [
+                        "MoveToLevel",
+                        "Move",
+                        "Step",
+                        "Stop",
+                        "MoveToLevelWithOnOff",
+                        "MoveWithOnOff",
+                        "StepWithOnOff",
+                        "StopWithOnOff"
+                    ]
+                },
+                {
+                    "name": "Occupancy Sensing",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-dimmablelight",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0101",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF",
+                        "GLOBAL_SCENE_CONTROL",
+                        "ON_TIME",
+                        "OFF_WAIT_TIME",
+                        "START_UP_ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle",
+                        "OffWithEffect",
+                        "OnWithRecallGlobalScene",
+                        "OnWithTimedOff"
+                    ]
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [
+                        "CURRENT_LEVEL",
+                        "OPTIONS",
+                        "LEVEL_CONTROL_REMAINING_TIME",
+                        "START_UP_CURRENT_LEVEL"
+                    ],
+                    "requireCommands": [
+                        "MoveToLevel",
+                        "Move",
+                        "Step",
+                        "Stop",
+                        "MoveToLevelWithOnOff",
+                        "MoveWithOnOff",
+                        "StepWithOnOff",
+                        "StopWithOnOff"
+                    ]
+                },
+                {
+                    "name": "Occupancy Sensing",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-colortemperaturelight",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x010C",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF",
+                        "GLOBAL_SCENE_CONTROL",
+                        "ON_TIME",
+                        "OFF_WAIT_TIME",
+                        "START_UP_ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle",
+                        "OffWithEffect",
+                        "OnWithRecallGlobalScene",
+                        "OnWithTimedOff"
+                    ]
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [
+                        "CURRENT_LEVEL",
+                        "OPTIONS",
+                        "LEVEL_CONTROL_REMAINING_TIME",
+                        "START_UP_CURRENT_LEVEL"
+                    ],
+                    "requireCommands": [
+                        "MoveToLevel",
+                        "Move",
+                        "Step",
+                        "Stop",
+                        "MoveToLevelWithOnOff",
+                        "MoveWithOnOff",
+                        "StepWithOnOff",
+                        "StopWithOnOff"
+                    ]
+                },
+                {
+                    "name": "Color Control",
+                    "requireAttributes": [
+                        "COLOR_CONTROL_REMAINING_TIME",
+                        "COLOR_CONTROL_COLOR_TEMPERATURE",
+                        "COLOR_CONTROL_COLOR_MODE",
+                        "COLOR_CONTROL_OPTIONS",
+                        "COLOR_CONTROL_NUMBER_OF_PRIMARIES",
+                        "COLOR_CONTROL_PRIMARY_1_X",
+                        "COLOR_CONTROL_PRIMARY_1_Y",
+                        "COLOR_CONTROL_PRIMARY_1_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_2_X",
+                        "COLOR_CONTROL_PRIMARY_2_Y",
+                        "COLOR_CONTROL_PRIMARY_2_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_3_X",
+                        "COLOR_CONTROL_PRIMARY_3_Y",
+                        "COLOR_CONTROL_PRIMARY_3_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_4_X",
+                        "COLOR_CONTROL_PRIMARY_4_Y",
+                        "COLOR_CONTROL_PRIMARY_4_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_5_X",
+                        "COLOR_CONTROL_PRIMARY_5_Y",
+                        "COLOR_CONTROL_PRIMARY_5_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_6_X",
+                        "COLOR_CONTROL_PRIMARY_6_Y",
+                        "COLOR_CONTROL_PRIMARY_6_INTENSITY",
+                        "COLOR_CONTROL_ENHANCED_CURRENT_HUE",
+                        "COLOR_CONTROL_COLOR_CAPABILITIES",
+                        "COLOR_CONTROL_COLOR_TEMP_PHYSICAL_MIN",
+                        "COLOR_CONTROL_COLOR_TEMP_PHYSICAL_MAX",
+                        "COLOR_CONTROL_TEMPERATURE_LEVEL_MIN_MIREDS",
+                        "START_UP_COLOR_TEMPERATURE_MIREDS"
+                    ],
+                    "requireCommands": [
+                        "MoveToHue",
+                        "MoveHue",
+                        "StepHue",
+                        "MoveToSaturation",
+                        "MoveSaturation",
+                        "StepSaturation",
+                        "MoveToHueAndSaturation",
+                        "MoveToColor",
+                        "MoveColor",
+                        "StepColor",
+                        "MoveToColorTemperature",
+                        "EnhancedMoveToHue",
+                        "EnhancedMoveHue",
+                        "EnhancedStepHue",
+                        "EnhancedMoveToHueAndSaturation",
+                        "ColorLoopSet",
+                        "StopMoveStep",
+                        "MoveColorTemperature",
+                        "StepColorTemperature"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MA-extendedcolorlight",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x010D",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF",
+                        "GLOBAL_SCENE_CONTROL",
+                        "ON_TIME",
+                        "OFF_WAIT_TIME",
+                        "START_UP_ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle",
+                        "OffWithEffect",
+                        "OnWithRecallGlobalScene",
+                        "OnWithTimedOff"
+                    ]
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [
+                        "CURRENT_LEVEL",
+                        "OPTIONS",
+                        "LEVEL_CONTROL_REMAINING_TIME",
+                        "START_UP_CURRENT_LEVEL"
+                    ],
+                    "requireCommands": [
+                        "MoveToLevel",
+                        "Move",
+                        "Step",
+                        "Stop",
+                        "MoveToLevelWithOnOff",
+                        "MoveWithOnOff",
+                        "StepWithOnOff",
+                        "StopWithOnOff"
+                    ]
+                },
+                {
+                    "name": "Color Control",
+                    "requireAttributes": [
+                        "COLOR_CONTROL_CURRENT_HUE",
+                        "COLOR_CONTROL_CURRENT_SATURATION",
+                        "COLOR_CONTROL_REMAINING_TIME",
+                        "COLOR_CONTROL_CURRENT_X",
+                        "COLOR_CONTROL_CURRENT_Y",
+                        "COLOR_CONTROL_COLOR_TEMPERATURE",
+                        "COLOR_CONTROL_COLOR_MODE",
+                        "COLOR_CONTROL_OPTIONS",
+                        "COLOR_CONTROL_NUMBER_OF_PRIMARIES",
+                        "COLOR_CONTROL_PRIMARY_1_X",
+                        "COLOR_CONTROL_PRIMARY_1_Y",
+                        "COLOR_CONTROL_PRIMARY_1_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_2_X",
+                        "COLOR_CONTROL_PRIMARY_2_Y",
+                        "COLOR_CONTROL_PRIMARY_2_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_3_X",
+                        "COLOR_CONTROL_PRIMARY_3_Y",
+                        "COLOR_CONTROL_PRIMARY_3_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_4_X",
+                        "COLOR_CONTROL_PRIMARY_4_Y",
+                        "COLOR_CONTROL_PRIMARY_4_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_5_X",
+                        "COLOR_CONTROL_PRIMARY_5_Y",
+                        "COLOR_CONTROL_PRIMARY_5_INTENSITY",
+                        "COLOR_CONTROL_PRIMARY_6_X",
+                        "COLOR_CONTROL_PRIMARY_6_Y",
+                        "COLOR_CONTROL_PRIMARY_6_INTENSITY",
+                        "COLOR_CONTROL_ENHANCED_CURRENT_HUE",
+                        "COLOR_CONTROL_ENHANCED_COLOR_MODE",
+                        "COLOR_CONTROL_COLOR_LOOP_ACTIVE",
+                        "COLOR_CONTROL_COLOR_LOOP_DIRECTION",
+                        "COLOR_CONTROL_COLOR_LOOP_TIME",
+                        "COLOR_CONTROL_COLOR_LOOP_START_ENHANCED_HUE",
+                        "COLOR_CONTROL_COLOR_LOOP_STORED_ENHANCED_HUE",
+                        "COLOR_CONTROL_COLOR_CAPABILITIES",
+                        "COLOR_CONTROL_COLOR_TEMP_PHYSICAL_MIN",
+                        "COLOR_CONTROL_COLOR_TEMP_PHYSICAL_MAX",
+                        "COLOR_CONTROL_TEMPERATURE_LEVEL_MIN_MIREDS",
+                        "START_UP_COLOR_TEMPERATURE_MIREDS"
+                    ],
+                    "requireCommands": [
+                        "MoveToHue",
+                        "MoveHue",
+                        "StepHue",
+                        "MoveToSaturation",
+                        "MoveSaturation",
+                        "StepSaturation",
+                        "MoveToHueAndSaturation",
+                        "MoveToColor",
+                        "MoveColor",
+                        "StepColor",
+                        "MoveToColorTemperature",
+                        "EnhancedMoveToHue",
+                        "EnhancedMoveHue",
+                        "EnhancedStepHue",
+                        "EnhancedMoveToHueAndSaturation",
+                        "ColorLoopSet",
+                        "StopMoveStep",
+                        "MoveColorTemperature",
+                        "StepColorTemperature"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MA-onoffpluginunit",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x010A",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF",
+                        "GLOBAL_SCENE_CONTROL",
+                        "ON_TIME",
+                        "OFF_WAIT_TIME",
+                        "START_UP_ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle",
+                        "OffWithEffect",
+                        "OnWithRecallGlobalScene",
+                        "OnWithTimedOff"
+                    ]
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [
+                        "CURRENT_LEVEL",
+                        "OPTIONS",
+                        "LEVEL_CONTROL_REMAINING_TIME",
+                        "START_UP_CURRENT_LEVEL"
+                    ],
+                    "requireCommands": [
+                        "MoveToLevel",
+                        "Move",
+                        "Step",
+                        "Stop",
+                        "MoveToLevelWithOnOff",
+                        "MoveWithOnOff",
+                        "StepWithOnOff",
+                        "StopWithOnOff"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MA-dimmablepluginunit",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x010B",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF",
+                        "GLOBAL_SCENE_CONTROL",
+                        "ON_TIME",
+                        "OFF_WAIT_TIME",
+                        "START_UP_ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle",
+                        "OffWithEffect",
+                        "OnWithRecallGlobalScene",
+                        "OnWithTimedOff"
+                    ]
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [
+                        "CURRENT_LEVEL",
+                        "OPTIONS",
+                        "LEVEL_CONTROL_REMAINING_TIME",
+                        "START_UP_CURRENT_LEVEL"
+                    ],
+                    "requireCommands": [
+                        "MoveToLevel",
+                        "Move",
+                        "Step",
+                        "Stop",
+                        "MoveToLevelWithOnOff",
+                        "MoveWithOnOff",
+                        "StepWithOnOff",
+                        "StopWithOnOff"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "MA-pump",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0303",
+            "profileId": "0x0999",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [
+                        "ON_OFF"
+                    ],
+                    "requireCommands": [
+                        "Off",
+                        "On",
+                        "Toggle"
+                    ]
+                },
+                {
+                    "name": "Pump Configuration and Control",
+                    "requireAttributes": [
+                        "MAX_PRESSURE",
+                        "MAX_SPEED",
+                        "MAX_FLOW",
+                        "EffectiveOperationMode",
+                        "EffectiveControlMode",
+                        "Capacity",
+                        "OperationMode"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Temperature Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Pressure Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Flow Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Occupancy Sensing",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-onofflightswitch",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0103",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-dimmerswitch",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0104",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-colordimmerswitch",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0105",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Color Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-genericswitch",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x000f",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Switch",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Fixed Label",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "User Label",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-contactsensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0015",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Boolean State",
+                    "requireAttributes": [
+                        "STATE_VALUE"
+                    ],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-lightsensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0106",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Illuminance Measurement",
+                    "requireAttributes": [
+                        "ILLUM_MEASURED_VALUE",
+                        "ILLUM_MIN_MEASURED_VALUE",
+                        "ILLUM_MAX_MEASURED_VALUE"
+                    ],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-occupancysensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0107",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Occupancy Sensing",
+                    "requireAttributes": [
+                        "OCCUPANCY",
+                        "OCCUPANCY_SENSOR_TYPE"
+                    ],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-tempsensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0302",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Temperature Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-pressuresensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0305",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Pressure Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-flowsensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0306",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Flow Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-humiditysensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0307",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Relative Humidity Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-onoffsensor",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0850",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Color Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-doorlock",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x000A",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Door Lock",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Time Synchronization",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-windowcovering",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0202",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Window Covering",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-heatcool",
+            "typeName": "",
+            "domain": "XCHIP",
+            "deviceId": "0x0300",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "Thermostat",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Fan Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-thermostat",
+            "typeName": "",
+            "domain": "HA",
+            "deviceId": "0x0301",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Scenes",
+                    "requireAttributes": [
+                        "SCENE_COUNT",
+                        "CURRENT_SCENE",
+                        "CURRENT_GROUP",
+                        "SCENE_VALID",
+                        "SCENE_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddScene",
+                        "AddSceneResponse",
+                        "ViewScene",
+                        "ViewSceneResponse",
+                        "RemoveScene",
+                        "RemoveSceneResponse",
+                        "RemoveAllScenes",
+                        "RemoveAllScenesResponse",
+                        "StoreScene",
+                        "StoreSceneResponse",
+                        "RecallScene",
+                        "GetSceneMembership",
+                        "GetSceneMembershipResponse"
+                    ]
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Thermostat",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Time Synchronization",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Thermostat User Interface Configuration",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Fan Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Temperature Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Occupancy Sensing",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Relative Humidity Measurement",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-fan",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x002B",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Groups",
+                    "requireAttributes": [
+                        "GROUP_NAME_SUPPORT"
+                    ],
+                    "requireCommands": [
+                        "AddGroup",
+                        "AddGroupResponse",
+                        "ViewGroup",
+                        "ViewGroupResponse",
+                        "GetGroupMembership",
+                        "GetGroupMembershipResponse",
+                        "RemoveGroup",
+                        "RemoveGroupResponse",
+                        "RemoveAllGroups",
+                        "AddGroupIfIdentifying"
+                    ]
+                },
+                {
+                    "name": "Fan Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-casting-videoplayer",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0023",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Playback",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Keypad Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Application Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Channel",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Audio Output",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Low Power",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Wake on LAN",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Target Navigator",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Account Login",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Content Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-basic-videoplayer",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0028",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Playback",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Keypad Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Channel",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Audio Output",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Low Power",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Wake on LAN",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Target Navigator",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-casting-videoclient",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0029",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Playback",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Content Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Keypad Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Account Login",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Wake on LAN",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Channel",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Target Navigator",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Low Power",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Audio Output",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Application Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Application Basic",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-video-remotecontrol",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x002A",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Binding",
+                    "requireAttributes": [
+                        "BINDING"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Playback",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Content Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Keypad Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Account Login",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Wake on LAN",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Channel",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Target Navigator",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Low Power",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Audio Output",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Application Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-speaker",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0022",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "On/Off",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Level Control",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-contentapp",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0024",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Application Basic",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Keypad Input",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Application Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Account Login",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Content Launcher",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Media Playback",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Target Navigator",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Channel",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-modeselect",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0x0027",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Identify",
+                    "requireAttributes": [
+                        "IDENTIFY_TIME",
+                        "IDENTIFY_TYPE"
+                    ],
+                    "requireCommands": [
+                        "Identify",
+                        "IdentifyQuery",
+                        "TriggerEffect"
+                    ]
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Mode Select",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                }
+            ]
+        },
+        {
+            "name": "MA-secondary-network-commissioning",
+            "typeName": "",
+            "domain": "CHIP",
+            "deviceId": "0xF002",
+            "profileId": "0x0103",
+            "clusters": [
+                {
+                    "name": "Network Commissioning",
+                    "requireAttributes": [],
+                    "requireCommands": []
+                },
+                {
+                    "name": "Descriptor",
+                    "requireAttributes": [
+                        "DEVICE_TYPE_LIST",
+                        "SERVER_LIST",
+                        "CLIENT_LIST",
+                        "PARTS_LIST"
+                    ],
+                    "requireCommands": []
+                }
+            ]
+        }
+    ]
+}

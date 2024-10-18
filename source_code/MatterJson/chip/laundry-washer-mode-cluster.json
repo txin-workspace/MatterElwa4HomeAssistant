@@ -1,0 +1,71 @@
+{
+    "name": "laundry washer mode cluster",
+    "description": "Attributes and commands for selecting a mode from a list of supported options.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Supported Modes",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Modes",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Mode",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Start Up Mode",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Start Up Mode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "On Mode",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "On Mode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Change To Mode",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        This command is used to change device modes.\n        On receipt of this command the device SHALL respond with a ChangeToModeResponse command.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Change To Mode Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        This command is sent by the device on receipt of the ChangeToModeWithStatus command.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Laundry Washer Mode"
+}

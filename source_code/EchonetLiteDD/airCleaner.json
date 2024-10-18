@@ -1,0 +1,168 @@
+{
+  "deviceType": "airCleaner",
+  "metaData": {
+    "version": "1.3.0"
+  },
+  "eoj": "0x0135",
+  "descriptions": {
+    "ja": "空気清浄器",
+    "en": "Air cleaner"
+  },
+  "properties": {
+    "airFlowLevel": {
+      "epc": "0xA0",
+      "descriptions": {
+        "ja": "風量設定",
+        "en": "Air flow rate setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 8,
+            "multipleOf": 1
+          },
+          {
+            "type": "string",
+            "enum": [
+              "auto"
+            ],
+            "values": [
+              {
+                "value": "auto",
+                "descriptions": {
+                  "ja": "換気風量自動状態",
+                  "en": "Ventilation air flow rate auto status"
+                },
+                "edt": "0x41"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "airPollutionDetection": {
+      "epc": "0xC0",
+      "descriptions": {
+        "ja": "空気汚れ検知状態",
+        "en": "Air pollution detection status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "空気汚れ検知有",
+              "en": "Air pollution detected"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "空気汚れ検知無",
+              "en": "Air pollution non-detected"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "smokeDetection": {
+      "epc": "0xC1",
+      "descriptions": {
+        "ja": "煙 (タバコ) 検知状態",
+        "en": "Smoke (cigarette) detection status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "煙 (タバコ) 検知有",
+              "en": "Smoke (cigarette) detection status found."
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "煙 (タバコ) 検知無",
+              "en": "Smoke (cigarette) detection status not found."
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "opticalCatalystOperationStatus": {
+      "epc": "0xC2",
+      "descriptions": {
+        "ja": "光触媒動作設定",
+        "en": "Optical catalyst operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "光触媒ON",
+              "en": "Optical catalyst ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "光触媒OFF",
+              "en": "Optical catalyst OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "filterChangeNotice": {
+      "epc": "0xE1",
+      "descriptions": {
+        "ja": "フィルタ交換通知状態",
+        "en": "Filter change notice"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "フィルタ交換時期通知有",
+              "en": "Found"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "フィルタ交換時期通知無",
+              "en": "Not found"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    }
+  }
+}

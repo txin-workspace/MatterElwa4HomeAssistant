@@ -1,0 +1,119 @@
+{
+    "name": "ethernet network diagnostics cluster",
+    "description": "The Ethernet Network Diagnostics Cluster provides a means to acquire standardized diagnostics metrics that MAY be used by a Node to assist a user or Administrative Node in diagnosing potential problems.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "P H Y Rate",
+            "type": "PHYRateEnum",
+            "typeId": "(-1, -1)",
+            "description": "P H Y Rate",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Full Duplex",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Full Duplex",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Packet Rx Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Packet Rx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Packet Tx Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Packet Tx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Tx Err Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Tx Err Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Collision Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Collision Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Overrun Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Overrun Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Carrier Detect",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Carrier Detect",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Time Since Reset",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Time Since Reset",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Reset Counts",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reception of this command SHALL reset the attributes: PacketRxCount, PacketTxCount, TxErrCount, CollisionCount, OverrunCount to 0",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Ethernet Network Diagnostics"
+}

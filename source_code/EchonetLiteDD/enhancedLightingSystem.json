@@ -1,0 +1,230 @@
+{
+  "deviceType": "enhancedLightingSystem",
+  "metaData": {
+    "version": "1.4.1"
+  },
+  "eoj": "0x02A4",
+  "descriptions": {
+    "ja": "拡張照明システム",
+    "en": "Extended lighting system"
+  },
+  "properties": {
+    "lightLevel": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "照明の明るさ設定",
+        "en": "Light level setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "sceneId": {
+      "epc": "0xC0",
+      "descriptions": {
+        "ja": "シーン制御設定",
+        "en": "Scene control setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 253
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noSetting"
+            ],
+            "values": [
+              {
+                "value": "noSetting",
+                "descriptions": {
+                  "ja": "設定なし",
+                  "en": "No setting"
+                },
+                "edt": "0x00"
+              }
+            ]
+          }
+        ]
+      },
+      "note": {
+        "ja": "最大値は maximumNumberOfSceneId の値",
+        "en": "Maximum value is the value of maximumNumberOfSceneId."
+      }
+    },
+    "maximumNumberOfSceneId": {
+      "epc": "0xC1",
+      "descriptions": {
+        "ja": "シーン制御設定可能数",
+        "en": "Number that can assign scene control setting."
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 253
+      }
+    },
+    "powerConsumptionRateList": {
+      "epc": "0xC2",
+      "descriptions": {
+        "ja": "電力消費率リスト",
+        "en": "Power consumption rate list"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 1,
+        "maxItems": 253,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "%",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "string",
+              "enum": [
+                "unknown"
+              ],
+              "values": [
+                {
+                  "value": "unknown",
+                  "descriptions": {
+                    "ja": "不明",
+                    "en": "Unknown"
+                  },
+                  "edt": "0xFF"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "powerConsumptionAtFullLighting": {
+      "epc": "0xC3",
+      "descriptions": {
+        "ja": "全灯時消費電力",
+        "en": "Power consumption when fully lighted"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": 0,
+        "maximum": 65533
+      }
+    },
+    "powerConsumptionWillBeSaved": {
+      "epc": "0xC4",
+      "descriptions": {
+        "ja": "節電可能消費電力",
+        "en": "Possible power savings"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": 0,
+        "maximum": 65533
+      }
+    },
+    "powerConsumptionLimit": {
+      "epc": "0xC5",
+      "descriptions": {
+        "ja": "消費電力制限設定",
+        "en": "Power consumption limit setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "W",
+            "minimum": 0,
+            "maximum": 65533
+          },
+          {
+            "type": "string",
+            "enum": [
+              "cancel"
+            ],
+            "values": [
+              {
+                "value": "cancel",
+                "descriptions": {
+                  "ja": "電力制限解除",
+                  "en": "Canceling power consumption restriction"
+                },
+                "edt": "0x0000"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "automaticOperationControlling": {
+      "epc": "0xC6",
+      "descriptions": {
+        "ja": "自動動作制御設定",
+        "en": "Automatic operation controlling setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "ON",
+              "en": "ON"
+            },
+            "edt": "0x30"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "OFF",
+              "en": "OFF"
+            },
+            "edt": "0x31"
+          }
+        ]
+      }
+    },
+    "fadingControlChangeTime": {
+      "epc": "0xC7",
+      "descriptions": {
+        "ja": "フェード制御変化時間設定",
+        "en": "Fading control change time setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "second",
+        "minimum": 0,
+        "maximum": 3600
+      }
+    }
+  }
+}

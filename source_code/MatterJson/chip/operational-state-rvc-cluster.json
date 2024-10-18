@@ -1,0 +1,120 @@
+{
+    "name": "operational state rvc cluster",
+    "description": "This cluster supports remotely monitoring and, where supported, changing the operational state of a Robotic Vacuum.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Phase List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Phase List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Phase",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Phase",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Countdown Time",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Countdown Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Operational State List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Operational State List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Operational State",
+            "type": "enum8",
+            "typeId": "(-1, -1)",
+            "description": "Operational State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Operational Error",
+            "type": "ErrorStateStruct",
+            "typeId": "(-1, -1)",
+            "description": "Operational Error",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Pause",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the device SHALL pause its operation if it is possible based on the current function of the server.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Stop",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the device SHALL stop its operation if it is at a position where it is safe to do so and/or permitted.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Start",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the device SHALL start its operation if it is safe to do so and the device is in an operational state from which it can be started.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Resume",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the device SHALL resume its operation from the point it was at when it received the Pause command, or from the point when it was paused by means outside of this cluster (for example by manual button press).",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Operational Command Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL be generated in response to any of the Start, Stop, Pause, or Resume commands.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "RVC Operational State"
+}

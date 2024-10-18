@@ -1,0 +1,30 @@
+{
+    "name": "diagnostic logs cluster",
+    "description": "The cluster provides commands for retrieving unstructured diagnostic logs from a Node that may be used to aid in diagnostics.",
+    "propertiesInfo": [],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Retrieve Logs Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Retrieving diagnostic logs from a Node",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Retrieve Logs Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Response to the RetrieveLogsRequest",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Diagnostic Logs"
+}

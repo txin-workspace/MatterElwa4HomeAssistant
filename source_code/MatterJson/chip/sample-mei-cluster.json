@@ -1,0 +1,51 @@
+{
+    "name": "sample mei cluster",
+    "description": "The Sample MEI cluster showcases a cluster manufacturer extensions",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Flip Flop",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Flip Flop",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x01",
+            "name": "Add Arguments Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Response for AddArguments that returns the sum.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Add Arguments",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes two uint8 arguments and returns their sum.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Ping",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple command without any parameters and without a response.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Sample MEI"
+}

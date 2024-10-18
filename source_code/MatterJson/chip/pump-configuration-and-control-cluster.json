@@ -1,0 +1,247 @@
+{
+    "name": "pump configuration and control cluster",
+    "description": "An interface for configuring and controlling pumps.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Max Pressure",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Max Pressure",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Max Speed",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Speed",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Flow",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Flow",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Min Const Pressure",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Min Const Pressure",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Max Const Pressure",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Max Const Pressure",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Min Comp Pressure",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Min Comp Pressure",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Max Comp Pressure",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Max Comp Pressure",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Min Const Speed",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Min Const Speed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Max Const Speed",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Const Speed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Min Const Flow",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Min Const Flow",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Max Const Flow",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Const Flow",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "Min Const Temp",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Min Const Temp",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000C",
+            "name": "Max Const Temp",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Max Const Temp",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "Pump Status",
+            "type": "PumpStatusBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Pump Status",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "Effective Operation Mode",
+            "type": "OperationModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Effective Operation Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "Effective Control Mode",
+            "type": "ControlModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Effective Control Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Capacity",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Capacity",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "Speed",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Speed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0015",
+            "name": "LifetimeRunningHours",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "LifetimeRunningHours",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0016",
+            "name": "Power",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "Power",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0017",
+            "name": "LifetimeEnergyConsumed",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "LifetimeEnergyConsumed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0020",
+            "name": "OperationMode",
+            "type": "OperationModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "OperationMode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0021",
+            "name": "ControlMode",
+            "type": "ControlModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "ControlMode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Pump Configuration and Control"
+}

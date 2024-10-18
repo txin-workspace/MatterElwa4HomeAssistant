@@ -1,0 +1,19 @@
+{
+    "name": "unit localization cluster",
+    "description": "Nodes should be expected to be deployed to any and all regions of the world. These global regions\n      may have differing preferences for the units in which values are conveyed in communication to a\n      user. As such, Nodes that visually or audibly convey measurable values to the user need a\n      mechanism by which they can be configured to use a user\u2019s preferred unit.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "TemperatureUnit",
+            "type": "TempUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "TemperatureUnit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Unit Localization"
+}

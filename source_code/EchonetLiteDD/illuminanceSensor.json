@@ -1,0 +1,43 @@
+{
+  "deviceType": "illuminanceSensor",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x00D0",
+  "descriptions": {
+    "ja": "照度センサ",
+    "en": "Illuminance sensor"
+  },
+  "properties": {
+    "valueInLux": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "照度計測値1",
+        "en": "Measured illuminance value 1"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "lux",
+        "minimum": 0,
+        "maximum": 65533
+      }
+    },
+    "valueInKlux": {
+      "epc": "0xE1",
+      "descriptions": {
+        "ja": "照度計測値2",
+        "en": "Measured illuminance value 2"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "klux",
+        "minimum": 0,
+        "maximum": 65533
+      }
+    }
+  }
+}

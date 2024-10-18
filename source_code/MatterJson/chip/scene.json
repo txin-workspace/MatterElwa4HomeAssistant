@@ -1,0 +1,300 @@
+{
+    "name": "scene",
+    "description": "Attributes and commands for scene configuration and manipulation.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Scene Count",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Scene Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Scene",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Scene",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Current Group",
+            "type": "group_id",
+            "typeId": "(-1, -1)",
+            "description": "Current Group",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Scene Valid",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Scene Valid",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Name Support",
+            "type": "NameSupportBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Name Support",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Last Configured By",
+            "type": "node_id",
+            "typeId": "(-1, -1)",
+            "description": "Last Configured By",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Scene Table Size",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Scene Table Size",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Fabric Scene Info",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Fabric Scene Info",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Add Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Add a scene to the scene table. Extension field sets are supported, and are inputed as '{\"ClusterID\": VALUE, \"AttributeValueList\":[{\"AttributeId\": VALUE, \"AttributeValue\": VALUE}]}'\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "View Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Retrieves the requested scene entry from its Scene table.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Remove Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Removes the requested scene entry, corresponding to the value of the GroupID field, from its Scene Table\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Remove All Scenes",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Remove all scenes, corresponding to the value of the GroupID field, from its Scene Table\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Store Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Adds the scene entry into its Scene Table along with all extension field sets corresponding to the current state of other clusters on the same endpoint\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Recall Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Set the attributes and corresponding state for each other cluster implemented on the endpoint accordingly to the resquested scene entry in the Scene Table\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Get Scene Membership",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Get an unused scene identifier when no commissioning tool is in the network, or for a commissioning tool to get the used scene identifiers within a certain group \n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x40",
+            "name": "Enhanced Add Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Allows a scene to be added using a finer scene transition time than the AddScene command.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x41",
+            "name": "Enhanced View Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Allows a scene to be retrieved using a finer scene transition time than the ViewScene command\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x42",
+            "name": "Copy Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Allows a client to efficiently copy scenes from one group/scene identifier pair to another group/scene identifier pair.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Add Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast AddScene command,\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "View Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast ViewScene command \n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Remove Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast RemoveScene command\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Remove All Scenes Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast RemoveAllScenes command\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Store Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast StoreScene command\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Get Scene Membership Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast GetSceneMembership command\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x40",
+            "name": "Enhanced Add Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast EnhancedAddScene command\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x41",
+            "name": "Enhanced View Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast EnhancedViewScene command\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x42",
+            "name": "Copy Scene Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The command is generated in response to a received unicast CopyScene command\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Scenes"
+}

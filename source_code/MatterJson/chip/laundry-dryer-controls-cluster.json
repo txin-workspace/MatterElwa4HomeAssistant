@@ -1,0 +1,26 @@
+{
+    "name": "laundry dryer controls cluster",
+    "description": "This cluster supports remotely monitoring and controling the different typs of\n            functionality available to a drying device, such as a laundry dryer.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Supported Dryness Levels",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Dryness Levels",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Selected Dryness Level",
+            "type": "DrynessLevelEnum",
+            "typeId": "(-1, -1)",
+            "description": "Selected Dryness Level",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Laundry Dryer Controls"
+}

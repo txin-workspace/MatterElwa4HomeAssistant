@@ -1,0 +1,62 @@
+{
+  "deviceType": "currentSensor",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0023",
+  "descriptions": {
+    "ja": "電流センサ",
+    "en": "Current sensor"
+  },
+  "properties": {
+    "unsignedValue": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "電流値計測値1",
+        "en": "Measured current value 1"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "mA",
+        "minimum": 0,
+        "maximum": 4294967293
+      }
+    },
+    "ratedVoltage": {
+      "epc": "0xE1",
+      "descriptions": {
+        "ja": "計測対象定格電圧値",
+        "en": "Rated voltage to be measured"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "V",
+        "minimum": 0,
+        "maximum": 65533
+      },
+      "note": {
+        "ja": "本プロパティは、固定値として実装してもよい",
+        "en": "This property may be implemented as a fixed value."
+      }
+    },
+    "signedValue": {
+      "epc": "0xE2",
+      "descriptions": {
+        "ja": "電流値計測値2",
+        "en": "Measured current value 2"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "mA",
+        "minimum": -2147483647,
+        "maximum": 2147483646
+      }
+    }
+  }
+}

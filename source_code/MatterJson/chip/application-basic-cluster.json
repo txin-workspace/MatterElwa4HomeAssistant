@@ -1,0 +1,86 @@
+{
+    "name": "application basic cluster",
+    "description": "This cluster provides information about an application running on a TV or media player device which is represented as an endpoint.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Vendor Name",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Vendor Name",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Vendor I D",
+            "type": "vendor_id",
+            "typeId": "(-1, -1)",
+            "description": "Vendor I D",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Application Name",
+            "type": "long_char_string",
+            "typeId": "(128, 1)",
+            "description": "Application Name",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Product I D",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Product I D",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Application",
+            "type": "ApplicationStruct",
+            "typeId": "(-1, -1)",
+            "description": "Application",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Status",
+            "type": "ApplicationStatusEnum",
+            "typeId": "(-1, -1)",
+            "description": "Status",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Application Version",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Application Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "AllowedVendorList",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "AllowedVendorList",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Application Basic"
+}

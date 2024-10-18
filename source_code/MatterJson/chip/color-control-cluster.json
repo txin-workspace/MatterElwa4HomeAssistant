@@ -1,0 +1,586 @@
+{
+    "name": "color control cluster",
+    "description": "Attributes and commands for controlling the color properties of a color-capable light.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Current Hue",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Hue",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Saturation",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Saturation",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Remaining Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Remaining Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Current X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Current X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Current Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Current Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Drift Compensation",
+            "type": "enum8",
+            "typeId": "(-1, -1)",
+            "description": "Drift Compensation",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Compensation Text",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Compensation Text",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Color Temperature Mireds",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Color Temperature Mireds",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Color Mode",
+            "type": "enum8",
+            "typeId": "(-1, -1)",
+            "description": "Color Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000F",
+            "name": "Options",
+            "type": "bitmap8",
+            "typeId": "(-1, -1)",
+            "description": "Options",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "Number Of Primaries",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Primaries",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "Primary1 X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary1 X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "Primary1 Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary1 Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Primary1 Intensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Primary1 Intensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0015",
+            "name": "Primary2 X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary2 X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0016",
+            "name": "Primary2 Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary2 Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0017",
+            "name": "Primary2 Intensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Primary2 Intensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0019",
+            "name": "Primary3 X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary3 X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001A",
+            "name": "Primary3 Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary3 Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001B",
+            "name": "Primary3 Intensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Primary3 Intensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0020",
+            "name": "Primary4 X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary4 X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0021",
+            "name": "Primary4 Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary4 Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0022",
+            "name": "Primary4 Intensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Primary4 Intensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0024",
+            "name": "Primary5 X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary5 X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0025",
+            "name": "Primary5 Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary5 Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0026",
+            "name": "Primary5 Intensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Primary5 Intensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0028",
+            "name": "Primary6 X",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary6 X",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0029",
+            "name": "Primary6 Y",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Primary6 Y",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x002A",
+            "name": "Primary6 Intensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Primary6 Intensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0030",
+            "name": "WhitePointX",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "WhitePointX",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0031",
+            "name": "WhitePointY",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "WhitePointY",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0032",
+            "name": "ColorPointRX",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ColorPointRX",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0033",
+            "name": "ColorPointRY",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ColorPointRY",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0034",
+            "name": "ColorPointRIntensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "ColorPointRIntensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0036",
+            "name": "ColorPointGX",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ColorPointGX",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0037",
+            "name": "ColorPointGY",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ColorPointGY",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0038",
+            "name": "ColorPointGIntensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "ColorPointGIntensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x003A",
+            "name": "ColorPointBX",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ColorPointBX",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x003B",
+            "name": "ColorPointBY",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ColorPointBY",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x003C",
+            "name": "ColorPointBIntensity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "ColorPointBIntensity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400D",
+            "name": "Couple Color Temp To Level Min Mireds",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Couple Color Temp To Level Min Mireds",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4010",
+            "name": "StartUpColorTemperatureMireds",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "StartUpColorTemperatureMireds",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Move To Hue",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move to specified hue.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Move Hue",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move hue up or down at specified rate.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Step Hue",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Step hue up or down by specified size at specified rate.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Move To Saturation",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move to specified saturation.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Move Saturation",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move saturation up or down at specified rate.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Step Saturation",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Step saturation up or down by specified size at specified rate.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Move To Hue And Saturation",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move to hue and saturation.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Move To Color",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move to specified color.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Move Color",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Moves the color.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Step Color",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Steps the lighting to a specific color.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Move To Color Temperature",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Move to a specific color temperature.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Color Control"
+}

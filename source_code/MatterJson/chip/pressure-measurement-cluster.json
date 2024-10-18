@@ -1,0 +1,101 @@
+{
+    "name": "pressure measurement cluster",
+    "description": "Attributes and commands for configuring the measurement of pressure, and reporting pressure measurements.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Measured Value",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Min Measured Value",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Max Measured Value",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Tolerance",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Tolerance",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "Scaled Value",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Scaled Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "Min Scaled Value",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Min Scaled Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "Max Scaled Value",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Max Scaled Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Scaled Tolerance",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Scaled Tolerance",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "Scale",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "Scale",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Pressure Measurement"
+}

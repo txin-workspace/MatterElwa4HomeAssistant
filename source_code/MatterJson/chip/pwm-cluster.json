@@ -1,0 +1,7 @@
+{
+    "name": "pwm cluster",
+    "description": "Cluster to control pulse width modulation",
+    "propertiesInfo": [],
+    "commands": [],
+    "nameMatterExact": "Pulse Width Modulation"
+}

@@ -1,0 +1,7 @@
+{
+    "name": "proxy valid cluster",
+    "description": "Cluster to control Proxy Valid",
+    "propertiesInfo": [],
+    "commands": [],
+    "nameMatterExact": "Proxy Valid"
+}

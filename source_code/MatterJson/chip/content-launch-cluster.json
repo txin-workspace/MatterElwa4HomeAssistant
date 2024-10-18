@@ -1,0 +1,64 @@
+{
+    "name": "content launch cluster",
+    "description": "This cluster provides an interface for launching content on a media player device such as a TV or Speaker.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Accept Header",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Accept Header",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Supported Streaming Protocols",
+            "type": "SupportedProtocolsBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Supported Streaming Protocols",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Launch Content",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL launch the specified content with optional search criteria.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Launch U R L",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL launch content from the specified URL.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Launcher Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL be generated in response to LaunchContent command.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Content Launcher"
+}

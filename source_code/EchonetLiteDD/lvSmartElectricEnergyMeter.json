@@ -1,0 +1,658 @@
+{
+  "deviceType": "lvSmartElectricEnergyMeter",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0288",
+  "descriptions": {
+    "ja": "低圧スマート電力量メータ",
+    "en": "Low-voltage smart electric energy meter"
+  },
+  "properties": {
+    "normalDirectionCumulativeElectricEnergy": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "積算電力量計測値 (正方向計測値)",
+        "en": "Measured cumulative amount of electric energy (normal direction)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "kWh",
+            "minimum": 0,
+            "coefficient": [
+              "0xD3",
+              "0xE1"
+            ]
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noData"
+            ],
+            "values": [
+              {
+                "value": "noData",
+                "descriptions": {
+                  "ja": "未計測",
+                  "en": "Not measured"
+                },
+                "edt": "0xFFFFFFFE"
+              }
+            ]
+          }
+        ]
+      },
+      "note": {
+        "ja": "EPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "The value is multipled by the value of EPC=0xD3 and 0xE1."
+      }
+    },
+    "normalDirectionCumulativeElectricEnergyLog1": {
+      "epc": "0xE2",
+      "epcAtomic": "0xE5",
+      "descriptions": {
+        "ja": "積算電力量計測値履歴1 (正方向計測値)",
+        "en": "Historical data of measured cumulative amounts of electric energy 1 (normal direction)"
+      },
+      "writable": false,
+      "observable": false,
+      "urlParameters": {
+        "day": {
+          "descriptions": {
+            "ja": "積算履歴収集日",
+            "en": "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          },
+          "schema": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 99
+          },
+          "required": false
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "descriptions": {
+              "ja": "積算履歴収集日",
+              "en": "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 99
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "defaultValue"
+                ],
+                "values": [
+                  {
+                    "value": "defaultValue",
+                    "descriptions": {
+                      "ja": "初期値",
+                      "en": "Default value"
+                    },
+                    "edt": "0x00FF"
+                  }
+                ]
+              }
+            ]
+          },
+          "electricEnergy": {
+            "descriptions": {
+              "ja": "積算電力量計測値",
+              "en": "Measured cumulative amounts of electric energy"
+            },
+            "type": "array",
+            "minItems": 48,
+            "maxItems": 48,
+            "items": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "unit": "kWh",
+                  "minimum": 0,
+                  "coefficient": [
+                    "0xD3",
+                    "0xE1"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "noData"
+                  ],
+                  "values": [
+                    {
+                      "value": "noData",
+                      "descriptions": {
+                        "ja": "未計測",
+                        "en": "Not measured"
+                      },
+                      "edt": "0xFFFFFFFE"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "Queryは履歴収集日 (省略時は0)。電力量はEPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "Query is Day for collection (default value is 0). Electric power is multipled by EPC=0xD3 and 0xE1."
+      }
+    },
+    "reverseDirectionCumulativeElectricEnergy": {
+      "epc": "0xE3",
+      "descriptions": {
+        "ja": "積算電力量計測値 (逆方向計測値)",
+        "en": "Measured cumulative amount of electric energy (reverse direction)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "kWh",
+            "minimum": 0,
+            "coefficient": [
+              "0xD3",
+              "0xE1"
+            ]
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noData"
+            ],
+            "values": [
+              {
+                "value": "noData",
+                "descriptions": {
+                  "ja": "未計測",
+                  "en": "Not measured"
+                },
+                "edt": "0xFFFFFFFE"
+              }
+            ]
+          }
+        ]
+      },
+      "note": {
+        "ja": "EPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "The value is multipled by the value of EPC=0xD3 and 0xE1."
+      }
+    },
+    "reverseDirectionCumulativeElectricEnergyLog1": {
+      "epc": "0xE4",
+      "epcAtomic": "0xE5",
+      "descriptions": {
+        "ja": "積算電力量計測値履歴1 (逆方向計測値)",
+        "en": "Historical data of measured cumulative amounts of electric energy 1 (reverse direction)"
+      },
+      "writable": false,
+      "observable": false,
+      "urlParameters": {
+        "day": {
+          "descriptions": {
+            "ja": "積算履歴収集日",
+            "en": "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+          },
+          "schema": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 99
+          },
+          "required": false
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "descriptions": {
+              "ja": "積算履歴収集日",
+              "en": "Day for which the historical data of measured cumulative amounts of electric energy is to be retrieved"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 99
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "defaultValue"
+                ],
+                "values": [
+                  {
+                    "value": "defaultValue",
+                    "descriptions": {
+                      "ja": "初期値",
+                      "en": "Default value"
+                    },
+                    "edt": "0x00FF"
+                  }
+                ]
+              }
+            ]
+          },
+          "electricEnergy": {
+            "descriptions": {
+              "ja": "積算電力量計測値",
+              "en": "Measured cumulative amounts of electric energy"
+            },
+            "type": "array",
+            "minItems": 48,
+            "maxItems": 48,
+            "items": {
+              "oneOf": [
+                {
+                  "type": "number",
+                  "unit": "kWh",
+                  "minimum": 0,
+                  "coefficient": [
+                    "0xD3",
+                    "0xE1"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "noData"
+                  ],
+                  "values": [
+                    {
+                      "value": "noData",
+                      "descriptions": {
+                        "ja": "未計測",
+                        "en": "Not measured"
+                      },
+                      "edt": "0xFFFFFFFE"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "Queryは履歴収集日 (省略時は0)。電力量はEPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "Query is Day for collection (default value is 0). Electric power is multipled by EPC=0xD3 and 0xE1."
+      }
+    },
+    "instantaneousElectricPower": {
+      "epc": "0xE7",
+      "descriptions": {
+        "ja": "瞬時電力計測値",
+        "en": "Measured instantaneous electric power"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "W",
+            "minimum": -2147483647,
+            "maximum": 2147483645
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noData"
+            ],
+            "values": [
+              {
+                "value": "noData",
+                "descriptions": {
+                  "ja": "未計測",
+                  "en": "Not measured"
+                },
+                "edt": "0x7FFFFFFE"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "instantaneousCurrent": {
+      "epc": "0xE8",
+      "descriptions": {
+        "ja": "瞬時電流計測値",
+        "en": "Measured instantaneous currents"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "rPhase": {
+            "descriptions": {
+              "ja": "R相",
+              "en": "R phase"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "unit": "A",
+                "minimum": -3276.7,
+                "maximum": 3276.5,
+                "multipleOf": 0.1
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "noData"
+                ],
+                "values": [
+                  {
+                    "value": "noData",
+                    "descriptions": {
+                      "ja": "未計測",
+                      "en": "Not measured"
+                    },
+                    "edt": "0x7FFE"
+                  }
+                ]
+              }
+            ]
+          },
+          "tPhase": {
+            "descriptions": {
+              "ja": "T相",
+              "en": "T phase"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "unit": "A",
+                "minimum": -3276.7,
+                "maximum": 3276.5,
+                "multipleOf": 0.1
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "noData"
+                ],
+                "values": [
+                  {
+                    "value": "noData",
+                    "descriptions": {
+                      "ja": "未計測",
+                      "en": "Not measured"
+                    },
+                    "edt": "0x7FFE"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "normalDirectionCumulativeElectricEnergyAtEvery30Min": {
+      "epc": "0xEA",
+      "descriptions": {
+        "ja": "定時積算電力量計測値 (正方向計測値)",
+        "en": "Cumulative amounts of electric energy measured at fixed time (normal direction)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "dateAndTime": {
+            "descriptions": {
+              "ja": "計測日時",
+              "en": "Date and time of measurement"
+            },
+            "type": "string",
+            "format": "date-time"
+          },
+          "electricEnergy": {
+            "descriptions": {
+              "ja": "積算電力量計測値",
+              "en": "Cumulative amounts of electric energy measured"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "unit": "kWh",
+                "minimum": 0,
+                "coefficient": [
+                  "0xD3",
+                  "0xE1"
+                ]
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "noData"
+                ],
+                "values": [
+                  {
+                    "value": "noData",
+                    "descriptions": {
+                      "ja": "未計測",
+                      "en": "Not measured"
+                    },
+                    "edt": "0xFFFFFFFE"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "note": {
+        "ja": "EPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "The value is multipled by the value of EPC=0xD3 and 0xE1."
+      }
+    },
+    "reverseDirectionCumulativeElectricEnergyAtEvery30Min": {
+      "epc": "0xEB",
+      "descriptions": {
+        "ja": "定時積算電力量計測値 (逆方向計測値)",
+        "en": "Cumulative amounts of electric energy measured at fixed time (reverse direction)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "dateAndTime": {
+            "descriptions": {
+              "ja": "計測日時",
+              "en": "Date and time of measurement"
+            },
+            "type": "string",
+            "format": "date-time"
+          },
+          "electricEnergy": {
+            "descriptions": {
+              "ja": "積算電力量計測値",
+              "en": "Cumulative amounts of electric energy measured"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "unit": "kWh",
+                "minimum": 0,
+                "coefficient": [
+                  "0xD3",
+                  "0xE1"
+                ]
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "noData"
+                ],
+                "values": [
+                  {
+                    "value": "noData",
+                    "descriptions": {
+                      "ja": "未計測",
+                      "en": "Not measured"
+                    },
+                    "edt": "0xFFFFFFFE"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "note": {
+        "ja": "EPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "The value is multipled by the value of EPC=0xD3 and 0xE1."
+      }
+    },
+    "cumulativeElectricEnergyLog2": {
+      "epc": "0xEC",
+      "epcAtomic": "0xED",
+      "descriptions": {
+        "ja": "積算電力量計測値履歴2 (正方向、逆方向計測値)",
+        "en": "Historical data of measured cumulative amounts of electric energy 2 (normal and reverse directions)"
+      },
+      "writable": false,
+      "observable": false,
+      "urlParameters": {
+        "dateAndTime": {
+          "descriptions": {
+            "ja": "積算履歴収集日時",
+            "en": "Date and time for which the historical data is to be retrieved"
+          },
+          "schema": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "required": true
+        },
+        "numberOfCollectionSegments": {
+          "descriptions": {
+            "ja": "収集コマ数",
+            "en": "Number of collection segments"
+          },
+          "schema": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "required": true
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "dateAndTime": {
+            "descriptions": {
+              "ja": "積算履歴収集日時",
+              "en": "Date and time for which the historical data is to be retrieved"
+            },
+            "type": "string",
+            "format": "date-time"
+          },
+          "numberOfCollectionSegments": {
+            "descriptions": {
+              "ja": "収集コマ数",
+              "en": "Number of collection segments"
+            },
+            "type": "number",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "electricEnergy": {
+            "descriptions": {
+              "ja": "積算電力量計測値",
+              "en": "Measured cumulative amounts of electric energy"
+            },
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "properties": {
+                "normalDirectionElectricEnergy": {
+                  "oneOf": [
+                    {
+                      "type": "number",
+                      "unit": "kWh",
+                      "minimum": 0,
+                      "coefficient": [
+                        "0xD3",
+                        "0xE1"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "enum": [
+                        "noData"
+                      ],
+                      "values": [
+                        {
+                          "value": "noData",
+                          "descriptions": {
+                            "ja": "未計測",
+                            "en": "Not measured"
+                          },
+                          "edt": "0xFFFFFFFE"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "reverseDirectionElectricEnergy": {
+                  "oneOf": [
+                    {
+                      "type": "number",
+                      "unit": "kWh",
+                      "minimum": 0,
+                      "coefficient": [
+                        "0xD3",
+                        "0xE1"
+                      ]
+                    },
+                    {
+                      "type": "string",
+                      "enum": [
+                        "noData"
+                      ],
+                      "values": [
+                        {
+                          "value": "noData",
+                          "descriptions": {
+                            "ja": "未計測",
+                            "en": "Not measured"
+                          },
+                          "edt": "0xFFFFFFFE"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "Queryは日時と収集コマ数。秒の値は0、分の値は0または30。電力量はEPC=0xD3, 0xE1の値を乗算済みの値",
+        "en": "Query is data&time and Number of collection segments. Value of seconds is 0 and value of minutes is 0 or 30. Electric energy is multipled by EPC=0xD3 and 0xE1."
+      }
+    }
+  }
+}

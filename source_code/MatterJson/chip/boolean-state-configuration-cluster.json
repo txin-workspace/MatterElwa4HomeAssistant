@@ -1,0 +1,119 @@
+{
+    "name": "boolean state configuration cluster",
+    "description": "This cluster is used to configure a boolean sensor.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Current Sensitivity Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Sensitivity Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Supported Sensitivity Levels",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Supported Sensitivity Levels",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Default Sensitivity Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Default Sensitivity Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Alarms Active",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Active",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Alarms Suppressed",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Suppressed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Alarms Enabled",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Enabled",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Alarms Supported",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Supported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Sensor Fault",
+            "type": "SensorFaultBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Sensor Fault",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Suppress Alarm",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used to suppress the specified alarm mode.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Enable Disable Alarm",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used to enable or disable the specified alarm mode.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Boolean State Configuration"
+}

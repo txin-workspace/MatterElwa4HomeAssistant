@@ -1,0 +1,7 @@
+{
+    "name": "proxy configuration cluster",
+    "description": "Cluster to control Proxy Configuration",
+    "propertiesInfo": [],
+    "commands": [],
+    "nameMatterExact": "Proxy Configuration"
+}

@@ -1,0 +1,679 @@
+{
+    "name": "thread network diagnostics cluster",
+    "description": "The Thread Network Diagnostics Cluster provides a means to acquire standardized diagnostics metrics that MAY be used by a Node to assist a user or Administrative Node in diagnosing potential problems",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "Channel",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Channel",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Routing Role",
+            "type": "RoutingRoleEnum",
+            "typeId": "(-1, -1)",
+            "description": "Routing Role",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Network Name",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Network Name",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Pan Id",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Pan Id",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Extended Pan Id",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Extended Pan Id",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Mesh Local Prefix",
+            "type": "octet_string",
+            "typeId": "(-1, -1)",
+            "description": "Mesh Local Prefix",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Overrun Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Overrun Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Neighbor Table",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Neighbor Table",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Route Table",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Route Table",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Partition Id",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Partition Id",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Weighting",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Weighting",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0B",
+            "name": "Data Version",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Data Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0C",
+            "name": "Stable Data Version",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Stable Data Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0D",
+            "name": "Leader Router Id",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Leader Router Id",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0E",
+            "name": "Detached Role Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Detached Role Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0F",
+            "name": "Child Role Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Child Role Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x10",
+            "name": "Router Role Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Router Role Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x11",
+            "name": "Leader Role Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Leader Role Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x12",
+            "name": "Attach Attempt Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Attach Attempt Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x13",
+            "name": "Partition Id Change Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Partition Id Change Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x14",
+            "name": "Better Partition Attach Attempt Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Better Partition Attach Attempt Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x15",
+            "name": "Parent Change Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Parent Change Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x16",
+            "name": "Tx Total Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Total Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x17",
+            "name": "Tx Unicast Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Unicast Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x18",
+            "name": "Tx Broadcast Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Broadcast Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x19",
+            "name": "Tx Ack Requested Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Ack Requested Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x1A",
+            "name": "Tx Acked Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Acked Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x1B",
+            "name": "Tx No Ack Requested Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx No Ack Requested Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x1C",
+            "name": "Tx Data Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Data Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x1D",
+            "name": "Tx Data Poll Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Data Poll Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x1E",
+            "name": "Tx Beacon Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Beacon Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x1F",
+            "name": "Tx Beacon Request Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Beacon Request Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x20",
+            "name": "Tx Other Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Other Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x21",
+            "name": "Tx Retry Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Retry Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x22",
+            "name": "Tx Direct Max Retry Expiry Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Direct Max Retry Expiry Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x23",
+            "name": "Tx Indirect Max Retry Expiry Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Indirect Max Retry Expiry Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x24",
+            "name": "Tx Err Cca Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Err Cca Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x25",
+            "name": "Tx Err Abort Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Err Abort Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x26",
+            "name": "Tx Err Busy Channel Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Tx Err Busy Channel Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x27",
+            "name": "Rx Total Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Total Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x28",
+            "name": "Rx Unicast Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Unicast Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x29",
+            "name": "Rx Broadcast Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Broadcast Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x2A",
+            "name": "Rx Data Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Data Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x2B",
+            "name": "Rx Data Poll Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Data Poll Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x2C",
+            "name": "Rx Beacon Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Beacon Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x2D",
+            "name": "Rx Beacon Request Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Beacon Request Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x2E",
+            "name": "Rx Other Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Other Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x2F",
+            "name": "Rx Address Filtered Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Address Filtered Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x30",
+            "name": "Rx Dest Addr Filtered Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Dest Addr Filtered Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x31",
+            "name": "Rx Duplicated Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Duplicated Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x32",
+            "name": "Rx Err No Frame Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Err No Frame Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x33",
+            "name": "Rx Err Unknown Neighbor Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Err Unknown Neighbor Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x34",
+            "name": "Rx Err Invalid Src Addr Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Err Invalid Src Addr Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x35",
+            "name": "Rx Err Sec Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Err Sec Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x36",
+            "name": "Rx Err Fcs Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Err Fcs Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x37",
+            "name": "Rx Err Other Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Rx Err Other Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x38",
+            "name": "Active Timestamp",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Active Timestamp",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x39",
+            "name": "Pending Timestamp",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Pending Timestamp",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x3A",
+            "name": "Delay",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Delay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x3B",
+            "name": "Security Policy",
+            "type": "SecurityPolicy",
+            "typeId": "(-1, -1)",
+            "description": "Security Policy",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x3C",
+            "name": "Channel Page0 Mask",
+            "type": "octet_string",
+            "typeId": "(-1, -1)",
+            "description": "Channel Page0 Mask",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x3D",
+            "name": "Operational Dataset Components",
+            "type": "OperationalDatasetComponents",
+            "typeId": "(-1, -1)",
+            "description": "Operational Dataset Components",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x3E",
+            "name": "Active Network Faults List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Network Faults List",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Reset Counts",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reception of this command SHALL reset the OverrunCount attributes to 0",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Thread Network Diagnostics"
+}

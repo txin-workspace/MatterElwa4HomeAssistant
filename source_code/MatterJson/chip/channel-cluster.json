@@ -1,0 +1,130 @@
+{
+    "name": "channel cluster",
+    "description": "This cluster provides an interface for controlling the current Channel on a device.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Channel List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Channel List",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Lineup",
+            "type": "LineupInfoStruct",
+            "typeId": "(-1, -1)",
+            "description": "Lineup",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Current Channel",
+            "type": "ChannelInfoStruct",
+            "typeId": "(-1, -1)",
+            "description": "Current Channel",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Change Channel",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Change the channel on the media player to the channel case-insensitive exact matching the value passed as an argument. ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Change Channel By Number",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Change the channel on the media plaeyer to the channel with the given Number in the ChannelList attribute.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Skip Channel",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command provides channel up and channel down functionality, but allows channel index jumps of size Count. When the value of the increase or decrease is larger than the number of channels remaining in the given direction, then the behavior SHALL be to return to the beginning (or end) of the channel list and continue. For example, if the current channel is at index 0 and count value of -1 is given, then the current channel should change to the last channel.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Change Channel Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL display the active status of the input list on screen.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Get Program Guide",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command retrieves the program guide. It accepts several filter parameters to return specific schedule and program information from a content app. The command shall receive in response a ProgramGuideResponse.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Program Guide Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is a response to the GetProgramGuide command.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Record Program",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Record a specific program or series when it goes live. This functionality enables DVR recording features.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Cancel Record Program",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Cancel recording for a specific program or series.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Channel"
+}

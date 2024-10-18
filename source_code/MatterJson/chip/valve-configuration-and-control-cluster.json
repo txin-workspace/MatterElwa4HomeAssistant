@@ -1,0 +1,131 @@
+{
+    "name": "valve configuration and control cluster",
+    "description": "This cluster is used to configure a valve.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Open Duration",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Open Duration",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Default Open Duration",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Default Open Duration",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Auto Close Time",
+            "type": "epoch_us",
+            "typeId": "(-1, -1)",
+            "description": "Auto Close Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Remaining Duration",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Remaining Duration",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Current State",
+            "type": "ValveStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Current State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Target State",
+            "type": "ValveStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Target State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Current Level",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Current Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Target Level",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Target Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Default Open Level",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Default Open Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Valve Fault",
+            "type": "ValveFaultBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Valve Fault",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Open",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used to set the valve to its open position.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Close",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used to set the valve to its closed position.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Valve Configuration and Control"
+}

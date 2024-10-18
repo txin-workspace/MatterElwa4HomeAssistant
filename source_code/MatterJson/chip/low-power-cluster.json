@@ -1,0 +1,19 @@
+{
+    "name": "low power cluster",
+    "description": "This cluster provides an interface for managing low power mode on a device.",
+    "propertiesInfo": [],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Sleep",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command shall put the device into low power mode.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Low Power"
+}

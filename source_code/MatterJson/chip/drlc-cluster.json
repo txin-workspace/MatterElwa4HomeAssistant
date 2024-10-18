@@ -1,0 +1,136 @@
+{
+    "name": "drlc cluster",
+    "description": "This cluster provides an interface to the functionality of Smart Energy Demand Response and Load Control.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Load Control Programs",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Load Control Programs",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Number Of Load Control Programs",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Load Control Programs",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Events",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Events",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Active Events",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Events",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Number Of Events Per Program",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Events Per Program",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Number Of Transitions",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Transitions",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "DefaultRandomStart",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "DefaultRandomStart",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "DefaultRandomDuration",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "DefaultRandomDuration",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Register Load Control Program Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Upon receipt, this SHALL insert a new LoadControlProgramStruct into LoadControlPrograms, or if the ProgramID matches an existing LoadControlProgramStruct, then the provider SHALL be updated with the provided values.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Unregister Load Control Program Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Upon receipt, this SHALL remove a the LoadControlProgramStruct from LoadControlPrograms with the matching ProgramID.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Add Load Control Event Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        On receipt of the AddLoadControlEventsRequest command, the server SHALL add a load control event.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Remove Load Control Event Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Upon receipt, this SHALL remove the LoadControlEventStruct with the matching EventID from LoadEventPrograms.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Clear Load Control Events Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Upon receipt, this SHALL clear all the load control events.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Demand Response Load Control"
+}

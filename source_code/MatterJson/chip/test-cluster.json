@@ -1,0 +1,1125 @@
+{
+    "name": "test cluster",
+    "description": "The Test Cluster is meant to validate the generated code",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "",
+            "type": "Bitmap8MaskMap",
+            "typeId": "(1, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "",
+            "type": "Bitmap16MaskMap",
+            "typeId": "(2, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "",
+            "type": "Bitmap32MaskMap",
+            "typeId": "(4, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "",
+            "type": "Bitmap64MaskMap",
+            "typeId": "(8, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "",
+            "type": "int40u",
+            "typeId": "(5, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "",
+            "type": "int48u",
+            "typeId": "(6, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "",
+            "type": "int56u",
+            "typeId": "(7, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000C",
+            "name": "",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000D",
+            "name": "",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000E",
+            "name": "",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000F",
+            "name": "",
+            "type": "int24s",
+            "typeId": "(3, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "",
+            "type": "int32s",
+            "typeId": "(4, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "",
+            "type": "int40s",
+            "typeId": "(5, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "",
+            "type": "int48s",
+            "typeId": "(6, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "",
+            "type": "int56s",
+            "typeId": "(7, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "",
+            "type": "int64s",
+            "typeId": "(8, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0015",
+            "name": "",
+            "type": "enum8",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0016",
+            "name": "",
+            "type": "enum16",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0017",
+            "name": "",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0018",
+            "name": "",
+            "type": "double",
+            "typeId": "(8, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0019",
+            "name": "",
+            "type": "octet_string",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001A",
+            "name": "",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001B",
+            "name": "",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001C",
+            "name": "",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001D",
+            "name": "",
+            "type": "long_octet_string",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001E",
+            "name": "",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001F",
+            "name": "",
+            "type": "LONG_CHAR_STRING",
+            "typeId": "(128, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0020",
+            "name": "",
+            "type": "epoch_us",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0021",
+            "name": "",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0022",
+            "name": "",
+            "type": "vendor_id",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0023",
+            "name": "",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0024",
+            "name": "",
+            "type": "SimpleEnum",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0025",
+            "name": "",
+            "type": "SimpleStruct",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0026",
+            "name": "",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0027",
+            "name": "",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0028",
+            "name": "",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0029",
+            "name": "",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x002A",
+            "name": "",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x002B",
+            "name": "",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0030",
+            "name": "",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0031",
+            "name": "",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0032",
+            "name": "",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4000",
+            "name": "",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4001",
+            "name": "",
+            "type": "Bitmap8MaskMap",
+            "typeId": "(1, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4002",
+            "name": "",
+            "type": "Bitmap16MaskMap",
+            "typeId": "(2, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4003",
+            "name": "",
+            "type": "Bitmap32MaskMap",
+            "typeId": "(4, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4004",
+            "name": "",
+            "type": "Bitmap64MaskMap",
+            "typeId": "(8, 2)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4005",
+            "name": "",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4006",
+            "name": "",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4007",
+            "name": "",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4008",
+            "name": "",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4009",
+            "name": "",
+            "type": "int40u",
+            "typeId": "(5, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400A",
+            "name": "",
+            "type": "int48u",
+            "typeId": "(6, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400B",
+            "name": "",
+            "type": "int56u",
+            "typeId": "(7, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400C",
+            "name": "",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400D",
+            "name": "",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400E",
+            "name": "",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x400F",
+            "name": "",
+            "type": "int24s",
+            "typeId": "(3, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4010",
+            "name": "",
+            "type": "int32s",
+            "typeId": "(4, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4011",
+            "name": "",
+            "type": "int40s",
+            "typeId": "(5, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4012",
+            "name": "",
+            "type": "int48s",
+            "typeId": "(6, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4013",
+            "name": "",
+            "type": "int56s",
+            "typeId": "(7, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4014",
+            "name": "",
+            "type": "int64s",
+            "typeId": "(8, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4015",
+            "name": "",
+            "type": "enum8",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4016",
+            "name": "",
+            "type": "enum16",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4017",
+            "name": "",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4018",
+            "name": "",
+            "type": "double",
+            "typeId": "(8, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4019",
+            "name": "",
+            "type": "octet_string",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x401E",
+            "name": "",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4024",
+            "name": "",
+            "type": "SimpleEnum",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4025",
+            "name": "",
+            "type": "SimpleStruct",
+            "typeId": "(-1, -1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4026",
+            "name": "",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4027",
+            "name": "",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4028",
+            "name": "",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4029",
+            "name": "",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x402A",
+            "name": "",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00FF",
+            "name": "",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Test",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple command without any parameters and without a specific response\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Test Not Handled",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple command without any parameters and without a specific response not handled by the server\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Test Specific",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple command without any parameters and with a specific response\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Test Unknown Command",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple command that should not be added to the server.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Test Add Arguments",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes two arguments and returns their sum.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Test Simple Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is bool\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Test Struct Array Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes various arguments that are arrays, including an array of structs which have a list member.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Test Struct Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is struct.  The response echoes the\n        'b' field of the single arg.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Test Nested Struct Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is nested struct.  The response\n        echoes the 'b' field of ar1.c.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Test List Struct Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is a list of structs.  The response\n        returns false if there is some struct in the list whose 'b' field is\n        false, and true otherwise (including if the list is empty).\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Test List Int8 U Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is a list of INT8U.  The response\n        returns false if the list contains a 0 in it, true otherwise (including\n        if the list is empty).\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0B",
+            "name": "Test Nested Struct List Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is a Nested Struct List.  The\n        response returns false if there is some struct in arg1 (either directly\n        in arg1.c or in the arg1.d list) whose 'b' field is false, and true\n        otherwise.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0C",
+            "name": "Test List Nested Struct List Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is a list of Nested Struct List.\n        The response returns false if there is some struct in arg1 (either\n        directly in as the 'c' field of an entry 'd' list of an entry) whose 'b'\n        field is false, and true otherwise (including if the list is empty).\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0D",
+            "name": "Test List Int8 U Reverse Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is a list of INT8U and expects a\n        response that reverses the list.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0E",
+            "name": "Test Enums Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that sends a vendor id and an enum.  The server is expected to\n        echo them back.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0F",
+            "name": "Test Nullable Optional Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is nullable and optional.  The\n        response returns a boolean indicating whether the argument was present,\n        if that's true a boolean indicating whether the argument was null, and\n        if that' false the argument it received.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x10",
+            "name": "Test Complex Nullable Optional Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes various arguments which can be nullable and/or optional.  The\n        response returns information about which things were received and what\n        their state was.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x11",
+            "name": "Simple Struct Echo Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an argument which is a struct.  The response echoes\n        the struct back.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x12",
+            "name": "Timed Invoke Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that just responds with a success status if the timed invoke\n        conditions are met.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x13",
+            "name": "Test Simple Optional Argument Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes an optional argument which is bool. It responds with a success value if the optional is set to any value.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x14",
+            "name": "Test Emit Test Event Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes identical arguments to the fields of the TestEvent and logs the TestEvent to the buffer.  Command returns an event ID as the response.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x15",
+            "name": "Test Emit Test Fabric Scoped Event Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that takes identical arguments to the fields of the TestFabricScopedEvent and logs the TestFabricScopedEvent to the buffer.  Command returns an event ID as the response.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Test Specific Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple response for TestWithResponse with a simple return value\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Test Add Arguments Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Response for TestAddArguments that returns the sum.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Test Simple Argument Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Simple response for TestSimpleArgumentRequest with a simple return value\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Test Struct Array Argument Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Response for TestStructArrayArgumentRequest with complicated return arguments\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Test List Int8 U Reverse Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Response that delivers the reversed list of uint8.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Test Enums Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Response that delivers a vendor id and an enum..\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Test Nullable Optional Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Delivers information about the argument TestNullableOptionalRequest had,\n        and the original value if there was one.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Test Complex Nullable Optional Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Delivers information about the arguments TestComplexNullableOptionalRequest had.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Boolean Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Delivers a single boolean argument. What the argument means depends on\n        what we're responding to.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Simple Struct Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command that returns a single argument which is a struct.  The contents\n        of the struct depend on what we are responding to.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Test Emit Test Event Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Delivers the ID of an event in response to test command emitting fabric scoped events.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0B",
+            "name": "Test Emit Test Fabric Scoped Event Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Delivers the ID of an event in response to test command emitting fabric scope events.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Unit Testing"
+}

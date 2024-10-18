@@ -1,0 +1,134 @@
+{
+    "name": "occupancy sensing cluster",
+    "description": "Attributes and commands for configuring occupancy sensing, and reporting occupancy status.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Occupancy",
+            "type": "OccupancyBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Occupancy",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Occupancy Sensor Type",
+            "type": "OccupancySensorTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Occupancy Sensor Type",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Occupancy Sensor Type Bitmap",
+            "type": "OccupancySensorTypeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Occupancy Sensor Type Bitmap",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "PIROccupiedToUnoccupiedDelay",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "PIROccupiedToUnoccupiedDelay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "PIRUnoccupiedToOccupiedDelay",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "PIRUnoccupiedToOccupiedDelay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "PIRUnoccupiedToOccupiedThreshold",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "PIRUnoccupiedToOccupiedThreshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0020",
+            "name": "UltrasonicOccupiedToUnoccupiedDelay",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "UltrasonicOccupiedToUnoccupiedDelay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0021",
+            "name": "UltrasonicUnoccupiedToOccupiedDelay",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "UltrasonicUnoccupiedToOccupiedDelay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0022",
+            "name": "UltrasonicUnoccupiedToOccupiedThreshold",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "UltrasonicUnoccupiedToOccupiedThreshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0030",
+            "name": "PhysicalContactOccupiedToUnoccupiedDelay",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "PhysicalContactOccupiedToUnoccupiedDelay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0031",
+            "name": "PhysicalContactUnoccupiedToOccupiedDelay",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "PhysicalContactUnoccupiedToOccupiedDelay",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0032",
+            "name": "PhysicalContactUnoccupiedToOccupiedThreshold",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "PhysicalContactUnoccupiedToOccupiedThreshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Occupancy Sensing"
+}

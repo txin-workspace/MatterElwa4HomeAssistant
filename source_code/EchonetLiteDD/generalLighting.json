@@ -1,0 +1,728 @@
+{
+  "deviceType": "generalLighting",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0290",
+  "descriptions": {
+    "ja": "一般照明",
+    "en": "General lighting"
+  },
+  "properties": {
+    "onTimerReservation": {
+      "epc": "0x90",
+      "descriptions": {
+        "ja": "ONタイマ予約設定",
+        "en": "ON timer reservation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "予約入",
+              "en": "Reservation ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "予約切",
+              "en": "Reservation OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "onTimerTime": {
+      "epc": "0x91",
+      "descriptions": {
+        "ja": "ONタイマ時刻設定値",
+        "en": "ON timer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "offTimerReservation": {
+      "epc": "0x94",
+      "descriptions": {
+        "ja": "OFFタイマ予約設定",
+        "en": "OFF timer reservation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "予約入",
+              "en": "Reservation ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "予約切",
+              "en": "Reservation OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "timeOfOffTimer": {
+      "epc": "0x95",
+      "descriptions": {
+        "ja": "OFFタイマ時刻設定値",
+        "en": "Time set by OFF timer"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "lightLevel": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "照明の明るさ設定",
+        "en": "Light level"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "lightColor": {
+      "epc": "0xB1",
+      "descriptions": {
+        "ja": "光色設定",
+        "en": "Light color setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "incandescent",
+          "white",
+          "daylightWhite",
+          "daylightColor",
+          "other",
+          "undefined"
+        ],
+        "values": [
+          {
+            "value": "incandescent",
+            "descriptions": {
+              "ja": "電球色",
+              "en": "Incandescent lamp color"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "white",
+            "descriptions": {
+              "ja": "白色",
+              "en": "White"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "daylightWhite",
+            "descriptions": {
+              "ja": "昼白色",
+              "en": "Daylight white"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "daylightColor",
+            "descriptions": {
+              "ja": "昼光色",
+              "en": "Daylight color"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "other",
+            "descriptions": {
+              "ja": "その他",
+              "en": "Other"
+            },
+            "edt": "0x40"
+          },
+          {
+            "value": "undefined",
+            "descriptions": {
+              "ja": "不明",
+              "en": "Undefined"
+            },
+            "edt": "0xFD"
+          }
+        ]
+      }
+    },
+    "lightLevelStep": {
+      "epc": "0xB2",
+      "descriptions": {
+        "ja": "照明の明るさ段数設定",
+        "en": "Light level step setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "0x01～設定可能照明の明るさ最大値(暗～明)",
+        "en": "From 0x01 to the maximum specifiable light level value (dark to bright)"
+      }
+    },
+    "lightColorLevelStep": {
+      "epc": "0xB3",
+      "descriptions": {
+        "ja": "光色レベル段数設定",
+        "en": "Light color step setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "0x01～設定可能光色レベル最大値(電球色～白色)",
+        "en": "From 0x01 to the maximum specifiable light color value (incandescent lamp color to white)"
+      }
+    },
+    "maximumSpecifiableLevel": {
+      "epc": "0xB4",
+      "descriptions": {
+        "ja": "設定可能レベル最大値",
+        "en": "Maximum specifiable values"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "lightLevel": {
+            "descriptions": {
+              "ja": "1Byte目:照明の明るさ",
+              "en": "Byte 1: light level"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 255
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "notLightLevel"
+                ],
+                "values": [
+                  {
+                    "value": "notLightLevel",
+                    "descriptions": {
+                      "ja": "機能を搭載していない場合",
+                      "en": "When the function is not implemented."
+                    },
+                    "edt": "0x00"
+                  }
+                ]
+              }
+            ]
+          },
+          "color": {
+            "descriptions": {
+              "ja": "2Byte目:光色",
+              "en": "Byte 2: light color"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 255
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "notColor"
+                ],
+                "values": [
+                  {
+                    "value": "notColor",
+                    "descriptions": {
+                      "ja": "機能を搭載していない場合",
+                      "en": "When the function is not implemented."
+                    },
+                    "edt": "0x00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "maximumSettableLevelForNightLighting": {
+      "epc": "0xB5",
+      "descriptions": {
+        "ja": "常夜灯設定可能レベル最大値",
+        "en": "Maximum value of settable level for night lighting"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "lightLevel": {
+            "descriptions": {
+              "ja": "1Byte目:照明の明るさ",
+              "en": "Byte 1: light level"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 255
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "notLightLevel"
+                ],
+                "values": [
+                  {
+                    "value": "notLightLevel",
+                    "descriptions": {
+                      "ja": "機能を搭載していない場合",
+                      "en": "When the function is not implemented"
+                    },
+                    "edt": "0x00"
+                  }
+                ]
+              }
+            ]
+          },
+          "color": {
+            "descriptions": {
+              "ja": "2Byte目:光色",
+              "en": "Byte 2: light color"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "minimum": 1,
+                "maximum": 255
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "notColor"
+                ],
+                "values": [
+                  {
+                    "value": "notColor",
+                    "descriptions": {
+                      "ja": "機能を搭載していない場合",
+                      "en": "When the function is not implemented."
+                    },
+                    "edt": "0x00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "operationMode": {
+      "epc": "0xB6",
+      "descriptions": {
+        "ja": "点灯モード設定",
+        "en": "Lighting mode setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "auto",
+          "normal",
+          "night",
+          "color"
+        ],
+        "values": [
+          {
+            "value": "auto",
+            "descriptions": {
+              "ja": "自動",
+              "en": "Auto"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "normal",
+            "descriptions": {
+              "ja": "通常灯",
+              "en": "Main lighting"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "night",
+            "descriptions": {
+              "ja": "常夜灯",
+              "en": "Night lighting"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "color",
+            "descriptions": {
+              "ja": "カラー灯",
+              "en": "Color lighting"
+            },
+            "edt": "0x45"
+          }
+        ]
+      }
+    },
+    "lightLevelForMainLighting": {
+      "epc": "0xB7",
+      "descriptions": {
+        "ja": "通常灯モード時照明の明るさ設定",
+        "en": "Light level setting for main lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "lightLevelStepForMainLighting": {
+      "epc": "0xB8",
+      "descriptions": {
+        "ja": "通常灯モード時照明の明るさ段数設定",
+        "en": "Light level step setting for main lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "0x01～設定可能照明の明るさ最大値(暗～明)",
+        "en": "Light level step setting for night lighting (dark to bright)"
+      }
+    },
+    "lightLevelForNightLighting": {
+      "epc": "0xB9",
+      "descriptions": {
+        "ja": "常夜灯モード時照明の明るさ設定",
+        "en": "Light level setting for night lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "note": {
+        "ja": "0x00-0x64",
+        "en": "0x00-0x64"
+      }
+    },
+    "lightLevelStepForNightLighting": {
+      "epc": "0xBA",
+      "descriptions": {
+        "ja": "常夜灯モード時照明の明るさ段数設定",
+        "en": "Light level step setting for night lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "0x01～設定可能照明の明るさ最大値(暗～明)",
+        "en": "0x01 to the maximum value of settable light level (dark to bright)"
+      }
+    },
+    "lightColorForMainLighting": {
+      "epc": "0xBB",
+      "descriptions": {
+        "ja": "通常灯モード時光色設定",
+        "en": "Light color setting for main lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "incandescent",
+          "white",
+          "daylightWhite",
+          "daylightColor",
+          "other"
+        ],
+        "values": [
+          {
+            "value": "incandescent",
+            "descriptions": {
+              "ja": "電球色",
+              "en": "Incandescent lamp color"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "white",
+            "descriptions": {
+              "ja": "白色",
+              "en": "White"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "daylightWhite",
+            "descriptions": {
+              "ja": "昼白色",
+              "en": "Daylight white"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "daylightColor",
+            "descriptions": {
+              "ja": "昼光色",
+              "en": "Daylight color"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "other",
+            "descriptions": {
+              "ja": "その他",
+              "en": "Other"
+            },
+            "edt": "0x40"
+          }
+        ]
+      }
+    },
+    "lightColorLevelStepForMainLighting": {
+      "epc": "0xBC",
+      "descriptions": {
+        "ja": "通常灯モード時光色レベル段数設定",
+        "en": "Light color level step setting for main lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "0x01～設定可能光色レベル最大値(電球色～白色)",
+        "en": "0x01 to the maximum value of settable light color level (incandescent lamp color to white)"
+      }
+    },
+    "lightColorLevelForNightLighting": {
+      "epc": "0xBD",
+      "descriptions": {
+        "ja": "常夜灯モード時光色設定",
+        "en": "Light color setting for night lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "incandescent",
+          "white",
+          "daylightWhite",
+          "daylightColor",
+          "other"
+        ],
+        "values": [
+          {
+            "value": "incandescent",
+            "descriptions": {
+              "ja": "電球色",
+              "en": "Incandescent lamp color"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "white",
+            "descriptions": {
+              "ja": "白色",
+              "en": "White"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "daylightWhite",
+            "descriptions": {
+              "ja": "昼白色",
+              "en": "Daylight white"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "daylightColor",
+            "descriptions": {
+              "ja": "昼光色",
+              "en": "Daylight color"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "other",
+            "descriptions": {
+              "ja": "その他",
+              "en": "Other"
+            },
+            "edt": "0x40"
+          }
+        ]
+      }
+    },
+    "lightColorLevelStepForNightLighting": {
+      "epc": "0xBE",
+      "descriptions": {
+        "ja": "常夜灯モード時光色レベル段数設定",
+        "en": "Light color level step setting for night lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "0x01～設定可能光色レベル最大値(電球色～白色)",
+        "en": "0x01 to the maximum value of settable light color level (incandescent lamp color to white)"
+      }
+    },
+    "autoMode": {
+      "epc": "0xBF",
+      "descriptions": {
+        "ja": "自動モード時点灯モード状態",
+        "en": "Lighting mode status in auto mode"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "normal",
+          "night",
+          "off",
+          "color"
+        ],
+        "values": [
+          {
+            "value": "normal",
+            "descriptions": {
+              "ja": "通常灯",
+              "en": "Main lighting"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "night",
+            "descriptions": {
+              "ja": "常夜灯",
+              "en": "Night lighting"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "off",
+            "descriptions": {
+              "ja": "消灯",
+              "en": "Off"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "color",
+            "descriptions": {
+              "ja": "カラー灯",
+              "en": "Color lighting"
+            },
+            "edt": "0x45"
+          }
+        ]
+      }
+    },
+    "rgb": {
+      "epc": "0xC0",
+      "descriptions": {
+        "ja": "カラー灯モード時RGB設定",
+        "en": "RGB setting for color lighting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "red": {
+            "descriptions": {
+              "ja": "1Byte目:R",
+              "en": "Byte 1: R"
+            },
+            "type": "number",
+            "minimum": 0,
+            "maximum": 255,
+            "multipleOf": 1
+          },
+          "green": {
+            "descriptions": {
+              "ja": "2Byte目:G",
+              "en": "Byte 2: G"
+            },
+            "type": "number",
+            "minimum": 0,
+            "maximum": 255,
+            "multipleOf": 1
+          },
+          "blue": {
+            "descriptions": {
+              "ja": "3Byte目:B",
+              "en": "Byte 3: B"
+            },
+            "type": "number",
+            "minimum": 0,
+            "maximum": 255,
+            "multipleOf": 1
+          }
+        }
+      }
+    }
+  }
+}

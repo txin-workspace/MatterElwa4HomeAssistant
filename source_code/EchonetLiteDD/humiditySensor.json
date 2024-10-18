@@ -1,0 +1,28 @@
+{
+  "deviceType": "humiditySensor",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0012",
+  "descriptions": {
+    "ja": "湿度センサ",
+    "en": "Humidity sensor"
+  },
+  "properties": {
+    "value": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "相対湿度計測値",
+        "en": "Measured value of relative humidity"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    }
+  }
+}

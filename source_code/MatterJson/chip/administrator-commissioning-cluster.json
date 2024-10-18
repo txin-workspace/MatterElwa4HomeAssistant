@@ -1,0 +1,69 @@
+{
+    "name": "administrator commissioning cluster",
+    "description": "Commands to trigger a Node to allow a new Administrator to commission it.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Window Status",
+            "type": "CommissioningWindowStatusEnum",
+            "typeId": "(-1, -1)",
+            "description": "Window Status",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Admin Fabric Index",
+            "type": "fabric_idx",
+            "typeId": "(-1, -1)",
+            "description": "Admin Fabric Index",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Admin Vendor Id",
+            "type": "vendor_id",
+            "typeId": "(-1, -1)",
+            "description": "Admin Vendor Id",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Open Commissioning Window",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used by a current Administrator to instruct a Node to go into commissioning mode using enhanced commissioning method.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Open Basic Commissioning Window",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used by a current Administrator to instruct a Node to go into commissioning mode using basic commissioning method, if the node supports it.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Revoke Commissioning",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used by a current Administrator to instruct a Node to revoke any active Open Commissioning Window or Open Basic Commissioning Window command.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Administrator Commissioning"
+}

@@ -1,0 +1,411 @@
+{
+  "deviceType": "tv",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0602",
+  "descriptions": {
+    "ja": "テレビ",
+    "en": "Television"
+  },
+  "properties": {
+    "displayControlStatus": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "表示制御設定",
+        "en": "Display control setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "enabled",
+          "disabled"
+        ],
+        "values": [
+          {
+            "value": "enabled",
+            "descriptions": {
+              "ja": "表示",
+              "en": "Displaying enabled"
+            },
+            "edt": "0x30"
+          },
+          {
+            "value": "disabled",
+            "descriptions": {
+              "ja": "非表示",
+              "en": "Displaying disabled"
+            },
+            "edt": "0x31"
+          }
+        ]
+      }
+    },
+    "stringSettingAcceptanceStatus": {
+      "epc": "0xB1",
+      "descriptions": {
+        "ja": "文字列設定受付可能状態",
+        "en": "Character string setting acceptance status"
+      },
+      "writable": false,
+      "observable": true,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "ready",
+          "busy"
+        ],
+        "values": [
+          {
+            "value": "ready",
+            "descriptions": {
+              "ja": "Ready",
+              "en": "Ready"
+            },
+            "edt": "0x30"
+          },
+          {
+            "value": "busy",
+            "descriptions": {
+              "ja": "Busy",
+              "en": "Busy"
+            },
+            "edt": "0x31"
+          }
+        ]
+      },
+      "note": {
+        "ja": "快適支援サービスとセキュリティサービスに対応する場合、本プロパティの搭載は必須とする",
+        "en": "In the case where a 'home amenity service' or a 'security service' is to be supported, the implementation of this property is mandatory."
+      }
+    },
+    "supportedCharacterCode": {
+      "epc": "0xB2",
+      "descriptions": {
+        "ja": "表示可能文字コード",
+        "en": "Supported character codes"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "ansiX34Equipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "shiftJisEquipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "jisEquipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "japaneseEucEquipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "ucs4Equipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "ucs2Equipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "latin1Equipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          },
+          "utf8Equipped": {
+            "type": "boolean",
+            "values": [
+              {
+                "value": false,
+                "descriptions": {
+                  "ja": "非搭載",
+                  "en": "Not implemented"
+                },
+                "edt": "0x00"
+              },
+              {
+                "value": true,
+                "descriptions": {
+                  "ja": "搭載",
+                  "en": "Implemented"
+                },
+                "edt": "0x01"
+              }
+            ]
+          }
+        }
+      },
+      "note": {
+        "ja": "快適支援サービスとセキュリティサービスに対応する場合、本プロパティの搭載は必須とする",
+        "en": "In the case where a 'home amenity service' or a 'security service' is to be supported, the implementation of this property is mandatory."
+      }
+    },
+    "characterStringPresented": {
+      "epc": "0xB3",
+      "descriptions": {
+        "ja": "伝達文字列設定",
+        "en": "Character string to present to the user"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "length": {
+            "descriptions": {
+              "ja": "伝達文字バイトコード列データ長の16 進換算値",
+              "en": "Byte code sequence data length of the character string to present to the user converted to the hexadecimal format"
+            },
+            "type": "number",
+            "minimum": 0,
+            "maximum": 244
+          },
+          "characterCode": {
+            "descriptions": {
+              "ja": "使用文字コード",
+              "en": "Character code to use"
+            },
+            "type": "string",
+            "enum": [
+              "ansi_x3_4",
+              "shift_jis",
+              "jis",
+              "japanese_euc",
+              "ucs_4",
+              "ucs_2",
+              "latin_1",
+              "utf_8"
+            ],
+            "values": [
+              {
+                "value": "ansi_x3_4",
+                "descriptions": {
+                  "ja": "ANSI X3.4",
+                  "en": "ANSI X3.4"
+                },
+                "edt": "0x01"
+              },
+              {
+                "value": "shift_jis",
+                "descriptions": {
+                  "ja": "Shift-JIS",
+                  "en": "Shift-JIS"
+                },
+                "edt": "0x02"
+              },
+              {
+                "value": "jis",
+                "descriptions": {
+                  "ja": "JIS",
+                  "en": "JIS"
+                },
+                "edt": "0x03"
+              },
+              {
+                "value": "japanese_euc",
+                "descriptions": {
+                  "ja": "日本語EUC",
+                  "en": "Japanese EUC"
+                },
+                "edt": "0x04"
+              },
+              {
+                "value": "ucs_4",
+                "descriptions": {
+                  "ja": "UCS-4",
+                  "en": "UCS-4"
+                },
+                "edt": "0x05"
+              },
+              {
+                "value": "ucs_2",
+                "descriptions": {
+                  "ja": "UCS-2",
+                  "en": "UCS-2"
+                },
+                "edt": "0x06"
+              },
+              {
+                "value": "latin_1",
+                "descriptions": {
+                  "ja": "Latin-1",
+                  "en": "Latin-1"
+                },
+                "edt": "0x07"
+              },
+              {
+                "value": "utf_8",
+                "descriptions": {
+                  "ja": "UTF-8",
+                  "en": "UTF-8"
+                },
+                "edt": "0x08"
+              }
+            ]
+          },
+          "characterString": {
+            "descriptions": {
+              "ja": "Max244Byte 分の伝達文字列バイトコード列",
+              "en": "Byte code sequence of the character string to present to the user (max.244 bytes)"
+            },
+            "type": "string"
+          }
+        }
+      }
+    },
+    "lengthOfStringAccepted": {
+      "epc": "0xB4",
+      "descriptions": {
+        "ja": "受付け伝達文字列長",
+        "en": "Length of character string accepted"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "length": {
+            "descriptions": {
+              "ja": "文字列の総バイト数",
+              "en": "data size of the string"
+            },
+            "type": "number",
+            "minimum": 0,
+            "maximum": 244
+          }
+        }
+      },
+      "note": {
+        "ja": "快適支援サービスとセキュリティサービスに対応する場合、本プロパティの搭載は必須とする",
+        "en": "In the case where a 'home amenity service' or a 'security service' is to be supported, the implementation of this property is mandatory."
+      }
+    }
+  }
+}

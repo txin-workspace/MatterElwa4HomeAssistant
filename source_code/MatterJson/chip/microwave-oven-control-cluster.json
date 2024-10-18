@@ -1,0 +1,82 @@
+{
+    "name": "microwave oven control cluster",
+    "description": "Attributes and commands for configuring the microwave oven control, and reporting cooking stats.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0001",
+            "name": "Cook Time",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Cook Time",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Power Setting",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Power Setting",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Min Power",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Min Power",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Max Power",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Max Power",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Power Step",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Power Step",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Set Cooking Parameters",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set Cooking Parameters",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Add More Time",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Add More Cooking Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Microwave Oven Control"
+}

@@ -1,0 +1,30 @@
+{
+    "name": "content app observer cluster",
+    "description": "This cluster provides an interface for sending targeted commands to an Observer of a Content App on a Video Player device such as a Streaming Media Player, Smart TV or Smart Screen. The cluster server for Content App Observer is implemented by an endpoint that communicates with a Content App, such as a Casting Video Client. The cluster client for Content App Observer is implemented by a Content App endpoint. A Content App is informed of the NodeId of an Observer when a binding is set on the Content App. The Content App can then send the ContentAppMessage to the Observer (server cluster), and the Observer responds with a ContentAppMessageResponse.",
+    "propertiesInfo": [],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Content App Message",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the data field MAY be parsed and interpreted. Message encoding is specific to the Content App. A Content App MAY when possible read attributes from the Basic Information Cluster on the Observer and use this to determine the Message encoding.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Content App Message Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL be generated in response to ContentAppMessage command.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Content App Observer"
+}

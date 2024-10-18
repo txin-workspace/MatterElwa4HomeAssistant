@@ -1,0 +1,26 @@
+{
+    "name": "localization configuration cluster",
+    "description": "Nodes should be expected to be deployed to any and all regions of the world. These global regions\n      may have differing common languages, units of measurements, and numerical formatting\n      standards. As such, Nodes that visually or audibly convey information need a mechanism by which\n      they can be configured to use a user\u2019s preferred language, units, etc",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "ActiveLocale",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "ActiveLocale",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Supported Locales",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Locales",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Localization Configuration"
+}

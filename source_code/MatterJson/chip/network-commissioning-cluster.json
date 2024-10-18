@@ -1,0 +1,239 @@
+{
+    "name": "network commissioning cluster",
+    "description": "Functionality to configure, enable, disable network credentials and access on a Matter device.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "MaxNetworks",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "MaxNetworks",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Networks",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Networks",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Scan Max Time Seconds",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Scan Max Time Seconds",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Connect Max Time Seconds",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Connect Max Time Seconds",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "InterfaceEnabled",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "InterfaceEnabled",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "LastNetworkingStatus",
+            "type": "NetworkCommissioningStatusEnum",
+            "typeId": "(-1, -1)",
+            "description": "LastNetworkingStatus",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "LastNetworkID",
+            "type": "octet_string",
+            "typeId": "(-1, -1)",
+            "description": "LastNetworkID",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "LastConnectErrorValue",
+            "type": "int32s",
+            "typeId": "(4, 0)",
+            "description": "LastConnectErrorValue",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "SupportedWiFiBands",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "SupportedWiFiBands",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "SupportedThreadFeatures",
+            "type": "ThreadCapabilitiesBitmap",
+            "typeId": "(-1, -1)",
+            "description": "SupportedThreadFeatures",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "ThreadVersion",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ThreadVersion",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Scan Networks",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Detemine the set of networks the device sees as available.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Scan Networks Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Relay the set of networks the device sees as available back to the client.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Add Or Update Wi Fi Network",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Add or update the credentials for a given Wi-Fi network.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Add Or Update Thread Network",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Add or update the credentials for a given Thread network.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Remove Network",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Remove the definition of a given network (including its credentials).",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Network Config Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Response command for various commands that add/remove/modify network credentials.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Connect Network",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Connect to the specified network, using previously-defined credentials.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Connect Network Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Command that indicates whether we have succcessfully connected to a network.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Reorder Network",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Modify the order in which networks will be presented in the Networks attribute.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Query Identity",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Retrieve details about and optionally proof of possession of a network client identity.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0a",
+            "name": "Query Identity Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Command that contains details about a network client identity and optionally a proof of possession.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Network Commissioning"
+}

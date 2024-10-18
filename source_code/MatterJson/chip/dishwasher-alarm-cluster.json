@@ -1,0 +1,69 @@
+{
+    "name": "dishwasher alarm cluster",
+    "description": "Attributes and commands for configuring the Dishwasher alarm.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Mask",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "Mask",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Latch",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "Latch",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "State",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Supported",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "Supported",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Reset",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reset alarm",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Modify Enabled Alarms",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Modify enabled alarms",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Dishwasher Alarm"
+}

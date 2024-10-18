@@ -1,0 +1,7 @@
+{
+    "name": "proxy discovery cluster",
+    "description": "Cluster to control Proxy Discovery",
+    "propertiesInfo": [],
+    "commands": [],
+    "nameMatterExact": "Proxy Discovery"
+}

@@ -1,0 +1,292 @@
+{
+  "deviceType": "commercialAirConditionerOutdoorUnit",
+  "metaData": {
+    "version": "1.4.1"
+  },
+  "eoj": "0x0157",
+  "descriptions": {
+    "ja": "業務用パッケージエアコン室外機 (設備用を除く)",
+    "en": "Package-type commercial air conditioner (outdoor unit)"
+  },
+  "properties": {
+    "specialState": {
+      "epc": "0xAB",
+      "descriptions": {
+        "ja": "特殊状態",
+        "en": "Special state"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "通常状態",
+              "en": "Normal operation"
+            },
+            "edt": "0x40"
+          },
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "特殊状態",
+              "en": "Special state"
+            },
+            "edt": "0x41"
+          }
+        ]
+      }
+    },
+    "ratedPowerConsumption": {
+      "epc": "0xB8",
+      "descriptions": {
+        "ja": "室外機定格消費電力値",
+        "en": "Rated power consumption of outdoor unit"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "cooling": {
+            "descriptions": {
+              "ja": "冷房",
+              "en": "Cooling"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "unit": "W",
+                "minimum": 0,
+                "maximum": 4294967293
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "unsupported"
+                ],
+                "values": [
+                  {
+                    "value": "unsupported",
+                    "descriptions": {
+                      "ja": "未サポート",
+                      "en": "Unsupported"
+                    },
+                    "edt": "0xFFFFFFFE"
+                  }
+                ]
+              }
+            ]
+          },
+          "heating": {
+            "descriptions": {
+              "ja": "暖房",
+              "en": "Heating"
+            },
+            "oneOf": [
+              {
+                "type": "number",
+                "unit": "W",
+                "minimum": 0,
+                "maximum": 4294967293
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "unsupported"
+                ],
+                "values": [
+                  {
+                    "value": "unsupported",
+                    "descriptions": {
+                      "ja": "未サポート",
+                      "en": "Unsupported"
+                    },
+                    "edt": "0xFFFFFFFE"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      }
+    },
+    "outdoorTemperature": {
+      "epc": "0xBE",
+      "descriptions": {
+        "ja": "室外機温度計測値",
+        "en": "Measured outdoor unit temperature"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": -127,
+            "maximum": 125
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測値を返せない",
+                  "en": "When the measurement value cannot be returned"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "groupInformation": {
+      "epc": "0xCA",
+      "descriptions": {
+        "ja": "グループ情報",
+        "en": "Group information"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 253
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noSetting"
+            ],
+            "values": [
+              {
+                "value": "noSetting",
+                "descriptions": {
+                  "ja": "設定なし",
+                  "en": "No setting"
+                },
+                "edt": "0x00"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "powerConsumption": {
+      "epc": "0xDB",
+      "descriptions": {
+        "ja": "室外機消費電力計測値",
+        "en": "Measured power consumption of outdoor unit"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": 0,
+        "maximum": 4294967293
+      }
+    },
+    "powerConsumptionWillBeSaved": {
+      "epc": "0xDD",
+      "descriptions": {
+        "ja": "室外機節電可能消費電力",
+        "en": "Possible power savings for outdoor units"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": 0,
+        "maximum": 4294967293
+      }
+    },
+    "powerConsumptionLimit": {
+      "epc": "0xDE",
+      "descriptions": {
+        "ja": "室外機消費電力制限設定",
+        "en": "Settings restricting power consumption of outdoor units"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "W",
+            "minimum": 1,
+            "maximum": 4294967293
+          },
+          {
+            "type": "string",
+            "enum": [
+              "canceling"
+            ],
+            "values": [
+              {
+                "value": "canceling",
+                "descriptions": {
+                  "ja": "電力制限解除",
+                  "en": "Canceling the restriction"
+                },
+                "edt": "0x00000000"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "restrictedMinimumPowerConsumption": {
+      "epc": "0xDF",
+      "descriptions": {
+        "ja": "室外機抑制最低消費電力",
+        "en": "Minimum power consumption for restricted outdoor unit"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": 0,
+        "maximum": 4294967293
+      }
+    },
+    "groupDeviceList": {
+      "descriptions": {
+        "ja": "グループ内デバイスリスト",
+        "en": "List of devices in group"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "deviceId": {
+              "type": "string"
+            },
+            "deviceType": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "WebAPIの'devices'で管理されている機器のIDおよびその'deviceType'を記述",
+        "en": "Describe the ID of the device managed in 'devices' of WebAPI and its 'deviceType'."
+      }
+    }
+  }
+}

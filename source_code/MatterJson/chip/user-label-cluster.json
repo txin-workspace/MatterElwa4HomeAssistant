@@ -1,0 +1,17 @@
+{
+    "name": "user label cluster",
+    "description": "The User Label Cluster provides a feature to tag an endpoint with zero or more labels.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "LabelList",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "LabelList",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "User Label"
+}

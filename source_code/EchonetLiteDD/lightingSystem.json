@@ -1,0 +1,76 @@
+{
+  "deviceType": "lightingSystem",
+  "metaData": {
+    "version": "1.4.1"
+  },
+  "eoj": "0x02A3",
+  "descriptions": {
+    "ja": "照明システム",
+    "en": "Lighting system"
+  },
+  "properties": {
+    "lightLevel": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "照明の明るさ設定",
+        "en": "Light level setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "sceneId": {
+      "epc": "0xC0",
+      "descriptions": {
+        "ja": "シーン制御設定",
+        "en": "Scene control setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 253
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noSetting"
+            ],
+            "values": [
+              {
+                "value": "noSetting",
+                "descriptions": {
+                  "ja": "設定なし",
+                  "en": "No setting"
+                },
+                "edt": "0x00"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "maximumNumberOfSceneId": {
+      "epc": "0xC1",
+      "descriptions": {
+        "ja": "シーン制御設定可能数",
+        "en": "Number that can assign scene control setting"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 253
+      }
+    }
+  }
+}

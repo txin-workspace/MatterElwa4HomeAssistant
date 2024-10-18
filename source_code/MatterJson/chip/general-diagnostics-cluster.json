@@ -1,0 +1,135 @@
+{
+    "name": "general diagnostics cluster",
+    "description": "The General Diagnostics Cluster, along with other diagnostics clusters, provide a means to acquire standardized diagnostics metrics that MAY be used by a Node to assist a user or Administrative Node in diagnosing potential problems.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "Network Interfaces",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Network Interfaces",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Reboot Count",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Reboot Count",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Up Time",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Up Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Total Operational Hours",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Total Operational Hours",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Boot Reason",
+            "type": "BootReasonEnum",
+            "typeId": "(-1, -1)",
+            "description": "Boot Reason",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Active Hardware Faults",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Hardware Faults",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Active Radio Faults",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Radio Faults",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Active Network Faults",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Network Faults",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Test Event Triggers Enabled",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Test Event Triggers Enabled",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Test Event Trigger",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Provide a means for certification tests to trigger some test-plan-specific events",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Time Snapshot",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Take a snapshot of system time and epoch time.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Time Snapshot Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Response for the TimeSnapshot command.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "General Diagnostics"
+}

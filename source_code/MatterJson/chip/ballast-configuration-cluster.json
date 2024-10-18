@@ -1,0 +1,152 @@
+{
+    "name": "ballast configuration cluster",
+    "description": "Attributes and commands for configuring a lighting ballast.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Physical Min Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Physical Min Level",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Physical Max Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Physical Max Level",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Ballast Status",
+            "type": "BallastStatusBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Ballast Status",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "MinLevel",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "MinLevel",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "MaxLevel",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "MaxLevel",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "IntrinsicBallastFactor",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "IntrinsicBallastFactor",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0015",
+            "name": "BallastFactorAdjustment",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "BallastFactorAdjustment",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0020",
+            "name": "Lamp Quantity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Lamp Quantity",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0030",
+            "name": "LampType",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "LampType",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0031",
+            "name": "LampManufacturer",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "LampManufacturer",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0032",
+            "name": "LampRatedHours",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "LampRatedHours",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0033",
+            "name": "LampBurnHours",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "LampBurnHours",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0034",
+            "name": "LampAlarmMode",
+            "type": "LampAlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "LampAlarmMode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0035",
+            "name": "LampBurnHoursTripPoint",
+            "type": "int24u",
+            "typeId": "(3, 1)",
+            "description": "LampBurnHoursTripPoint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Ballast Configuration"
+}

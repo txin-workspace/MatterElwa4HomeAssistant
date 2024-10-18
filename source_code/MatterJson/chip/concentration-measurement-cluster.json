@@ -1,0 +1,1218 @@
+{
+    "name": "concentration measurement cluster",
+    "description": "Attributes for reporting radon concentration measurements",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Min Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Max Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Peak Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Peak Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Peak Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Peak Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Average Measured Value",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Average Measured Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Average Measured Value Window",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Average Measured Value Window",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Uncertainty",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Uncertainty",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Measurement Unit",
+            "type": "MeasurementUnitEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Unit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Measurement Medium",
+            "type": "MeasurementMediumEnum",
+            "typeId": "(-1, -1)",
+            "description": "Measurement Medium",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000a",
+            "name": "Level Value",
+            "type": "LevelValueEnum",
+            "typeId": "(-1, -1)",
+            "description": "Level Value",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Radon Concentration Measurement"
+}

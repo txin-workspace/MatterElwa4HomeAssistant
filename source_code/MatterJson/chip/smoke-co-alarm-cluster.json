@@ -1,0 +1,153 @@
+{
+    "name": "smoke co alarm cluster",
+    "description": "This cluster provides an interface for observing and managing the state of smoke and CO alarms.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Expressed State",
+            "type": "ExpressedStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Expressed State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Smoke State",
+            "type": "AlarmStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Smoke State",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "C O State",
+            "type": "AlarmStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "C O State",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Battery Alert",
+            "type": "AlarmStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Battery Alert",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Device Muted",
+            "type": "MuteStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Device Muted",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Test In Progress",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Test In Progress",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Hardware Fault Alert",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Hardware Fault Alert",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "End Of Service Alert",
+            "type": "EndOfServiceEnum",
+            "typeId": "(-1, -1)",
+            "description": "End Of Service Alert",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Interconnect Smoke Alarm",
+            "type": "AlarmStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Interconnect Smoke Alarm",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Interconnect C O Alarm",
+            "type": "AlarmStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Interconnect C O Alarm",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Contamination State",
+            "type": "ContaminationStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Contamination State",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "SmokeSensitivityLevel",
+            "type": "SensitivityEnum",
+            "typeId": "(-1, -1)",
+            "description": "SmokeSensitivityLevel",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000C",
+            "name": "Expiry Date",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Expiry Date",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Self Test Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL initiate a device self-test.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Smoke CO Alarm"
+}

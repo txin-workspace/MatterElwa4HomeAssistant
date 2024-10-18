@@ -1,0 +1,17 @@
+{
+    "name": "air quality cluster",
+    "description": "Attributes for reporting air quality classification",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Air Quality",
+            "type": "AirQualityEnum",
+            "typeId": "(-1, -1)",
+            "description": "Air Quality",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Air Quality"
+}

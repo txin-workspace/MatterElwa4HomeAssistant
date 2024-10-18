@@ -1,0 +1,159 @@
+{
+    "name": "resource monitoring cluster",
+    "description": "Attributes and commands for monitoring activated carbon filters in a device",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Condition",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Condition",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Degradation Direction",
+            "type": "DegradationDirectionEnum",
+            "typeId": "(-1, -1)",
+            "description": "Degradation Direction",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Change Indication",
+            "type": "ChangeIndicationEnum",
+            "typeId": "(-1, -1)",
+            "description": "Change Indication",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "In Place Indicator",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "In Place Indicator",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Last Changed Time",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Last Changed Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Replacement Product List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Replacement Product List",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Condition",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Condition",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Degradation Direction",
+            "type": "DegradationDirectionEnum",
+            "typeId": "(-1, -1)",
+            "description": "Degradation Direction",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Change Indication",
+            "type": "ChangeIndicationEnum",
+            "typeId": "(-1, -1)",
+            "description": "Change Indication",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "In Place Indicator",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "In Place Indicator",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Last Changed Time",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Last Changed Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Replacement Product List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Replacement Product List",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Reset Condition",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reset the condition of the replaceable to the non degraded state",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Reset Condition",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reset the condition of the replaceable to the non degraded state",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Activated Carbon Filter Monitoring"
+}

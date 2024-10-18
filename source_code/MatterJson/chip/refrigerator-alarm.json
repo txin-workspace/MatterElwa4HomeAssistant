@@ -1,0 +1,35 @@
+{
+    "name": "refrigerator alarm",
+    "description": "Attributes and commands for configuring the Refrigerator alarm.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Mask",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "Mask",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "State",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Supported",
+            "type": "AlarmMap",
+            "typeId": "(-1, -1)",
+            "description": "Supported",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Refrigerator Alarm"
+}

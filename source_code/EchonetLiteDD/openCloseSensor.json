@@ -1,0 +1,45 @@
+{
+    "deviceType": "openCloseSensor",
+    "metaData": {
+        "version": "1.3.0"
+    },
+    "eoj": "0x0029",
+    "descriptions": {
+        "ja": "開閉センサー",
+        "en": "open/close sensor"
+    },
+    "properties": {
+        "openingDetectionStatus2": {
+            "epc": "0xE0",
+            "descriptions": {
+                "ja": "開度検知状態2",
+                "en": "Degree-ofopeningdetection status 2"
+            },
+            "writable": false,
+            "observable": true,
+            "type": "string",
+            "enum": [
+                "open",
+                "close"
+            ],
+            "values": [
+                {
+                    "value": "open",
+                    "descriptions": {
+                        "ja": "開",
+                        "en": "open"
+                    },
+                    "edt": "0x41"
+                },
+                {
+                    "value": "close",
+                    "descriptions": {
+                        "ja": "閉",
+                        "en": "close"
+                    },
+                    "edt": "0x42"
+                }
+            ]
+        }
+    }
+}

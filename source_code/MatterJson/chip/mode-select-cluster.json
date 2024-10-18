@@ -1,0 +1,78 @@
+{
+    "name": "mode select cluster",
+    "description": "Attributes and commands for selecting a mode from a list of supported options.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Description",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Description",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Standard Namespace",
+            "type": "enum16",
+            "typeId": "(-1, -1)",
+            "description": "Standard Namespace",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Supported Modes",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Modes",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Current Mode",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Start Up Mode",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Start Up Mode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "On Mode",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "On Mode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Change To Mode",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        On receipt of this command, if the NewMode field matches the Mode field in an entry of the SupportedModes list, the server SHALL set the CurrentMode attribute to the NewMode value, otherwise, the server SHALL respond with an INVALID_COMMAND status response.\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Mode Select"
+}

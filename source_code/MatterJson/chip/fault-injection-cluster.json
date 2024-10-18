@@ -1,0 +1,30 @@
+{
+    "name": "fault injection cluster",
+    "description": "The Fault Injection Cluster provide a means for a test harness to configure faults(for example triggering a fault in the system).",
+    "propertiesInfo": [],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Fail At Fault",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Configure a fault to be triggered deterministically",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Fail Randomly At Fault",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Configure a fault to be triggered randomly, with a given probability defined as a percentage",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Fault Injection"
+}

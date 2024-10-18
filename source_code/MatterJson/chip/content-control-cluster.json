@@ -1,0 +1,214 @@
+{
+    "name": "content control cluster",
+    "description": "This cluster is used for managing the content control (including \"parental control\") settings on a media device such as a TV, or Set-top Box.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Enabled",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Enabled",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "On Demand Ratings",
+            "type": "ARRAY",
+            "typeId": "(64, 1)",
+            "description": "On Demand Ratings",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "On Demand Rating Threshold",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "On Demand Rating Threshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Scheduled Content Ratings",
+            "type": "ARRAY",
+            "typeId": "(64, 1)",
+            "description": "Scheduled Content Ratings",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Scheduled Content Rating Threshold",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Scheduled Content Rating Threshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Screen Daily Time",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Screen Daily Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Remaining Screen Time",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Remaining Screen Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Block Unrated",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Block Unrated",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Update P I N",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to update the PIN used for protecting configuration of the content control settings. Upon success, the old PIN SHALL no longer work. The PIN is used to ensure that only the Node (or User) with the PIN code can make changes to the Content Control settings, for example, turn off Content Controls or modify the ScreenDailyTime. The PIN is composed of a numeric string of up to 6 human readable characters (displayable) . Upon receipt of this command, the media device SHALL check if the OldPIN field of this command is the same as the current PIN. If the PINs are the same, then the PIN code SHALL be set to NewPIN. Otherwise a response with InvalidPINCode error status SHALL be returned. The media device MAY provide a default PIN to the User via an out of band mechanism. For security reasons, it is recommended that a client encourage the user to update the PIN from its default value when performing configuration of the Content Control settings exposed by this cluster. The ResetPIN command can also be used to obtain the default PIN.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Reset P I N",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to reset the PIN. If this command is executed successfully, a ResetPINResponse command with a new PIN SHALL be returned.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Reset P I N Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL be generated in response to a ResetPIN command. The data for this command SHALL be as follows:",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Enable",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to turn on the Content Control feature on a media device. On receipt of the Enable command, the media device SHALL set the Enabled attribute to TRUE.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Disable",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to turn off the Content Control feature on a media device. On receipt of the Disable command, the media device SHALL set the Enabled attribute to FALSE.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Add Bonus Time",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to add the extra screen time for the user. If a client with Operate privilege invokes this command, the media device SHALL check whether the PINCode passed in the command matches the current PINCode value. If these match, then the RemainingScreenTime attribute SHALL be increased by the specified BonusTime value. If the PINs do not match, then a response with InvalidPINCode error status SHALL be returned, and no changes SHALL be made to RemainingScreenTime. If a client with Manage privilege or greater invokes this command, the media device SHALL ignore the PINCode field and directly increase the RemainingScreenTime attribute by the specified BonusTime value. A server that does not support the PM feature SHALL respond with InvalidPINCode to clients that only have Operate privilege unless: It has been provided with the PIN value to expect via an out of band mechanism, and The client has provided a PINCode that matches the expected PIN value.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Set Screen Daily Time",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to set the ScreenDailyTime attribute. On receipt of the SetScreenDailyTime command, the media device SHALL set the ScreenDailyTime attribute to the ScreenTime value.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Block Unrated Content",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to specify whether programs with no Content rating must be blocked by this media device. On receipt of the BlockUnratedContent command, the media device SHALL set the BlockUnrated attribute to TRUE.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Unblock Unrated Content",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to specify whether programs with no Content rating must be blocked by this media device. On receipt of the UnblockUnratedContent command, the media device SHALL set the BlockUnrated attribute to FALSE.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Set On Demand Rating Threshold",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to set the OnDemandRatingThreshold attribute. On receipt of the SetOnDemandRatingThreshold command, the media device SHALL check if the Rating field is one of values present in the OnDemandRatings attribute. If not, then a response with InvalidRating error status SHALL be returned.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Set Scheduled Content Rating Threshold",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The purpose of this command is to set ScheduledContentRatingThreshold attribute. On receipt of the SetScheduledContentRatingThreshold command, the media device SHALL check if the Rating field is one of values present in the ScheduledContentRatings attribute. If not, then a response with InvalidRating error status SHALL be returned.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Content Control"
+}

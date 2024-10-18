@@ -1,0 +1,51 @@
+{
+    "name": "target navigator cluster",
+    "description": "This cluster provides an interface for UX navigation within a set of targets on a device or endpoint.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Target List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Target List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Target",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Target",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Navigate Target",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL navigation the UX to the target identified.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Navigate Target Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL be generated in response to NavigateTarget commands.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Target Navigator"
+}

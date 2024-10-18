@@ -1,0 +1,55 @@
+{
+    "name": "descriptor cluster",
+    "description": "The Descriptor Cluster is meant to replace the support from the Zigbee Device Object (ZDO) for describing a node, its endpoints and clusters.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Device Type List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Device Type List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Server List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Server List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Client List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Client List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Parts List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Parts List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Tag List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Tag List",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Descriptor"
+}

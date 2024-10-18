@@ -1,0 +1,49 @@
+{
+    "name": "identify cluster",
+    "description": "Attributes and commands for putting a device into Identification mode (e.g. flashing a light).",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Identify Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Identify Time",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Identify Type",
+            "type": "IdentifyTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Identify Type",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Identify",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for Identify\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x40",
+            "name": "Trigger Effect",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for TriggerEffect\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Identify"
+}

@@ -1,0 +1,668 @@
+{
+    "name": "door lock cluster",
+    "description": "An interface to a generic way to secure a door",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0",
+            "name": "Lock State",
+            "type": "DlLockState",
+            "typeId": "(-1, -1)",
+            "description": "Lock State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "1",
+            "name": "Lock Type",
+            "type": "DlLockType",
+            "typeId": "(-1, -1)",
+            "description": "Lock Type",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "2",
+            "name": "Actuator Enabled",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Actuator Enabled",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "3",
+            "name": "Door State",
+            "type": "DoorStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Door State",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "4",
+            "name": "DoorOpenEvents",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "DoorOpenEvents",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "5",
+            "name": "DoorClosedEvents",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "DoorClosedEvents",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "6",
+            "name": "OpenPeriod",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "OpenPeriod",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "17",
+            "name": "Number Of Total Users Supported",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Number Of Total Users Supported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "18",
+            "name": "Number Of P I N Users Supported",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Number Of P I N Users Supported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "19",
+            "name": "Number Of R F I D Users Supported",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Number Of R F I D Users Supported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "20",
+            "name": "Number Of Week Day Schedules Supported Per User",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Week Day Schedules Supported Per User",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "21",
+            "name": "Number Of Year Day Schedules Supported Per User",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Year Day Schedules Supported Per User",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "22",
+            "name": "Number Of Holiday Schedules Supported",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Holiday Schedules Supported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "23",
+            "name": "Max P I N Code Length",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Max P I N Code Length",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "24",
+            "name": "Min P I N Code Length",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Min P I N Code Length",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "25",
+            "name": "Max R F I D Code Length",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Max R F I D Code Length",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "26",
+            "name": "Min R F I D Code Length",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Min R F I D Code Length",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "27",
+            "name": "Credential Rules Support",
+            "type": "DlCredentialRuleMask",
+            "typeId": "(-1, -1)",
+            "description": "Credential Rules Support",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "28",
+            "name": "Number Of Credentials Supported Per User",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Credentials Supported Per User",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "33",
+            "name": "Language",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Language",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "34",
+            "name": "LEDSettings",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "LEDSettings",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "35",
+            "name": "AutoRelockTime",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "AutoRelockTime",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "36",
+            "name": "SoundVolume",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "SoundVolume",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "37",
+            "name": "OperatingMode",
+            "type": "OperatingModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "OperatingMode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "38",
+            "name": "Supported Operating Modes",
+            "type": "DlSupportedOperatingModes",
+            "typeId": "(-1, -1)",
+            "description": "Supported Operating Modes",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "39",
+            "name": "Default Configuration Register",
+            "type": "DlDefaultConfigurationRegister",
+            "typeId": "(-1, -1)",
+            "description": "Default Configuration Register",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "40",
+            "name": "EnableLocalProgramming",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "EnableLocalProgramming",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "41",
+            "name": "EnableOneTouchLocking",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "EnableOneTouchLocking",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "42",
+            "name": "EnableInsideStatusLED",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "EnableInsideStatusLED",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "43",
+            "name": "EnablePrivacyModeButton",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "EnablePrivacyModeButton",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "44",
+            "name": "LocalProgrammingFeatures",
+            "type": "DlLocalProgrammingFeatures",
+            "typeId": "(-1, -1)",
+            "description": "LocalProgrammingFeatures",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "48",
+            "name": "WrongCodeEntryLimit",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "WrongCodeEntryLimit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "49",
+            "name": "UserCodeTemporaryDisableTime",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "UserCodeTemporaryDisableTime",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "50",
+            "name": "SendPINOverTheAir",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "SendPINOverTheAir",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "51",
+            "name": "RequirePINforRemoteOperation",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "RequirePINforRemoteOperation",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "53",
+            "name": "ExpiringUserTimeout",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ExpiringUserTimeout",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0",
+            "name": "Lock Door",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command causes the lock device to lock the door.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "1",
+            "name": "Unlock Door",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command causes the lock device to unlock the door.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "3",
+            "name": "Unlock With Timeout",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command causes the lock device to unlock the door with a timeout parameter.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "11",
+            "name": "Set Week Day Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set a weekly repeating schedule for a specified user.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "12",
+            "name": "Get Week Day Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Retrieve the specific weekly schedule for the specific user.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "12",
+            "name": "Get Week Day Schedule Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the weekly repeating schedule data for the specified schedule index.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "13",
+            "name": "Clear Week Day Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Clear the specific weekly schedule or all weekly schedules for the specific user.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "14",
+            "name": "Set Year Day Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set a time-specific schedule ID for a specified user.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "15",
+            "name": "Get Year Day Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the year day schedule data for the specified schedule and user indexes.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "15",
+            "name": "Get Year Day Schedule Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the year day schedule data for the specified schedule and user indexes.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "16",
+            "name": "Clear Year Day Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Clears the specific year day schedule or all year day schedules for the specific user.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "17",
+            "name": "Set Holiday Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set the holiday Schedule by specifying local start time and local end time with respect to any Lock Operating Mode.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "18",
+            "name": "Get Holiday Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Get the holiday schedule for the specified index.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "18",
+            "name": "Get Holiday Schedule Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the Holiday Schedule Entry for the specified Holiday ID.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "19",
+            "name": "Clear Holiday Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Clears the holiday schedule or all holiday schedules.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "26",
+            "name": "Set User",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set User into the lock.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "27",
+            "name": "Get User",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Retrieve User.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "28",
+            "name": "Get User Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the User for the specified UserIndex.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "29",
+            "name": "Clear User",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Clears a User or all Users.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "34",
+            "name": "Set Credential",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set a credential (e.g. PIN, RFID, Fingerprint, etc.) into the lock for a new user, existing user, or ProgrammingUser.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "35",
+            "name": "Set Credential Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the status for setting the specified credential.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "36",
+            "name": "Get Credential Status",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Retrieve the status of a particular credential (e.g. PIN, RFID, Fingerprint, etc.) by index.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "37",
+            "name": "Get Credential Status Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Returns the status for the specified credential.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "38",
+            "name": "Clear Credential",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Clear one, one type, or all credentials except ProgrammingPIN credential.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "39",
+            "name": "Unbolt Door",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command causes the lock device to unlock the door without pulling the latch.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Door Lock"
+}

@@ -1,0 +1,87 @@
+{
+    "name": "boolean sensor configuration cluster",
+    "description": "This cluster is used to configure a boolean sensor.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Sensitivity Level",
+            "type": "SensitivityEnum",
+            "typeId": "(100, 3)",
+            "description": "Sensitivity Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": {
+                "type": "",
+                "format": "",
+                "minimum": -1,
+                "maximum": -1,
+                "unit": "",
+                "dataInfoStates": [
+                    {
+                        "value": 0,
+                        "name": "High",
+                        "description": "High"
+                    },
+                    {
+                        "value": 1,
+                        "name": "Standard",
+                        "description": "Standard"
+                    },
+                    {
+                        "value": 2,
+                        "name": "Low",
+                        "description": "Low"
+                    }
+                ]
+            }
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Alarms Active",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Active",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Alarms Suppressed",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Suppressed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Alarms Enabled",
+            "type": "AlarmModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Alarms Enabled",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Suppress Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used to suppress the specified alarm.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Boolean Sensor Configuration"
+}

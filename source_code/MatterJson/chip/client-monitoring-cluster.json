@@ -1,0 +1,108 @@
+{
+    "name": "client monitoring cluster",
+    "description": "Client Monitoring allows servers to ensure that listed clients are notified when a server is available for communication.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "Idle Mode Interval",
+            "type": "INT32U",
+            "typeId": "(4, 1)",
+            "description": "Idle Mode Interval",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Active Mode Interval",
+            "type": "INT32U",
+            "typeId": "(4, 1)",
+            "description": "Active Mode Interval",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Active Mode Threshold",
+            "type": "INT16U",
+            "typeId": "(2, 1)",
+            "description": "Active Mode Threshold",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "",
+            "type": "ARRAY",
+            "typeId": "(64, 1)",
+            "description": "",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "",
+            "type": "INT32U",
+            "typeId": "(4, 1)",
+            "description": "",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Register Client Monitoring",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": " Register a client to the end device ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Register Client Monitoring Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": " RegisterClientMonitoring response command ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Unregister Client Monitoring",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": " Unregister a client from an end device ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Stay Awake Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Request the end device to stay in Active Mode for an additional ActiveModeThreshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Client Monitoring"
+}

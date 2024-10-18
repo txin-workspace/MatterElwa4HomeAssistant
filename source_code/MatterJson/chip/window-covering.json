@@ -1,0 +1,318 @@
+{
+    "name": "window covering",
+    "description": "Provides an interface for controlling and adjusting automatic window coverings. ",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Type",
+            "type": "Type",
+            "typeId": "(-1, -1)",
+            "description": "Type",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Physical Closed Limit Lift",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Physical Closed Limit Lift",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Physical Closed Limit Tilt",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Physical Closed Limit Tilt",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Current Position Lift",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Current Position Lift",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Current Position Tilt",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Current Position Tilt",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Number Of Actuations Lift",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Number Of Actuations Lift",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Number Of Actuations Tilt",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Number Of Actuations Tilt",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Config Status",
+            "type": "ConfigStatus",
+            "typeId": "(-1, -1)",
+            "description": "Config Status",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Current Position Lift Percentage",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Current Position Lift Percentage",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Current Position Tilt Percentage",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Current Position Tilt Percentage",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Operational Status",
+            "type": "OperationalStatus",
+            "typeId": "(0, 1)",
+            "description": "Operational Status",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "Target Position Lift Percent100ths",
+            "type": "percent100ths",
+            "typeId": "(-1, -1)",
+            "description": "Target Position Lift Percent100ths",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000C",
+            "name": "Target Position Tilt Percent100ths",
+            "type": "percent100ths",
+            "typeId": "(-1, -1)",
+            "description": "Target Position Tilt Percent100ths",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000D",
+            "name": "End Product Type",
+            "type": "EndProductType",
+            "typeId": "(-1, -1)",
+            "description": "End Product Type",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000E",
+            "name": "Current Position Lift Percent100ths",
+            "type": "percent100ths",
+            "typeId": "(-1, -1)",
+            "description": "Current Position Lift Percent100ths",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000F",
+            "name": "Current Position Tilt Percent100ths",
+            "type": "percent100ths",
+            "typeId": "(-1, -1)",
+            "description": "Current Position Tilt Percent100ths",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "Installed Open Limit Lift",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Installed Open Limit Lift",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "Installed Closed Limit Lift",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Installed Closed Limit Lift",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "Installed Open Limit Tilt",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Installed Open Limit Tilt",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Installed Closed Limit Tilt",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Installed Closed Limit Tilt",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0017",
+            "name": "Mode",
+            "type": "Mode",
+            "typeId": "(-1, -1)",
+            "description": "Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001A",
+            "name": "Safety Status",
+            "type": "SafetyStatus",
+            "typeId": "(0, 1)",
+            "description": "Safety Status",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Up Or Open",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Moves window covering to InstalledOpenLimitLift and InstalledOpenLimitTilt",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Down Or Close",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Moves window covering to InstalledClosedLimitLift and InstalledCloseLimitTilt",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Stop Motion",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Stop any adjusting of window covering",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Go To Lift Value",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Go to lift value specified",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Go To Lift Percentage",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Go to lift percentage specified",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Go To Tilt Value",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Go to tilt value specified",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Go To Tilt Percentage",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Go to tilt percentage specified",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Window Covering"
+}

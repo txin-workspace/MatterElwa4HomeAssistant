@@ -1,0 +1,17 @@
+{
+    "name": "fixed label cluster",
+    "description": "The Fixed Label Cluster provides a feature for the device to tag an endpoint with zero or more read only\nlabels.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Label List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Label List",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Fixed Label"
+}

@@ -1,0 +1,63 @@
+{
+    "name": "energy preference cluster",
+    "description": "This cluster provides an interface to specify preferences for how devices should consume energy.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Energy Balances",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Energy Balances",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "CurrentEnergyBalance",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "CurrentEnergyBalance",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Energy Priorities",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Energy Priorities",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Low Power Mode Sensitivities",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Low Power Mode Sensitivities",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "CurrentLowPowerModeSensitivity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "CurrentLowPowerModeSensitivity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Energy Preference"
+}

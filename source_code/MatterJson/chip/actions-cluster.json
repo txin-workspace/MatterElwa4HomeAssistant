@@ -1,0 +1,170 @@
+{
+    "name": "actions cluster",
+    "description": "This cluster provides a standardized way for a Node (typically a Bridge, but could be any Node) to expose action information.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Action List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Action List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Endpoint Lists",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Endpoint Lists",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Setup U R L",
+            "type": "LONG_CHAR_STRING",
+            "typeId": "(128, 1)",
+            "description": "Setup U R L",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Instant Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command triggers an action (state change) on the involved endpoints.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Instant Action With Transition",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command triggers an action (state change) on the involved endpoints, with a specified time to transition from the current state to the new state.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Start Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command triggers the commencement of an action on the involved endpoints.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Start Action With Duration",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command triggers the commencement of an action (with a duration) on the involved endpoints.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Stop Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command stops the ongoing action on the involved endpoints.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Pause Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command pauses an ongoing action.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Pause Action With Duration",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command pauses an ongoing action with a duration.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Resume Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command resumes a previously paused action.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Enable Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command enables a certain action or automation.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Enable Action With Duration",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command enables a certain action or automation with a duration.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Disable Action",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command disables a certain action or automation.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0B",
+            "name": "Disable Action With Duration",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command disables a certain action or automation with a duration.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Actions"
+}

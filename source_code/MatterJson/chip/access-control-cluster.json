@@ -1,0 +1,55 @@
+{
+    "name": "access control cluster",
+    "description": "The Access Control Cluster exposes a data model view of a\n      Node's Access Control List (ACL), which codifies the rules used to manage\n      and enforce Access Control for the Node's endpoints and their associated\n      cluster instances.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "ACL",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "ACL",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Extension",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Extension",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "SubjectsPerAccessControlEntry",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "SubjectsPerAccessControlEntry",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "TargetsPerAccessControlEntry",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "TargetsPerAccessControlEntry",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "AccessControlEntriesPerFabric",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "AccessControlEntriesPerFabric",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Access Control"
+}

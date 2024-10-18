@@ -1,0 +1,30 @@
+name: "matter elwa converter"
+description: "this add-on can get matter devices information from 'matter server', conver and send to a ECHONET Lite Web API server by MQTT"
+version: "0.0.2"
+slug: "matter_elwa_converter"
+init: false
+boot: "manual"
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  eladdr: "127.0.0.1"
+  elport: 7883
+  matteraddr: "ws://127.0.0.1:5580/ws" 
+  tpcre: ctr/cre
+  tpdel: ctr/del
+  tpupd: ctr/upd
+  tpope: ctr/ope
+  tpres: ctr/res
+schema:
+  eladdr: str
+  elport: int
+  matteraddr: str
+  tpcre: str
+  tpdel: str
+  tpupd: str
+  tpope: str
+  tpres: str

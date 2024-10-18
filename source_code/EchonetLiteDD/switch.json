@@ -1,0 +1,29 @@
+{
+  "deviceType": "switch",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x05FD",
+  "descriptions": {
+    "ja": "スイッチ (JEM-A/HA端子対応)",
+    "en": "Switch (supporting JEM-A/HA terminals)"
+  },
+  "properties": {
+    "connectedDevice": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "接続機器",
+        "en": "Connected device"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      },
+      "note": {
+        "ja": "アスキーコードで保持 (12byte)",
+        "en": "ASCII code (12byte)"
+      }
+    }
+  }
+}

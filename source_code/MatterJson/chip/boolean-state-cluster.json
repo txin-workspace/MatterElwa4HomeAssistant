@@ -1,0 +1,17 @@
+{
+    "name": "boolean state cluster",
+    "description": "This cluster provides an interface to a boolean state called StateValue.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "State Value",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "State Value",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Boolean State"
+}

@@ -1,0 +1,697 @@
+{
+  "deviceType": "airConditionerVentilationFan",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0134",
+  "descriptions": {
+    "ja": "空調換気扇",
+    "en": "Air conditioner ventilation fan"
+  },
+  "properties": {
+    "airFlowLevel": {
+      "epc": "0xA0",
+      "descriptions": {
+        "ja": "換気風量設定",
+        "en": "Set value of ventilation air flow rate"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 8,
+            "multipleOf": 1
+          },
+          {
+            "type": "string",
+            "enum": [
+              "auto"
+            ],
+            "values": [
+              {
+                "value": "auto",
+                "descriptions": {
+                  "ja": "換気風量自動状態",
+                  "en": "Ventilation air flow rate auto status"
+                },
+                "edt": "0x41"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ventilationModeAuto": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "換気モード自動設定",
+        "en": "Ventilation mode automatic setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "AUTO",
+              "en": "Auto"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "非AUTO",
+              "en": "Non-auto"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "ventilationMethod": {
+      "epc": "0xB1",
+      "descriptions": {
+        "ja": "換気方式設定",
+        "en": "Ventilation method setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "blowing",
+          "airConditioning"
+        ],
+        "values": [
+          {
+            "value": "blowing",
+            "descriptions": {
+              "ja": "送風換気",
+              "en": "Blowing ventilation"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "airConditioning",
+            "descriptions": {
+              "ja": "空調換気",
+              "en": "Air conditioning ventilation"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "ventilationMode": {
+      "epc": "0xB2",
+      "descriptions": {
+        "ja": "換気モード設定",
+        "en": "Ventilation mode setting"
+      },
+      "writable": true,
+      "observable": true,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "normal",
+          "heatExchange",
+          "cooling",
+          "heating",
+          "dehumidifying",
+          "humidifying",
+          "other"
+        ],
+        "values": [
+          {
+            "value": "normal",
+            "descriptions": {
+              "ja": "普通換気",
+              "en": "Normal ventilation"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "heatExchange",
+            "descriptions": {
+              "ja": "熱交換換気",
+              "en": "Heat exchange ventilation"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "cooling",
+            "descriptions": {
+              "ja": "冷房換気",
+              "en": "Cooling ventilation"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "heating",
+            "descriptions": {
+              "ja": "暖房換気",
+              "en": "Heating ventilation"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "dehumidifying",
+            "descriptions": {
+              "ja": "除湿換気",
+              "en": "Dehumidifying ventilation"
+            },
+            "edt": "0x45"
+          },
+          {
+            "value": "humidifying",
+            "descriptions": {
+              "ja": "加湿換気",
+              "en": "Humidifying ventilation"
+            },
+            "edt": "0x46"
+          },
+          {
+            "value": "other",
+            "descriptions": {
+              "ja": "その他換気",
+              "en": "Other ventilation modes"
+            },
+            "edt": "0x40"
+          }
+        ]
+      }
+    },
+    "highlowLevel": {
+      "epc": "0xB3",
+      "descriptions": {
+        "ja": "冷暖強弱設定",
+        "en": "Cooling / heating high-low setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 8,
+        "multipleOf": 1
+      }
+    },
+    "targetHumidity": {
+      "epc": "0xB4",
+      "descriptions": {
+        "ja": "室内相対湿度設定値",
+        "en": "Set value of room relative humidity"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    },
+    "currentConsumption": {
+      "epc": "0xB9",
+      "descriptions": {
+        "ja": "消費電流計測値",
+        "en": "Measured value of electric current consumption"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "A",
+        "minimum": 0,
+        "maximum": 6553.3,
+        "multipleOf": 0.1
+      }
+    },
+    "humidity": {
+      "epc": "0xBA",
+      "descriptions": {
+        "ja": "室内相対湿度計測値",
+        "en": "Measured value of room relative humidity"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "%",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0xFD"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "outdoorTemperature": {
+      "epc": "0xBE",
+      "descriptions": {
+        "ja": "外気温度計測値",
+        "en": "Measured value of outdoor air temperature"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": -127,
+            "maximum": 125
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "ventilationAuto": {
+      "epc": "0xBF",
+      "descriptions": {
+        "ja": "換気自動設定",
+        "en": "Ventilation auto setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "AUTO",
+              "en": "Auto"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "非AUTO",
+              "en": "Non-auto"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "co2Concentration": {
+      "epc": "0xC0",
+      "descriptions": {
+        "ja": "CO2濃度計測値",
+        "en": "Measured value of CO2 concentration"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "ppm",
+        "minimum": 0,
+        "maximum": 65533
+      }
+    },
+    "smokeDetection": {
+      "epc": "0xC1",
+      "descriptions": {
+        "ja": "煙 (タバコ) 検知状態",
+        "en": "Smoke (cigarette) detection status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "煙 (タバコ) 検知有",
+              "en": "Smoke (cigarette) detection status found."
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "煙 (タバコ) 検知無",
+              "en": "Smoke (cigarette) detection status not found."
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "pollutionDetection": {
+      "epc": "0xC2",
+      "descriptions": {
+        "ja": "汚れ検知状態",
+        "en": "Pollution detection status"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "汚れ検知有",
+              "en": "Pollution detected"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "汚れ検知無",
+              "en": "Pollution non-detected"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "outdoorHumidity": {
+      "epc": "0xCA",
+      "descriptions": {
+        "ja": "外気相対湿度計測値",
+        "en": "Measured value of outdoor relative humidity"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "%",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0xFD"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "returnAirTemperature": {
+      "epc": "0xD0",
+      "descriptions": {
+        "ja": "還気温度計測値",
+        "en": "Measured value of return air temperature"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 10,
+        "maxItems": 10,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "Celsius",
+              "minimum": -127,
+              "maximum": 125
+            },
+            {
+              "type": "string",
+              "enum": [
+                "unmeasurable"
+              ],
+              "values": [
+                {
+                  "value": "unmeasurable",
+                  "descriptions": {
+                    "ja": "計測不能",
+                    "en": "Unmeasurable"
+                  },
+                  "edt": "0x7E"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "returnAirHumidity": {
+      "epc": "0xD1",
+      "descriptions": {
+        "ja": "還気相対湿度計測値",
+        "en": "Measured value of return relative humidity"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 10,
+        "maxItems": 10,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "%",
+              "minimum": 0,
+              "maximum": 100
+            },
+            {
+              "type": "string",
+              "enum": [
+                "unmeasurable"
+              ],
+              "values": [
+                {
+                  "value": "unmeasurable",
+                  "descriptions": {
+                    "ja": "計測不能",
+                    "en": "Unmeasurable"
+                  },
+                  "edt": "0xFD"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "chargingAirTemperature": {
+      "epc": "0xD2",
+      "descriptions": {
+        "ja": "給気温度計測値",
+        "en": "Measured value of charging air temperature"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": -127,
+            "maximum": 125
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "chargingAirHumidity": {
+      "epc": "0xD3",
+      "descriptions": {
+        "ja": "給気相対湿度計測値",
+        "en": "Measured value of charging relative humidity"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "%",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0xFD"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dischargingAirTemperature": {
+      "epc": "0xD4",
+      "descriptions": {
+        "ja": "排気温度計測値",
+        "en": "Measured value of discharging air temperature"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": -127,
+            "maximum": 125
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "dischargingAirHumidity": {
+      "epc": "0xD5",
+      "descriptions": {
+        "ja": "排気相対湿度計測値",
+        "en": "Measured value of discharging air relative humidity"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "%",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測不能",
+                  "en": "Unmeasurable"
+                },
+                "edt": "0xFD"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "heatExchangerOperationStatus": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "熱交換機動作設定",
+        "en": "Heat exchanger operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "熱交換機ON",
+              "en": "Heat exchanger ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "熱交換機OFF",
+              "en": "Heat exchanger ON"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    }
+  }
+}

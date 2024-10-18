@@ -1,0 +1,345 @@
+{
+  "deviceType": "commercialAirConditionerIndoorUnit",
+  "metaData": {
+    "version": "1.4.1"
+  },
+  "eoj": "0x0156",
+  "descriptions": {
+    "ja": "業務用パッケージエアコン室内機 (設備用を除く)",
+    "en": "Package-type commercial air conditioner (indoor unit) (except those for facilities)"
+  },
+  "properties": {
+    "thermostatState": {
+      "epc": "0xAC",
+      "descriptions": {
+        "ja": "サーモ状態",
+        "en": "Thermostat state"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "サーモON",
+              "en": "Thermostat ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "サーモOFF",
+              "en": "Thermostat OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "automaticOperationModeStatus": {
+      "epc": "0xAE",
+      "descriptions": {
+        "ja": "自動運転時運転モード状態",
+        "en": "Current function (automatic operation mode)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "cooling",
+          "heating",
+          "dehumidification",
+          "circulation",
+          "other"
+        ],
+        "values": [
+          {
+            "value": "cooling",
+            "descriptions": {
+              "ja": "冷房",
+              "en": "Cooling"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "heating",
+            "descriptions": {
+              "ja": "暖房",
+              "en": "Heating"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "dehumidification",
+            "descriptions": {
+              "ja": "除湿",
+              "en": "Dehumidification"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "circulation",
+            "descriptions": {
+              "ja": "送風",
+              "en": "Air circulation"
+            },
+            "edt": "0x45"
+          },
+          {
+            "value": "other",
+            "descriptions": {
+              "ja": "その他",
+              "en": "Other"
+            },
+            "edt": "0x40"
+          }
+        ]
+      }
+    },
+    "operationMode": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "運転モード設定",
+        "en": "Operation mode setting"
+      },
+      "writable": true,
+      "observable": true,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "auto",
+          "cooling",
+          "heating",
+          "dehumidification",
+          "circulation"
+        ],
+        "values": [
+          {
+            "value": "auto",
+            "descriptions": {
+              "ja": "自動",
+              "en": "Automatic"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "cooling",
+            "descriptions": {
+              "ja": "冷房",
+              "en": "Cooling"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "heating",
+            "descriptions": {
+              "ja": "暖房",
+              "en": "Heating"
+            },
+            "edt": "0x43"
+          },
+          {
+            "value": "dehumidification",
+            "descriptions": {
+              "ja": "除湿",
+              "en": "Dehumidification"
+            },
+            "edt": "0x44"
+          },
+          {
+            "value": "circulation",
+            "descriptions": {
+              "ja": "送風",
+              "en": "Air circulation"
+            },
+            "edt": "0x45"
+          }
+        ]
+      }
+    },
+    "targetTemperature": {
+      "epc": "0xB3",
+      "descriptions": {
+        "ja": "温度設定値",
+        "en": "Temperature setting"
+      },
+      "writable": true,
+      "observable": true,
+      "schema": {
+        "type": "number",
+        "unit": "Celsius",
+        "minimum": 0,
+        "maximum": 50
+      }
+    },
+    "roomTemperature": {
+      "epc": "0xBB",
+      "descriptions": {
+        "ja": "室内機温度計測値",
+        "en": "Measured indoor unit temperature"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": -127,
+            "maximum": 125
+          },
+          {
+            "type": "string",
+            "enum": [
+              "unmeasurable"
+            ],
+            "values": [
+              {
+                "value": "unmeasurable",
+                "descriptions": {
+                  "ja": "計測値を返せない",
+                  "en": "When the measurement value cannot be returned"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "groupInformation": {
+      "epc": "0xCA",
+      "descriptions": {
+        "ja": "グループ情報",
+        "en": "Group information"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 253
+          },
+          {
+            "type": "string",
+            "enum": [
+              "noSetting"
+            ],
+            "values": [
+              {
+                "value": "noSetting",
+                "descriptions": {
+                  "ja": "設定なし",
+                  "en": "No setting"
+                },
+                "edt": "0x00"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "powerConsumption": {
+      "epc": "0xDB",
+      "descriptions": {
+        "ja": "室内機消費電力範囲",
+        "en": "Power consumption range for indoor units"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "less50W",
+          "less100W",
+          "less150W",
+          "less200W",
+          "200WOrMore",
+          "undefined"
+        ],
+        "values": [
+          {
+            "value": "less50W",
+            "descriptions": {
+              "ja": "50W未満",
+              "en": "Up to 50W"
+            },
+            "edt": "0x01"
+          },
+          {
+            "value": "less100W",
+            "descriptions": {
+              "ja": "50W以上～100W未満",
+              "en": "50W-100W"
+            },
+            "edt": "0x02"
+          },
+          {
+            "value": "less150W",
+            "descriptions": {
+              "ja": "100W以上～150W未満",
+              "en": "100W-150W"
+            },
+            "edt": "0x03"
+          },
+          {
+            "value": "less200W",
+            "descriptions": {
+              "ja": "150W以上～200W未満",
+              "en": "150W-200W"
+            },
+            "edt": "0x04"
+          },
+          {
+            "value": "200WOrMore",
+            "descriptions": {
+              "ja": "200W以上",
+              "en": "200W-"
+            },
+            "edt": "0x05"
+          },
+          {
+            "value": "undefined",
+            "descriptions": {
+              "ja": "未定",
+              "en": "Undefined"
+            },
+            "edt": "0x00"
+          }
+        ]
+      }
+    },
+    "groupDeviceList": {
+      "descriptions": {
+        "ja": "グループ内デバイスリスト",
+        "en": "List of devices in group"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "deviceId": {
+              "type": "string"
+            },
+            "deviceType": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "WebAPIの'devices'で管理されている機器のIDおよびその'deviceType'を記述",
+        "en": "Describe the ID of the device managed in 'devices' of WebAPI and its 'deviceType'."
+      }
+    }
+  }
+}

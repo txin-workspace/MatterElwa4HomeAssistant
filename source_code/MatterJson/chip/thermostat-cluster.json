@@ -1,0 +1,597 @@
+{
+    "name": "thermostat cluster",
+    "description": "An interface for configuring and controlling the functionality of a thermostat.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Local Temperature",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Local Temperature",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Outdoor Temperature",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Outdoor Temperature",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Occupancy",
+            "type": "bitmap8",
+            "typeId": "(-1, -1)",
+            "description": "Occupancy",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Abs Min Heat Setpoint Limit",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Abs Min Heat Setpoint Limit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Abs Max Heat Setpoint Limit",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Abs Max Heat Setpoint Limit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Abs Min Cool Setpoint Limit",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Abs Min Cool Setpoint Limit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Abs Max Cool Setpoint Limit",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Abs Max Cool Setpoint Limit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "P I Cooling Demand",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "P I Cooling Demand",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "P I Heating Demand",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "P I Heating Demand",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "HVACSystemTypeConfiguration",
+            "type": "bitmap8",
+            "typeId": "(-1, -1)",
+            "description": "HVACSystemTypeConfiguration",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "LocalTemperatureCalibration",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "LocalTemperatureCalibration",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "Occupied Cooling Setpoint",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Occupied Cooling Setpoint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "Occupied Heating Setpoint",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Occupied Heating Setpoint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Unoccupied Cooling Setpoint",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Unoccupied Cooling Setpoint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "Unoccupied Heating Setpoint",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Unoccupied Heating Setpoint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0015",
+            "name": "MinHeatSetpointLimit",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "MinHeatSetpointLimit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0016",
+            "name": "MaxHeatSetpointLimit",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "MaxHeatSetpointLimit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0017",
+            "name": "MinCoolSetpointLimit",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "MinCoolSetpointLimit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0018",
+            "name": "MaxCoolSetpointLimit",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "MaxCoolSetpointLimit",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0019",
+            "name": "MinSetpointDeadBand",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "MinSetpointDeadBand",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001A",
+            "name": "RemoteSensing",
+            "type": "RemoteSensingBitmap",
+            "typeId": "(-1, -1)",
+            "description": "RemoteSensing",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001B",
+            "name": "ControlSequenceOfOperation",
+            "type": "ControlSequenceOfOperationEnum",
+            "typeId": "(-1, -1)",
+            "description": "ControlSequenceOfOperation",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001C",
+            "name": "SystemMode",
+            "type": "SystemModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "SystemMode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001E",
+            "name": "Thermostat Running Mode",
+            "type": "ThermostatRunningModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Thermostat Running Mode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0020",
+            "name": "Start Of Week",
+            "type": "StartOfWeekEnum",
+            "typeId": "(-1, -1)",
+            "description": "Start Of Week",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0021",
+            "name": "Number Of Weekly Transitions",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Weekly Transitions",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0022",
+            "name": "Number Of Daily Transitions",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Daily Transitions",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0023",
+            "name": "TemperatureSetpointHold",
+            "type": "TemperatureSetpointHoldEnum",
+            "typeId": "(-1, -1)",
+            "description": "TemperatureSetpointHold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0024",
+            "name": "TemperatureSetpointHoldDuration",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "TemperatureSetpointHoldDuration",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0025",
+            "name": "ThermostatProgrammingOperationMode",
+            "type": "ProgrammingOperationModeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "ThermostatProgrammingOperationMode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0029",
+            "name": "Thermostat Running State",
+            "type": "RelayStateBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Thermostat Running State",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0030",
+            "name": "Setpoint Change Source",
+            "type": "SetpointChangeSourceEnum",
+            "typeId": "(-1, -1)",
+            "description": "Setpoint Change Source",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0031",
+            "name": "Setpoint Change Amount",
+            "type": "int16s",
+            "typeId": "(2, 0)",
+            "description": "Setpoint Change Amount",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0032",
+            "name": "Setpoint Change Source Timestamp",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Setpoint Change Source Timestamp",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0034",
+            "name": "OccupiedSetback",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "OccupiedSetback",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0035",
+            "name": "Occupied Setback Min",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Occupied Setback Min",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0036",
+            "name": "Occupied Setback Max",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Occupied Setback Max",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0037",
+            "name": "UnoccupiedSetback",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "UnoccupiedSetback",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0038",
+            "name": "Unoccupied Setback Min",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Unoccupied Setback Min",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0039",
+            "name": "Unoccupied Setback Max",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Unoccupied Setback Max",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x003A",
+            "name": "EmergencyHeatDelta",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "EmergencyHeatDelta",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0040",
+            "name": "ACType",
+            "type": "ACTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "ACType",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0041",
+            "name": "ACCapacity",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ACCapacity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0042",
+            "name": "ACRefrigerantType",
+            "type": "ACRefrigerantTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "ACRefrigerantType",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0043",
+            "name": "ACCompressorType",
+            "type": "ACCompressorTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "ACCompressorType",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0044",
+            "name": "ACErrorCode",
+            "type": "ACErrorCodeBitmap",
+            "typeId": "(-1, -1)",
+            "description": "ACErrorCode",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0045",
+            "name": "ACLouverPosition",
+            "type": "ACLouverPositionEnum",
+            "typeId": "(-1, -1)",
+            "description": "ACLouverPosition",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0046",
+            "name": "A C Coil Temperature",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "A C Coil Temperature",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0047",
+            "name": "ACCapacityformat",
+            "type": "ACCapacityFormatEnum",
+            "typeId": "(-1, -1)",
+            "description": "ACCapacityformat",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Setpoint Raise Lower",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for SetpointRaiseLower\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Set Weekly Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for SetWeeklySchedule\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Get Weekly Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for GetWeeklySchedule\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Clear Weekly Schedule",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The Clear Weekly Schedule command is used to clear the weekly schedule.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Get Weekly Schedule Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        The Current Weekly Schedule Command is sent from the server in response to the Get Weekly Schedule Command.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Thermostat"
+}

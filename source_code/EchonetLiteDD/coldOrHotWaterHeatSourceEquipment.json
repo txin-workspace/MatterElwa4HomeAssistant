@@ -1,0 +1,590 @@
+{
+  "deviceType": "coldOrHotWaterHeatSourceEquipment",
+  "metaData": {
+    "version": "1.4.1"
+  },
+  "eoj": "0x027A",
+  "descriptions": {
+    "ja": "冷温水熱源機",
+    "en": "Cold or hot water heat source equipment"
+  },
+  "properties": {
+    "onTimerReservation": {
+      "epc": "0x90",
+      "descriptions": {
+        "ja": "ONタイマ予約設定",
+        "en": "ON timer reservation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "予約入",
+              "en": "ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "予約切",
+              "en": "OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "timeOfOnTimer": {
+      "epc": "0x91",
+      "descriptions": {
+        "ja": "ONタイマ時刻設定値",
+        "en": "ON timer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "relativeTimeOfOnTimer": {
+      "epc": "0x92",
+      "descriptions": {
+        "ja": "ONタイマ相対時間設定値",
+        "en": "Relative ON timer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "offTimerReservation": {
+      "epc": "0x94",
+      "descriptions": {
+        "ja": "OFFタイマ予約設定",
+        "en": "OFF timer reservation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "予約入",
+              "en": "ON"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "予約切",
+              "en": "OFF"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "timeOfOffTimer": {
+      "epc": "0x95",
+      "descriptions": {
+        "ja": "OFFタイマ時刻設定値",
+        "en": "Time set by OFF timer"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "relativeTimeOfOffTimer": {
+      "epc": "0x96",
+      "descriptions": {
+        "ja": "OFFタイマ相対時間設定値",
+        "en": "Relative OFF timer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "format": "time"
+      }
+    },
+    "coldWaterTemperatue2MaximumLevel": {
+      "epc": "0xD1",
+      "descriptions": {
+        "ja": "冷水温設定2設定可能最大レベル",
+        "en": "Cold water temperature setting 2 Maximum allowable setting level"
+      },
+      "writable": true,
+      "observable": true,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 15,
+        "multipleOf": 1
+      },
+      "note": {
+        "ja": "冷房(冷水)水温設定2の最大段階数",
+        "en": "The maximum number of steps for cooling (cold water) temperature setting 2"
+      }
+    },
+    "warmWaterTemperatue2MaximumLevel": {
+      "epc": "0xD2",
+      "descriptions": {
+        "ja": "温水温設定2設定可能最大レベル",
+        "en": "Warm water temperature setting 2 Maximum allowable setting level"
+      },
+      "writable": true,
+      "observable": true,
+      "schema": {
+        "type": "number",
+        "minimum": 17,
+        "maximum": 31,
+        "multipleOf": 1
+      },
+      "note": {
+        "ja": "暖房(温水)水温設定2の最大段階数",
+        "en": "The maximum number of steps for heating (warm water) temperature setting 2"
+      }
+    },
+    "operationMode": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "運転モード設定",
+        "en": "Operation mode setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "heating",
+          "cooling"
+        ],
+        "values": [
+          {
+            "value": "heating",
+            "descriptions": {
+              "ja": "暖房",
+              "en": "Heating"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "cooling",
+            "descriptions": {
+              "ja": "冷房",
+              "en": "Cooling"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "waterTemperature1": {
+      "epc": "0xE1",
+      "descriptions": {
+        "ja": "水温設定1",
+        "en": "Water temperature setting 1"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "auto"
+            ],
+            "values": [
+              {
+                "value": "auto",
+                "descriptions": {
+                  "ja": "AUTO",
+                  "en": "AUTO"
+                },
+                "edt": "0x71"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "waterTemperature2": {
+      "epc": "0xE2",
+      "descriptions": {
+        "ja": "水温設定2",
+        "en": "Water temperature setting 2"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 31,
+            "multipleOf": 1
+          },
+          {
+            "type": "string",
+            "enum": [
+              "auto"
+            ],
+            "values": [
+              {
+                "value": "auto",
+                "descriptions": {
+                  "ja": "自動",
+                  "en": "Auto"
+                },
+                "edt": "0x41"
+              }
+            ]
+          }
+        ]
+      },
+      "note": {
+        "ja": "冷房(冷水):1~15、暖房(温水):17~31",
+        "en": "Cooling (cold water) : 1 - 15, Heating (hot water) : 17 - 31"
+      }
+    },
+    "outwardWaterTemperatureExit": {
+      "epc": "0xE3",
+      "descriptions": {
+        "ja": "往き水温計測値(出口水温)",
+        "en": "Measured temperature of outward water (Exit water Temperature)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "undefined"
+            ],
+            "values": [
+              {
+                "value": "undefined",
+                "descriptions": {
+                  "ja": "不明",
+                  "en": "Undefined"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "inwardWaterTemperatureEntrance": {
+      "epc": "0xE4",
+      "descriptions": {
+        "ja": "戻り水温計測値(入口水温)",
+        "en": "Measured temperature of inward water (Entrance water Temperature)"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "unit": "Celsius",
+            "minimum": 0,
+            "maximum": 100
+          },
+          {
+            "type": "string",
+            "enum": [
+              "undefined"
+            ],
+            "values": [
+              {
+                "value": "undefined",
+                "descriptions": {
+                  "ja": "不明",
+                  "en": "Undefined"
+                },
+                "edt": "0x7E"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "specialOperation": {
+      "epc": "0xE5",
+      "descriptions": {
+        "ja": "特殊運転設定",
+        "en": "Special operation setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "normal",
+          "modest",
+          "highPower"
+        ],
+        "values": [
+          {
+            "value": "normal",
+            "descriptions": {
+              "ja": "通常運転",
+              "en": "Normal operation"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "modest",
+            "descriptions": {
+              "ja": "ひかえめ運転",
+              "en": "Modest operation"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "highPower",
+            "descriptions": {
+              "ja": "ハイパワー運転",
+              "en": "High power operation"
+            },
+            "edt": "0x43"
+          }
+        ]
+      }
+    },
+    "dailyTimer": {
+      "epc": "0xE6",
+      "descriptions": {
+        "ja": "デイリータイマー設定",
+        "en": "Daily timer setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "timerOff",
+          "timer1",
+          "timer2"
+        ],
+        "values": [
+          {
+            "value": "timerOff",
+            "descriptions": {
+              "ja": "タイマー切",
+              "en": "Timer OFF"
+            },
+            "edt": "0x40"
+          },
+          {
+            "value": "timer1",
+            "descriptions": {
+              "ja": "タイマー1",
+              "en": "Timer 1"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "timer2",
+            "descriptions": {
+              "ja": "タイマー2",
+              "en": "Timer 2"
+            },
+            "edt": "0x42"
+          }
+        ]
+      },
+      "note": {
+        "ja": "最大2種のタイマー使用可能",
+        "en": "Up to 2 kinds of timer can be used"
+      }
+    },
+    "dailyTimer1": {
+      "epc": "0xE7",
+      "descriptions": {
+        "ja": "デイリータイマー1設定",
+        "en": "Daily timer setting 1"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 24,
+        "items": {
+          "type": "object",
+          "properties": {
+            "startTime": {
+              "descriptions": {
+                "ja": "運転開始時間",
+                "en": "Start time"
+              },
+              "type": "string",
+              "format": "time"
+            },
+            "endTime": {
+              "descriptions": {
+                "ja": "運転停止時間",
+                "en": "End time"
+              },
+              "type": "string",
+              "format": "time"
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "開始分は0分もしくは30分",
+        "en": "Time is fixed at 0 or 30 min."
+      }
+    },
+    "dailyTimer2": {
+      "epc": "0xE8",
+      "descriptions": {
+        "ja": "デイリータイマー2設定",
+        "en": "Daily timer setting 2"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 0,
+        "maxItems": 24,
+        "items": {
+          "type": "object",
+          "properties": {
+            "startTime": {
+              "descriptions": {
+                "ja": "運転開始時間",
+                "en": "Start time"
+              },
+              "type": "string",
+              "format": "time"
+            },
+            "endTime": {
+              "descriptions": {
+                "ja": "運転停止時間",
+                "en": "End time"
+              },
+              "type": "string",
+              "format": "time"
+            }
+          }
+        }
+      },
+      "note": {
+        "ja": "開始分は0分もしくは30分",
+        "en": "Time is fixed at 0 or 30 min."
+      }
+    },
+    "ratedPowerconsumption": {
+      "epc": "0xE9",
+      "descriptions": {
+        "ja": "定格消費電力値",
+        "en": "Rated power consumption"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "heating": {
+            "descriptions": {
+              "ja": "暖房(温水)運転モード時の定格消費電力",
+              "en": "Rated power consumption of heater (hot water) mode in watts"
+            },
+            "type": "number",
+            "unit": "W",
+            "minimum": 0,
+            "maximum": 65533
+          },
+          "cooling": {
+            "descriptions": {
+              "ja": "冷房(冷水)運転モード時の定格消費電力",
+              "en": "Rated power consumption of cooler (cold water) mode in watts"
+            },
+            "type": "number",
+            "unit": "W",
+            "minimum": 0,
+            "maximum": 65533
+          }
+        }
+      },
+      "note": {
+        "ja": "暖房(温水) : 冷房(冷水)",
+        "en": "Heater (hot water) : cooler (cold water)"
+      }
+    },
+    "powerConsumptionMeasurementMethod": {
+      "epc": "0xEA",
+      "descriptions": {
+        "ja": "消費電力計測方法",
+        "en": "Power consumption measurement method"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "nodeUnit",
+          "classUnit",
+          "instanceUnit"
+        ],
+        "values": [
+          {
+            "value": "nodeUnit",
+            "descriptions": {
+              "ja": "ノード単位",
+              "en": "Node unit"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": "classUnit",
+            "descriptions": {
+              "ja": "クラス単位",
+              "en": "Class unit"
+            },
+            "edt": "0x42"
+          },
+          {
+            "value": "instanceUnit",
+            "descriptions": {
+              "ja": "インスタンス単位",
+              "en": "Instance unit"
+            },
+            "edt": "0x43"
+          }
+        ]
+      }
+    }
+  }
+}

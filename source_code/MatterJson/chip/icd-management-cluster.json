@@ -1,0 +1,146 @@
+{
+    "name": "icd management cluster",
+    "description": "Allows servers to ensure that listed clients are notified when a server is available for communication.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "Idle Mode Duration",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Idle Mode Duration",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Active Mode Duration",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Active Mode Duration",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Active Mode Threshold",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Active Mode Threshold",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "RegisteredClients",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "RegisteredClients",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "ICDCounter",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "ICDCounter",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Clients Supported Per Fabric",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Clients Supported Per Fabric",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "User Active Mode Trigger Hint",
+            "type": "UserActiveModeTriggerBitmap",
+            "typeId": "(-1, -1)",
+            "description": "User Active Mode Trigger Hint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "User Active Mode Trigger Instruction",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "User Active Mode Trigger Instruction",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Register Client",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Register a client to the end device",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Register Client Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "RegisterClient response command",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Unregister Client",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Unregister a client from an end device",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Stay Active Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Request the end device to stay in Active Mode for an additional ActiveModeThreshold",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Stay Active Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "StayActiveRequest response command",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "ICD Management"
+}

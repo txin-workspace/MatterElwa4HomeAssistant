@@ -1,0 +1,80 @@
+{
+  "deviceType": "wattHourMeter",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0280",
+  "descriptions": {
+    "ja": "電力量メータ",
+    "en": "Watt-hour meter"
+  },
+  "properties": {
+    "cumulativeElectricEnergy": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "積算電力量計測値",
+        "en": "Cumulative amounts of electric energy measurement value"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "kWh",
+        "minimum": 0,
+        "coefficient": [
+          "0xE2"
+        ]
+      },
+      "note": {
+        "ja": "EPC=0xE2の値を乗算済みの値",
+        "en": "This value is already multipled by the value of EPC=0xE2."
+      }
+    },
+    "cumulativeElectricEnergyLog1": {
+      "epc": "0xE3",
+      "descriptions": {
+        "ja": "積算電力量計測値履歴1",
+        "en": "Cumulative amounts of electric energy measurement log 1"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 48,
+        "maxItems": 48,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "kWh",
+              "minimum": 0,
+              "coefficient": [
+                "0xE2"
+              ]
+            },
+            {
+              "type": "string",
+              "enum": [
+                "noData"
+              ],
+              "values": [
+                {
+                  "value": "noData",
+                  "descriptions": {
+                    "ja": "未計測",
+                    "en": "Not measured"
+                  },
+                  "edt": "0xFFFFFFFE"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "note": {
+        "ja": "EPC=0xE2の値を乗算済みの値",
+        "en": "This value is already multipled by the value of EPC=0xE2."
+      }
+    }
+  }
+}

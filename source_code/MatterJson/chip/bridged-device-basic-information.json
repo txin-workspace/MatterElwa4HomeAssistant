@@ -1,0 +1,182 @@
+{
+    "name": "bridged device basic information",
+    "description": "This Cluster serves two purposes towards a Node communicating with a Bridge: indicate that the functionality on\n          the Endpoint where it is placed (and its Parts) is bridged from a non-CHIP technology; and provide a centralized\n          collection of attributes that the Node MAY collect to aid in conveying information regarding the Bridged Device to a user,\n          such as the vendor name, the model name, or user-assigned name.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "1",
+            "name": "Vendor Name",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Vendor Name",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "2",
+            "name": "Vendor I D",
+            "type": "vendor_id",
+            "typeId": "(-1, -1)",
+            "description": "Vendor I D",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "3",
+            "name": "Product Name",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Product Name",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "5",
+            "name": "Node Label",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Node Label",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "7",
+            "name": "Hardware Version",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Hardware Version",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "8",
+            "name": "Hardware Version String",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Hardware Version String",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "9",
+            "name": "Software Version",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Software Version",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "10",
+            "name": "Software Version String",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Software Version String",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "11",
+            "name": "Manufacturing Date",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Manufacturing Date",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "12",
+            "name": "Part Number",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Part Number",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "13",
+            "name": "Product U R L",
+            "type": "long_char_string",
+            "typeId": "(128, 1)",
+            "description": "Product U R L",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "14",
+            "name": "Product Label",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Product Label",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "15",
+            "name": "Serial Number",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Serial Number",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "17",
+            "name": "Reachable",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Reachable",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "18",
+            "name": "Unique I D",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Unique I D",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "20",
+            "name": "Product Appearance",
+            "type": "ProductAppearanceStruct",
+            "typeId": "(-1, -1)",
+            "description": "Product Appearance",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Bridged Device Basic Information"
+}

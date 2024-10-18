@@ -1,0 +1,293 @@
+{
+    "name": "media playback cluster",
+    "description": "This cluster provides an interface for controlling Media Playback (PLAY, PAUSE, etc) on a media device such as a TV or Speaker.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Current State",
+            "type": "PlaybackStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Current State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Start Time",
+            "type": "epoch_us",
+            "typeId": "(-1, -1)",
+            "description": "Start Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Duration",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Duration",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Sampled Position",
+            "type": "PlaybackPositionStruct",
+            "typeId": "(-1, -1)",
+            "description": "Sampled Position",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Playback Speed",
+            "type": "single",
+            "typeId": "(4, 0)",
+            "description": "Playback Speed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Seek Range End",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Seek Range End",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Seek Range Start",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Seek Range Start",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Active Audio Track",
+            "type": "TrackStruct",
+            "typeId": "(-1, -1)",
+            "description": "Active Audio Track",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Available Audio Tracks",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Available Audio Tracks",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Active Text Track",
+            "type": "TrackStruct",
+            "typeId": "(-1, -1)",
+            "description": "Active Text Track",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Available Text Tracks",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Available Text Tracks",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Play",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL play media.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Pause",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL pause media.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Stop",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL stop media. User experience is context-specific. This will often navigate the user back to the location where media was originally launched.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Start Over",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL Start Over with the current media playback item.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Previous",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL cause the handler to be invoked for \"Previous\". User experience is context-specific. This will often Go back to the previous media playback item.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Next",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL cause the handler to be invoked for \"Next\". User experience is context-specific. This will often Go forward to the next media playback item.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Rewind",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL Rewind through media. Different Rewind speeds can be used on the TV based upon the number of sequential calls to this function. This is to avoid needing to define every speed now (multiple fast, slow motion, etc).",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Fast Forward",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL Advance through media. Different FF speeds can be used on the TV based upon the number of sequential calls to this function. This is to avoid needing to define every speed now (multiple fast, slow motion, etc).",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Skip Forward",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL Skip forward in the media by the given number of seconds, using the data as follows:",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Skip Backward",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL Skip backward in the media by the given number of seconds, using the data as follows:",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0B",
+            "name": "Seek",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL Skip backward in the media by the given number of seconds, using the data as follows:",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Playback Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL be generated in response to various Playback Request commands.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0C",
+            "name": "Activate Audio Track",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the server SHALL set the active Audio Track to the one identified by the TrackID in the Track catalog for the streaming media. If the TrackID does not exist in the Track catalog, OR does not correspond to the streaming media OR no media is being streamed at the time of receipt of this command, the server will return an error status of INVALID_ARGUMENT.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0D",
+            "name": "Activate Text Track",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, the server SHALL set the active Text Track to the one identified by the TrackID in the Track catalog for the streaming media. If the TrackID does not exist in the Track catalog, OR does not correspond to the streaming media OR no media is being streamed at the time of receipt of this command, the server SHALL return an error status of INVALID_ARGUMENT.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0E",
+            "name": "Deactivate Text Track",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "If a Text Track is active (i.e. being displayed), upon receipt of this command, the server SHALL stop displaying it.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Media Playback"
+}

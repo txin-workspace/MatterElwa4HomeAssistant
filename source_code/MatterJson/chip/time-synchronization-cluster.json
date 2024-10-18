@@ -1,0 +1,214 @@
+{
+    "name": "time synchronization cluster",
+    "description": "Accurate time is required for a number of reasons, including scheduling, display and validating security materials.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "U T C Time",
+            "type": "epoch_us",
+            "typeId": "(-1, -1)",
+            "description": "U T C Time",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Granularity",
+            "type": "GranularityEnum",
+            "typeId": "(-1, -1)",
+            "description": "Granularity",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Time Source",
+            "type": "TimeSourceEnum",
+            "typeId": "(-1, -1)",
+            "description": "Time Source",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Trusted Time Source",
+            "type": "TrustedTimeSourceStruct",
+            "typeId": "(-1, -1)",
+            "description": "Trusted Time Source",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Default N T P",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Default N T P",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Time Zone",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Time Zone",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "D S T Offset",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "D S T Offset",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Local Time",
+            "type": "epoch_us",
+            "typeId": "(-1, -1)",
+            "description": "Local Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Time Zone Database",
+            "type": "TimeZoneDatabaseEnum",
+            "typeId": "(-1, -1)",
+            "description": "Time Zone Database",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "N T P Server Available",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "N T P Server Available",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Time Zone List Max Size",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Time Zone List Max Size",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "D S T Offset List Max Size",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "D S T Offset List Max Size",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000C",
+            "name": "Supports D N S Resolve",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Supports D N S Resolve",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Set U T C Time",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command MAY be issued by Administrator to set the time.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Set Trusted Time Source",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL set TrustedTimeSource.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Set Time Zone",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL set TimeZone.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Set Time Zone Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Response to SetTimeZone.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Set D S T Offset",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command SHALL set DSTOffset.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Set Default N T P",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "This command is used to set DefaultNTP.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Time Synchronization"
+}

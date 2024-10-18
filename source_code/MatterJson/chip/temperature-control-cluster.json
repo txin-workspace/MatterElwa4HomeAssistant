@@ -1,0 +1,86 @@
+{
+    "name": "temperature control cluster",
+    "description": "Attributes and commands for configuring the temperature control, and reporting temperature.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Temperature Setpoint",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Temperature Setpoint",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Temperature",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Min Temperature",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Temperature",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Max Temperature",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Step",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Step",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Selected Temperature Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Selected Temperature Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Supported Temperature Levels",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Temperature Levels",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Set Temperature",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set Temperature",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Temperature Control"
+}

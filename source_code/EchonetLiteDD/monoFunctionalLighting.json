@@ -1,0 +1,28 @@
+{
+  "deviceType": "monoFunctionalLighting",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0291",
+  "descriptions": {
+    "ja": "単機能照明",
+    "en": "Mono functional lighting"
+  },
+  "properties": {
+    "lightLevel": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "照明の明るさ設定",
+        "en": "Light level Setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "%",
+        "minimum": 0,
+        "maximum": 100
+      }
+    }
+  }
+}

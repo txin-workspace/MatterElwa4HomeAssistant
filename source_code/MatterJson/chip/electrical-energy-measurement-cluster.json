@@ -1,0 +1,61 @@
+{
+    "name": "electrical energy measurement cluster",
+    "description": "This cluster provides a mechanism for querying data about the electrical energy imported or provided by the server.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Accuracy",
+            "type": "MeasurementAccuracyStruct",
+            "typeId": "(-1, -1)",
+            "description": "Accuracy",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Cumulative Energy Imported",
+            "type": "EnergyMeasurementStruct",
+            "typeId": "(-1, -1)",
+            "description": "Cumulative Energy Imported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Cumulative Energy Exported",
+            "type": "EnergyMeasurementStruct",
+            "typeId": "(-1, -1)",
+            "description": "Cumulative Energy Exported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Periodic Energy Imported",
+            "type": "EnergyMeasurementStruct",
+            "typeId": "(-1, -1)",
+            "description": "Periodic Energy Imported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Periodic Energy Exported",
+            "type": "EnergyMeasurementStruct",
+            "typeId": "(-1, -1)",
+            "description": "Periodic Energy Exported",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Electrical Energy Measurement"
+}

@@ -1,0 +1,233 @@
+{
+    "name": "basic information cluster",
+    "description": "This cluster provides attributes and events for determining basic information about Nodes, which supports both\n      Commissioning and operational determination of Node characteristics, such as Vendor ID, Product ID and serial number,\n      which apply to the whole Node. Also allows setting user device information such as location.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0",
+            "name": "Data Model Revision",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Data Model Revision",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "1",
+            "name": "Vendor Name",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Vendor Name",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "2",
+            "name": "Vendor I D",
+            "type": "vendor_id",
+            "typeId": "(-1, -1)",
+            "description": "Vendor I D",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "3",
+            "name": "Product Name",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Product Name",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "4",
+            "name": "Product I D",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Product I D",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "5",
+            "name": "NodeLabel",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "NodeLabel",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "6",
+            "name": "Location",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Location",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "7",
+            "name": "Hardware Version",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Hardware Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "8",
+            "name": "Hardware Version String",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Hardware Version String",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "9",
+            "name": "Software Version",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Software Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "10",
+            "name": "Software Version String",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Software Version String",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "11",
+            "name": "Manufacturing Date",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Manufacturing Date",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "12",
+            "name": "Part Number",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Part Number",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "13",
+            "name": "Product U R L",
+            "type": "long_char_string",
+            "typeId": "(128, 1)",
+            "description": "Product U R L",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "14",
+            "name": "Product Label",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Product Label",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "15",
+            "name": "Serial Number",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Serial Number",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "16",
+            "name": "LocalConfigDisabled",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "LocalConfigDisabled",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "17",
+            "name": "Reachable",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Reachable",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "18",
+            "name": "Unique I D",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Unique I D",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "19",
+            "name": "Capability Minima",
+            "type": "CapabilityMinimaStruct",
+            "typeId": "(-1, -1)",
+            "description": "Capability Minima",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "20",
+            "name": "Product Appearance",
+            "type": "ProductAppearanceStruct",
+            "typeId": "(-1, -1)",
+            "description": "Product Appearance",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "21",
+            "name": "Specification Version",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Specification Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "22",
+            "name": "Max Paths Per Invoke",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Paths Per Invoke",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Basic Information"
+}

@@ -1,0 +1,70 @@
+{
+  "deviceType": "gasMeter",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0282",
+  "descriptions": {
+    "ja": "ガスメータ",
+    "en": "Gas meter"
+  },
+  "properties": {
+    "cumulativeGasConsumption": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "積算ガス消費量計測値",
+        "en": "Cumulative amount of gas consumption measurement value"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "m3",
+        "minimum": 0,
+        "maximum": 999999.999,
+        "multipleOf": 0.001
+      }
+    },
+    "cumulativeGasConsumptionLog": {
+      "epc": "0xE2",
+      "descriptions": {
+        "ja": "積算ガス消費量計測値履歴",
+        "en": "Cumulative amounts of gas consumption measurement log"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 48,
+        "maxItems": 48,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "m3",
+              "minimum": 0,
+              "maximum": 999999.999,
+              "multipleOf": 0.001
+            },
+            {
+              "type": "string",
+              "enum": [
+                "noData"
+              ],
+              "values": [
+                {
+                  "value": "noData",
+                  "descriptions": {
+                    "ja": "未計測",
+                    "en": "Not measured"
+                  },
+                  "edt": "0xFFFFFFFE"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

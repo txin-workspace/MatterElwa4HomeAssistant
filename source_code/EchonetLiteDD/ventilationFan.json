@@ -1,0 +1,78 @@
+{
+  "deviceType": "ventilationFan",
+  "metaData": {
+    "version": "1.3.0"
+  },
+  "eoj": "0x0133",
+  "descriptions": {
+    "ja": "換気扇",
+    "en": "Ventilation fan"
+  },
+  "properties": {
+    "airFlowLevel": {
+      "epc": "0xA0",
+      "descriptions": {
+        "ja": "換気風量設定",
+        "en": "Set value of ventilation air flow rate"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "oneOf": [
+          {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 8,
+            "multipleOf": 1
+          },
+          {
+            "type": "string",
+            "enum": [
+              "auto"
+            ],
+            "values": [
+              {
+                "value": "auto",
+                "descriptions": {
+                  "ja": "換気風量自動状態",
+                  "en": "Ventilation air flow rate auto status"
+                },
+                "edt": "0x41"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "automaticVentilationOperation": {
+      "epc": "0xBF",
+      "descriptions": {
+        "ja": "換気自動設定",
+        "en": "Ventilation Auto setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "AUTO",
+              "en": "Auto"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "非AUTO",
+              "en": "Non-auto"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    }
+  }
+}

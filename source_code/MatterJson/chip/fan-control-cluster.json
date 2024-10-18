@@ -1,0 +1,144 @@
+{
+    "name": "fan control cluster",
+    "description": "An interface for controlling a fan in a heating/cooling system.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Fan Mode",
+            "type": "FanModeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Fan Mode",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Fan Mode Sequence",
+            "type": "FanModeSequenceEnum",
+            "typeId": "(-1, -1)",
+            "description": "Fan Mode Sequence",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Percent Setting",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Percent Setting",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Percent Current",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Percent Current",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Speed Max",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Speed Max",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Speed Setting",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Speed Setting",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Speed Current",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Speed Current",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Rock Support",
+            "type": "RockBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Rock Support",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Rock Setting",
+            "type": "RockBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Rock Setting",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Wind Support",
+            "type": "WindBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Wind Support",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Wind Setting",
+            "type": "WindBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Wind Setting",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "Airflow Direction",
+            "type": "AirflowDirectionEnum",
+            "typeId": "(-1, -1)",
+            "description": "Airflow Direction",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Step",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The Step command speeds up or slows down the fan, in steps.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Fan Control"
+}

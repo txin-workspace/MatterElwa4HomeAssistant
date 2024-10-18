@@ -1,0 +1,49 @@
+{
+    "name": "audio output cluster",
+    "description": "This cluster provides an interface for controlling the Output on a media device such as a TV.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Output List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Output List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Output",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Output",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Select Output",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL change the output on the media device to the output at a specific index in the Output List.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Rename Output",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL rename the output at a specific index in the Output List. Updates to the output name SHALL appear in the TV settings menus.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Audio Output"
+}

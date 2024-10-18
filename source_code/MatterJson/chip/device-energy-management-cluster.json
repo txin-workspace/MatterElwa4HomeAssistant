@@ -1,0 +1,153 @@
+{
+    "name": "device energy management cluster",
+    "description": "This cluster allows a client to manage the power draw of a device. An example of such a client could be an Energy Management System (EMS) which controls an Energy Smart Appliance (ESA).",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "E S A Type",
+            "type": "ESATypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "E S A Type",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "E S A Can Generate",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "E S A Can Generate",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "E S A State",
+            "type": "ESAStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "E S A State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Abs Min Power",
+            "type": "power_mw",
+            "typeId": "(-1, -1)",
+            "description": "Abs Min Power",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Abs Max Power",
+            "type": "power_mw",
+            "typeId": "(-1, -1)",
+            "description": "Abs Max Power",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Power Adjustment Capability",
+            "type": "ARRAY",
+            "typeId": "(64, 1)",
+            "description": "Power Adjustment Capability",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Forecast",
+            "type": "ForecastStruct",
+            "typeId": "(-1, -1)",
+            "description": "Forecast",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Power Adjust Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to request an adjustment in the power consumption of an ESA for a specified duration.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Cancel Power Adjust Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to cancel an ongoing PowerAdjustmentRequest operation.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Start Time Adjust Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to adjust the start time of a Forecast sequence that has not yet started operation (i.e. where the current Forecast StartTime is in the future).",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Pause Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to temporarily pause an operation and reduce the ESAs energy demand.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Resume Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to cancel the PauseRequest command and enable earlier resumption of operation.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Modify Forecast Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to modify a Forecast within the limits allowed by the ESA.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Request Constraint Based Forecast",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to ask the ESA to recompute its Forecast based on power and time constraints.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Device Energy Management"
+}

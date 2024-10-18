@@ -1,0 +1,111 @@
+{
+    "name": "group key mgmt cluster",
+    "description": "The Group Key Management Cluster is the mechanism by which group keys are managed.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "GroupKeyMap",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "GroupKeyMap",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Group Table",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Group Table",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Groups Per Fabric",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Groups Per Fabric",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Max Group Keys Per Fabric",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Group Keys Per Fabric",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Key Set Write",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Write a new set of keys for the given key set id.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Key Set Read",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Read the keys for a given key set id.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Key Set Read Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n       Response to KeySetRead\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Key Set Remove",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Revoke a Root Key from a Group",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Key Set Read All Indices",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Return the list of Group Key Sets associated with the accessing fabric",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Key Set Read All Indices Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Reseponse to KeySetReadAllIndices\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Group Key Management"
+}

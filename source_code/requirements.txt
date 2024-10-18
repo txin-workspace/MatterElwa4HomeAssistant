@@ -1,0 +1,2 @@
+paho_mqtt==1.6.1
+websocket_client==1.7.0

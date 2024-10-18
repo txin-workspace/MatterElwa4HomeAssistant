@@ -1,0 +1,71 @@
+{
+    "name": "media input cluster",
+    "description": "This cluster provides an interface for controlling the Input Selector on a media device such as a TV.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Input List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Input List",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Input",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Input",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Select Input",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL change the input on the media device to the input at a specific index in the Input List.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Show Input Status",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL display the active status of the input list on screen.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Hide Input Status",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL hide the input list from the screen.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Rename Input",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Upon receipt, this SHALL rename the input at a specific index in the Input List. Updates to the input name SHALL appear in the TV settings menus.    ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Media Input"
+}

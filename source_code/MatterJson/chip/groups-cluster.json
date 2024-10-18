@@ -1,0 +1,128 @@
+{
+    "name": "groups cluster",
+    "description": "Attributes and commands for group configuration and manipulation.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Name Support",
+            "type": "NameSupportBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Name Support",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Add Group",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for AddGroup\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "View Group",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for ViewGroup\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Get Group Membership",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for GetGroupMembership\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Remove Group",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for RemoveGroup\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Remove All Groups",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for RemoveAllGroups\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Add Group If Identifying",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for AddGroupIfIdentifying\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Add Group Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for AddGroupResponse\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "View Group Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for ViewGroupResponse\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Get Group Membership Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for GetGroupMembershipResponse\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Remove Group Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for RemoveGroupResponse\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Groups"
+}

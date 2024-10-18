@@ -1,0 +1,111 @@
+{
+    "name": "chip ota",
+    "description": "Provides an interface for downloading and applying OTA software updates",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "DefaultOTAProviders",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "DefaultOTAProviders",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Update Possible",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Update Possible",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Update State",
+            "type": "UpdateStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Update State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Update State Progress",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Update State Progress",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Query Image",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Determine availability of a new Software Image",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Query Image Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Response to QueryImage command",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Apply Update Request",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Determine next action to take for a downloaded Software Image",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Apply Update Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reponse to ApplyUpdateRequest command",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Notify Update Applied",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Notify OTA Provider that an update was applied",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x00",
+            "name": "Announce O T A Provider",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Announce the presence of an OTA Provider",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "OTA Software Update Requestor"
+}

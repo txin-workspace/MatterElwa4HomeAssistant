@@ -1,0 +1,39 @@
+{
+    "name": "time format localization cluster",
+    "description": "Nodes should be expected to be deployed to any and all regions of the world. These global regions\n      may have differing preferences for how dates and times are conveyed. As such, Nodes that visually\n      or audibly convey time information need a mechanism by which they can be configured to use a\n      user\u2019s preferred format.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "HourFormat",
+            "type": "HourFormatEnum",
+            "typeId": "(-1, -1)",
+            "description": "HourFormat",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "ActiveCalendarType",
+            "type": "CalendarTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "ActiveCalendarType",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Supported Calendar Types",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Calendar Types",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Time Format Localization"
+}

@@ -1,0 +1,144 @@
+{
+  "deviceType": "electricEnergySensor",
+  "metaData": {
+    "version": "1.3.0"
+  },
+  "eoj": "0x0022",
+  "descriptions": {
+    "ja": "電力量センサ",
+    "en": "Electric energy sensor"
+  },
+  "properties": {
+    "cumulativeElectricEnergy": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "積算電力量計測値",
+        "en": "Cumulative amounts of electric energy"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "kWh",
+        "minimum": 0,
+        "maximum": 999999.999,
+        "multipleOf": 0.001
+      },
+      "note": {
+        "ja": "オーバーフロー時は0にリセット",
+        "en": "The value is reset to 0 after overflow."
+      }
+    },
+    "mediumCapacitySensorValue": {
+      "epc": "0xE1",
+      "descriptions": {
+        "ja": "中容量センサ瞬時電力値計測値",
+        "en": "Medium-capacity sensor instantaneous electric energy"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": -999999999,
+        "maximum": 999999999
+      }
+    },
+    "smallCapacitySensorValue": {
+      "epc": "0xE2",
+      "descriptions": {
+        "ja": "小容量センサ瞬時電力値計測値",
+        "en": "Small-capacity sensor instantaneous electric energy"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "W",
+        "minimum": -3276.7,
+        "maximum": 3276.6,
+        "multipleOf": 0.1
+      }
+    },
+    "largeCapacitySensorValue": {
+      "epc": "0xE3",
+      "descriptions": {
+        "ja": "大容量センサ瞬時電力値計測値",
+        "en": "Large-capacity sensor instantaneous electric energy"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "kW",
+        "minimum": -3276.7,
+        "maximum": 3276.6,
+        "multipleOf": 0.1
+      }
+    },
+    "log": {
+      "epc": "0xE4",
+      "descriptions": {
+        "ja": "積算電力量計測履歴情報",
+        "en": "Cumulative amounts of electric energy measurement log"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 48,
+        "maxItems": 48,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "kWh",
+              "minimum": 0,
+              "maximum": 999999.999,
+              "multipleOf": 0.001
+            },
+            {
+              "type": "string",
+              "enum": [
+                "noData"
+              ],
+              "values": [
+                {
+                  "value": "noData",
+                  "descriptions": {
+                    "ja": "未計測",
+                    "en": "Not measured"
+                  },
+                  "edt": "0xFFFFFFFE"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "note": {
+        "ja": "積算電力量(0.001kWh)の計測結果履歴を、30分毎データを過去24時間で示す",
+        "en": "This property indicates measurement result log of cumulative amounts of electric energy (0.001kWh) fir the past 24 hours in 30-minute sections."
+      }
+    },
+    "effectiveVoltageValue": {
+      "epc": "0xE5",
+      "descriptions": {
+        "ja": "実効電圧値計測値",
+        "en": "Effective voltage value"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "V",
+        "minimum": 0,
+        "maximum": 65533
+      },
+      "note": {
+        "ja": "実行電圧値をVで示す。本プロパティは、計測定格電圧値として固定値で実装してもよい",
+        "en": "This property indicates effective voltage value in volts. This property may be implemeented as a fixed value of the rated voltage of measurement."
+      }
+    }
+  }
+}

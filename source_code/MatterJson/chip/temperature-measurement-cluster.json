@@ -1,0 +1,46 @@
+{
+    "name": "temperature measurement cluster",
+    "description": "Attributes and commands for configuring the measurement of temperature, and reporting temperature measurements.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Measured Value",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Measured Value",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Min Measured Value",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Min Measured Value",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Max Measured Value",
+            "type": "temperature",
+            "typeId": "(-1, -1)",
+            "description": "Max Measured Value",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Tolerance",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Tolerance",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Temperature Measurement"
+}

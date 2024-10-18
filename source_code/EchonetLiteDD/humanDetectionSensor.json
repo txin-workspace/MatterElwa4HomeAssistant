@@ -1,0 +1,58 @@
+{
+  "deviceType": "humanDetectionSensor",
+  "metaData": {
+    "version": "1.4.0"
+  },
+  "eoj": "0x0007",
+  "descriptions": {
+    "ja": "人体検知センサ",
+    "en": "Human detection sensor"
+  },
+  "properties": {
+    "thresholdLevel": {
+      "epc": "0xB0",
+      "descriptions": {
+        "ja": "検知閾値レベル設定",
+        "en": "Detection threshold level"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 1,
+        "maximum": 8,
+        "multipleOf": 1
+      }
+    },
+    "detection": {
+      "epc": "0xB1",
+      "descriptions": {
+        "ja": "人体検知状態",
+        "en": "Human detection status"
+      },
+      "writable": false,
+      "observable": true,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "検知有",
+              "en": "Detected"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "検知無",
+              "en": "Not detected"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    }
+  }
+}

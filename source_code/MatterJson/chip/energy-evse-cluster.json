@@ -1,0 +1,352 @@
+{
+    "name": "energy evse cluster",
+    "description": "Electric Vehicle Supply Equipment (EVSE) is equipment used to charge an Electric Vehicle (EV) or Plug-In Hybrid Electric Vehicle. This cluster provides an interface to the functionality of Electric Vehicle Supply Equipment (EVSE) management.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "State",
+            "type": "StateEnum",
+            "typeId": "(-1, -1)",
+            "description": "State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Supply State",
+            "type": "SupplyStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Supply State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Fault State",
+            "type": "FaultStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Fault State",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Charging Enabled Until",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Charging Enabled Until",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Discharging Enabled Until",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Discharging Enabled Until",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Circuit Capacity",
+            "type": "amperage_ma",
+            "typeId": "(-1, -1)",
+            "description": "Circuit Capacity",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Minimum Charge Current",
+            "type": "amperage_ma",
+            "typeId": "(-1, -1)",
+            "description": "Minimum Charge Current",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Maximum Charge Current",
+            "type": "amperage_ma",
+            "typeId": "(-1, -1)",
+            "description": "Maximum Charge Current",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Maximum Discharge Current",
+            "type": "amperage_ma",
+            "typeId": "(-1, -1)",
+            "description": "Maximum Discharge Current",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "UserMaximumChargeCurrent",
+            "type": "amperage_ma",
+            "typeId": "(-1, -1)",
+            "description": "UserMaximumChargeCurrent",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "RandomizationDelayWindow",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "RandomizationDelayWindow",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0021",
+            "name": "Number Of Weekly Targets",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Weekly Targets",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0022",
+            "name": "Number Of Daily Targets",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Daily Targets",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0023",
+            "name": "Next Charge Start Time",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Next Charge Start Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0024",
+            "name": "Next Charge Target Time",
+            "type": "epoch_s",
+            "typeId": "(-1, -1)",
+            "description": "Next Charge Target Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0025",
+            "name": "Next Charge Required Energy",
+            "type": "energy_mwh",
+            "typeId": "(-1, -1)",
+            "description": "Next Charge Required Energy",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0026",
+            "name": "Next Charge Target So C",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "Next Charge Target So C",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0027",
+            "name": "ApproximateEVEfficiency",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "ApproximateEVEfficiency",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0030",
+            "name": "State Of Charge",
+            "type": "percent",
+            "typeId": "(-1, -1)",
+            "description": "State Of Charge",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0031",
+            "name": "Battery Capacity",
+            "type": "energy_mwh",
+            "typeId": "(-1, -1)",
+            "description": "Battery Capacity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0032",
+            "name": "Vehicle I D",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Vehicle I D",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0040",
+            "name": "Session I D",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Session I D",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0041",
+            "name": "Session Duration",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Session Duration",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0042",
+            "name": "Session Energy Charged",
+            "type": "energy_mwh",
+            "typeId": "(-1, -1)",
+            "description": "Session Energy Charged",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0043",
+            "name": "Session Energy Discharged",
+            "type": "energy_mwh",
+            "typeId": "(-1, -1)",
+            "description": "Session Energy Discharged",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x0001",
+            "name": "Disable",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to disable the EVSE from charging and discharging.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Enable Charging",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to enable the EVSE to charge an EV.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Enable Discharging",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to enable the EVSE to discharge an EV.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Start Diagnostics",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to put the EVSE into a self-diagnostics mode.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Set Targets",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to set the user specified charging targets.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Get Targets",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to retrieve the user specified charging targets.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Clear Targets",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Allows a client to clear all stored charging targets.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0000",
+            "name": "Get Targets Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The GetTargetsResponse is sent in response to the GetTargets Command.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Energy EVSE"
+}

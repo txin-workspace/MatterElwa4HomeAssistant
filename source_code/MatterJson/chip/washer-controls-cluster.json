@@ -1,0 +1,52 @@
+{
+    "name": "washer controls cluster",
+    "description": "This cluster supports remotely monitoring and controling the different typs of functionality available to a washing device, such as a washing machine.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Spin Speeds",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Spin Speeds",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Spin Speed Current",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Spin Speed Current",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Number Of Rinses",
+            "type": "NumberOfRinsesEnum",
+            "typeId": "(-1, -1)",
+            "description": "Number Of Rinses",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Supported Rinses",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Supported Rinses",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Laundry Washer Controls"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "binding cluster",
+    "description": "The Binding Cluster is meant to replace the support from the Zigbee Device Object (ZDO) for supporting the binding table.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Binding",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Binding",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Binding"
+}

@@ -1,0 +1,256 @@
+{
+    "name": "level control cluster",
+    "description": "Attributes and commands for controlling devices that can be set to a level between fully 'On' and fully 'Off.'",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Current Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Level",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Remaining Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Remaining Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Min Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Min Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Max Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Max Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Current Frequency",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Current Frequency",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Min Frequency",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Min Frequency",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Max Frequency",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Max Frequency",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "On Off Transition Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "On Off Transition Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "On Level",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "On Level",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "On Transition Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "On Transition Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Off Transition Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Off Transition Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "Default Move Rate",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Default Move Rate",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000F",
+            "name": "Options",
+            "type": "OptionsBitmap",
+            "typeId": "(-1, -1)",
+            "description": "Options",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4000",
+            "name": "StartUpCurrentLevel",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "StartUpCurrentLevel",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Move To Level",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for MoveToLevel\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Move",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for Move\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Step",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for Step\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Stop",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for Stop\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Move To Level With On Off",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for MoveToLevelWithOnOff\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Move With On Off",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for MoveWithOnOff\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Step With On Off",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for StepWithOnOff\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Stop With On Off",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Command description for StopWithOnOff\n      ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Move To Closest Frequency",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n        Change the currrent frequency to the provided one, or a close\n        approximation if the exact provided one is not possible.\n      ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Level Control"
+}

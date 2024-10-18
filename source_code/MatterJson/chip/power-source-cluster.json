@@ -1,0 +1,352 @@
+{
+    "name": "power source cluster",
+    "description": "This cluster is used to describe the configuration and capabilities of a physical power source that provides power to the Node.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Status",
+            "type": "PowerSourceStatusEnum",
+            "typeId": "(-1, -1)",
+            "description": "Status",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Order",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Order",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Description",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Description",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0003",
+            "name": "Wired Assessed Input Voltage",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Wired Assessed Input Voltage",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0004",
+            "name": "Wired Assessed Input Frequency",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Wired Assessed Input Frequency",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0005",
+            "name": "Wired Current Type",
+            "type": "WiredCurrentTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Wired Current Type",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0006",
+            "name": "Wired Assessed Current",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Wired Assessed Current",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0007",
+            "name": "Wired Nominal Voltage",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Wired Nominal Voltage",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0008",
+            "name": "Wired Maximum Current",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Wired Maximum Current",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0009",
+            "name": "Wired Present",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Wired Present",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000A",
+            "name": "Active Wired Faults",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Wired Faults",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000B",
+            "name": "Bat Voltage",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Bat Voltage",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000C",
+            "name": "Bat Percent Remaining",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Bat Percent Remaining",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000D",
+            "name": "Bat Time Remaining",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Bat Time Remaining",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000E",
+            "name": "Bat Charge Level",
+            "type": "BatChargeLevelEnum",
+            "typeId": "(-1, -1)",
+            "description": "Bat Charge Level",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x000F",
+            "name": "Bat Replacement Needed",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Bat Replacement Needed",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0010",
+            "name": "Bat Replaceability",
+            "type": "BatReplaceabilityEnum",
+            "typeId": "(-1, -1)",
+            "description": "Bat Replaceability",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0011",
+            "name": "Bat Present",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Bat Present",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0012",
+            "name": "Active Bat Faults",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Bat Faults",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0013",
+            "name": "Bat Replacement Description",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Bat Replacement Description",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0014",
+            "name": "Bat Common Designation",
+            "type": "BatCommonDesignationEnum",
+            "typeId": "(-1, -1)",
+            "description": "Bat Common Designation",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0015",
+            "name": "Bat A N S I Designation",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Bat A N S I Designation",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0016",
+            "name": "Bat I E C Designation",
+            "type": "char_string",
+            "typeId": "(64, 1)",
+            "description": "Bat I E C Designation",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0017",
+            "name": "Bat Approved Chemistry",
+            "type": "BatApprovedChemistryEnum",
+            "typeId": "(-1, -1)",
+            "description": "Bat Approved Chemistry",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0018",
+            "name": "Bat Capacity",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Bat Capacity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0019",
+            "name": "Bat Quantity",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Bat Quantity",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001A",
+            "name": "Bat Charge State",
+            "type": "BatChargeStateEnum",
+            "typeId": "(-1, -1)",
+            "description": "Bat Charge State",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001B",
+            "name": "Bat Time To Full Charge",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Bat Time To Full Charge",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001C",
+            "name": "Bat Functional While Charging",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Bat Functional While Charging",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001D",
+            "name": "Bat Charging Current",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Bat Charging Current",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001E",
+            "name": "Active Bat Charge Faults",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Active Bat Charge Faults",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x001F",
+            "name": "Endpoint List",
+            "type": "array",
+            "typeId": "(64, 1)",
+            "description": "Endpoint List",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Power Source"
+}

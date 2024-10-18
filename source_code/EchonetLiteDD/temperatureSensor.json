@@ -1,0 +1,29 @@
+{
+  "deviceType": "temperatureSensor",
+  "metaData": {
+    "version": "1.3.0"
+  },
+  "eoj": "0x0011",
+  "descriptions": {
+    "ja": "温度センサ",
+    "en": "Temperature sensor"
+  },
+  "properties": {
+    "value": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "温度計測値",
+        "en": "Measured temperature value"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "Celsius",
+        "minimum": -273.2,
+        "maximum": 3276.6,
+        "multipleOf": 0.1
+      }
+    }
+  }
+}

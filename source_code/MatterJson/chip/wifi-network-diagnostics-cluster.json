@@ -1,0 +1,153 @@
+{
+    "name": "wifi network diagnostics cluster",
+    "description": "The Wi-Fi Network Diagnostics Cluster provides a means to acquire standardized diagnostics metrics that MAY be used by a Node to assist a user or Administrative Node in diagnosing potential problems.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "B S S I D",
+            "type": "octet_string",
+            "typeId": "(-1, -1)",
+            "description": "B S S I D",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Security Type",
+            "type": "SecurityTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Security Type",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Wi Fi Version",
+            "type": "WiFiVersionEnum",
+            "typeId": "(-1, -1)",
+            "description": "Wi Fi Version",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Channel Number",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Channel Number",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "R S S I",
+            "type": "int8s",
+            "typeId": "(1, 0)",
+            "description": "R S S I",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Beacon Lost Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Beacon Lost Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x06",
+            "name": "Beacon Rx Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Beacon Rx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x07",
+            "name": "Packet Multicast Rx Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Packet Multicast Rx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x08",
+            "name": "Packet Multicast Tx Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Packet Multicast Tx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x09",
+            "name": "Packet Unicast Rx Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Packet Unicast Rx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0A",
+            "name": "Packet Unicast Tx Count",
+            "type": "int32u",
+            "typeId": "(4, 1)",
+            "description": "Packet Unicast Tx Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0B",
+            "name": "Current Max Rate",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Current Max Rate",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0C",
+            "name": "Overrun Count",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Overrun Count",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Reset Counts",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Reception of this command SHALL reset the Breacon and Packet related count attributes to 0",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "WiFi Network Diagnostics"
+}

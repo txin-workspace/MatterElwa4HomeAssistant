@@ -1,0 +1,80 @@
+{
+    "name": "timer cluster",
+    "description": "This cluster supports creating a simple timer functionality.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Set Time",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Set Time",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Time Remaining",
+            "type": "elapsed_s",
+            "typeId": "(-1, -1)",
+            "description": "Time Remaining",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Timer State",
+            "type": "TimerStatusEnum",
+            "typeId": "(-1, -1)",
+            "description": "Timer State",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Set Timer",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n             This command is used to set the timer.\n            ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Reset Timer",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n            This command is used to reset the timer to the original value.\n            ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Add Time",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n            This command is used to add time to the existing timer.\n            ",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Reduce Time",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "\n            This command is used to reduce time on the existing timer.\n            ",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "Timer"
+}

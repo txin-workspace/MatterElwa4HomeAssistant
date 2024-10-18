@@ -1,0 +1,250 @@
+{
+  "deviceType": "waterFlowMeter",
+  "metaData": {
+    "version": "1.5.0"
+  },
+  "eoj": "0x0281",
+  "descriptions": {
+    "ja": "水流量メータ",
+    "en": "Water flowmeter"
+  },
+  "properties": {
+    "waterFlowMeterClassification": {
+      "epc": "0xD0",
+      "descriptions": {
+        "ja": "水流量メータ区分",
+        "en": "Water flowmeter classification"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "runningWater",
+          "recycledWater",
+          "sewageWater",
+          "otherWater"
+        ],
+        "values": [
+          {
+            "value": "runningWater",
+            "descriptions": {
+              "ja": "上水",
+              "en": "running water"
+            },
+            "edt": "0x30"
+          },
+          {
+            "value": "recycledWater",
+            "descriptions": {
+              "ja": "中水",
+              "en": "recycled water"
+            },
+            "edt": "0x31"
+          },
+          {
+            "value": "sewageWater",
+            "descriptions": {
+              "ja": "下水",
+              "en": "sewage water"
+            },
+            "edt": "0x32"
+          },
+          {
+            "value": "otherWater",
+            "descriptions": {
+              "ja": "その他",
+              "en": "other water"
+            },
+            "edt": "0x33"
+          }
+        ]
+      }
+    },
+    "ownerClassification": {
+      "epc": "0xD1",
+      "descriptions": {
+        "ja": "所有者区分",
+        "en": "Owner classification"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string",
+        "enum": [
+          "notSpecified",
+          "publicWaterworksCompany",
+          "privateSectorCompany",
+          "individual"
+        ],
+        "values": [
+          {
+            "value": "notSpecified",
+            "descriptions": {
+              "ja": "指定なし",
+              "en": "Not specified"
+            },
+            "edt": "0x30"
+          },
+          {
+            "value": "publicWaterworksCompany",
+            "descriptions": {
+              "ja": "事業体",
+              "en": "Public waterworks company"
+            },
+            "edt": "0x31"
+          },
+          {
+            "value": "privateSectorCompany",
+            "descriptions": {
+              "ja": "民間会社",
+              "en": "Private sector company"
+            },
+            "edt": "0x32"
+          },
+          {
+            "value": "individual",
+            "descriptions": {
+              "ja": "個人",
+              "en": "Individual"
+            },
+            "edt": "0x33"
+          }
+        ]
+      }
+    },
+    "cumulativeFlowingWater": {
+      "epc": "0xE0",
+      "descriptions": {
+        "ja": "積算水流量計測値",
+        "en": "Measured cumulative amount of flowing water"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "unit": "m3",
+        "minimum": 0,
+        "maximum": 999999999
+      },
+      "note": {
+        "ja": "値は0xE1の値を乗算した値。",
+        "en": "This value is already multiplied with 0xE1."
+      }
+    },
+    "abnormalDetection": {
+      "epc": "0xE3",
+      "descriptions": {
+        "ja": "検針データ異常検知状態",
+        "en": "Detection of abnormal value in metering data"
+      },
+      "writable": false,
+      "observable": true,
+      "schema": {
+        "type": "boolean",
+        "values": [
+          {
+            "value": true,
+            "descriptions": {
+              "ja": "検知有",
+              "en": "Detected"
+            },
+            "edt": "0x41"
+          },
+          {
+            "value": false,
+            "descriptions": {
+              "ja": "検知無",
+              "en": "Not detected"
+            },
+            "edt": "0x42"
+          }
+        ]
+      }
+    },
+    "securityDataInformation": {
+      "epc": "0xE4",
+      "descriptions": {
+        "ja": "セキュリティデータ情報",
+        "en": "Security data information"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 4294967295
+      }
+    },
+    "idNumber": {
+      "epc": "0xE5",
+      "descriptions": {
+        "ja": "ID番号設定",
+        "en": "ID number setting"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      }
+    },
+    "verificationExpirationInformation": {
+      "epc": "0xE6",
+      "descriptions": {
+        "ja": "検定満期情報",
+        "en": "Verification expiration information"
+      },
+      "writable": true,
+      "observable": false,
+      "schema": {
+        "type": "string"
+      }
+    },
+    "cumulativeFlowingWaterLog2": {
+      "epc": "0xE7",
+      "descriptions": {
+        "ja": "積算水流量計測値履歴2",
+        "en": "Historical data 2 of measured cumulative amount of flowing water"
+      },
+      "writable": false,
+      "observable": false,
+      "schema": {
+        "type": "array",
+        "minItems": 48,
+        "maxItems": 48,
+        "items": {
+          "oneOf": [
+            {
+              "type": "number",
+              "unit": "m3",
+              "minimum": 0,
+              "coefficient": [
+                "0xE1"
+              ]
+            },
+            {
+              "type": "string",
+              "enum": [
+                "noData"
+              ],
+              "values": [
+                {
+                  "value": "noData",
+                  "descriptions": {
+                    "ja": "未計測",
+                    "en": "Not measured"
+                  },
+                  "edt": "0xFFFFFFFE"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "note": {
+        "ja": "EPC=0xE1の値を乗算済みの値",
+        "en": "This value is already multipled by the value of EPC=0xE1."
+      }
+    }
+  }
+}

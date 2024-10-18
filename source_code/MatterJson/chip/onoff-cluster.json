@@ -1,0 +1,128 @@
+{
+    "name": "onoff cluster",
+    "description": "Attributes and commands for switching devices between 'On' and 'Off' states.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "On Off",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "On Off",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4000",
+            "name": "Global Scene Control",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Global Scene Control",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4001",
+            "name": "On Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "On Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4002",
+            "name": "Off Wait Time",
+            "type": "int16u",
+            "typeId": "(2, 1)",
+            "description": "Off Wait Time",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x4003",
+            "name": "StartUpOnOff",
+            "type": "StartUpOnOffEnum",
+            "typeId": "(-1, -1)",
+            "description": "StartUpOnOff",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Off",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "On receipt of this command, a device SHALL enter its \u2018Off\u2019 state. This state is device dependent, but it is recommended that it is used for power off or similar functions. On receipt of the Off command, the OnTime attribute SHALL be set to 0.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "On",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "On receipt of this command, a device SHALL enter its \u2018On\u2019 state. This state is device dependent, but it is recommended that it is used for power on or similar functions. On receipt of the On command, if the value of the OnTime attribute is equal to 0, the device SHALL set the OffWaitTime attribute to 0.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Toggle",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "On receipt of this command, if a device is in its \u2018Off\u2019 state it SHALL enter its \u2018On\u2019 state. Otherwise, if it is in its \u2018On\u2019 state it SHALL enter its \u2018Off\u2019 state. On receipt of the Toggle command, if the value of the OnOff attribute is equal to FALSE and if the value of the OnTime attribute is equal to 0, the device SHALL set the OffWaitTime attribute to 0. If the value of the OnOff attribute is equal to TRUE, the OnTime attribute SHALL be set to 0.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x40",
+            "name": "Off With Effect",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The OffWithEffect command allows devices to be turned off using enhanced ways of fading.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x41",
+            "name": "On With Recall Global Scene",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The OnWithRecallGlobalScene command allows the recall of the settings when the device was turned off.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x42",
+            "name": "On With Timed Off",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "The OnWithTimedOff command allows devices to be turned on for a specific duration with a guarded off duration so that SHOULD the device be subsequently switched off, further OnWithTimedOff commands, received during this time, are prevented from turning the devices back on.",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "On/Off"
+}

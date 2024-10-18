@@ -1,0 +1,67 @@
+// pattern 0
+create/{device_id}/
+    {
+        'mid':'str', 
+        'info':{
+            'deviceType': , 
+            'protocol': , 
+            'manufacturer': }, 
+        'dd':{}, 
+        'properties':{}
+    }
+    
+delete/
+    {
+        'mid': 'str', 
+        'deivce_id': id -> str
+    }
+    
+udpate/{device_id}/{property_name}/
+    {
+        'mid':'str', 
+        'value': value
+    }
+
+operate/{device_id}/{property_name}/
+    {
+        'mid': 'str', 
+        'value': new_value,
+        'caching': bool
+    }
+    
+result/
+    {
+        'mid': 'str', 
+        'result': code-int[200, 500, 400, 404, ...], 
+        'reason': None/text
+    }
+
+read/
+    // TODO
+
+
+
+// pattern 1
+/elwa/req/{server-id}/{matterClient-id}/
+/elwa/resp/{server-id}/{matterClient-id}/
+
+req or resp / client type / 
+req/
+
+{
+    'op': '',
+
+}
+
+
+// pattern 2
+/
+    create_list, delete_list
+
+/{device_id}
+    ?
+    create_list, delete_list
+
+
+/{device_id}/{property_id}
+    update, operate

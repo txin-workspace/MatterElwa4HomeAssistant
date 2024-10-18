@@ -1,0 +1,37 @@
+{
+    "name": "switch cluster",
+    "description": "This cluster exposes interactions with a switch device, for the purpose of using those interactions by other devices.\nTwo types of switch devices are supported: latching switch (e.g. rocker switch) and momentary switch (e.g. push button), distinguished with their feature flags.\nInteractions with the switch device are exposed as attributes (for the latching switch) and as events (for both types of switches). An interested party MAY subscribe to these attributes/events and thus be informed of the interactions, and can perform actions based on this, for example by sending commands to perform an action such as controlling a light or a window shade.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x0000",
+            "name": "Number Of Positions",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Number Of Positions",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0001",
+            "name": "Current Position",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Current Position",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x0002",
+            "name": "Multi Press Max",
+            "type": "int8u",
+            "typeId": "(1, 1)",
+            "description": "Multi Press Max",
+            "isRequired": [
+                false
+            ],
+            "dataInfo": null
+        }
+    ],
+    "commands": [],
+    "nameMatterExact": "Switch"
+}

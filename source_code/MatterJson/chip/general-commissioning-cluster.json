@@ -1,0 +1,120 @@
+{
+    "name": "general commissioning cluster",
+    "description": "This cluster is used to manage global aspects of the Commissioning flow.",
+    "propertiesInfo": [
+        {
+            "epcOrId": "0x00",
+            "name": "Breadcrumb",
+            "type": "int64u",
+            "typeId": "(8, 1)",
+            "description": "Breadcrumb",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Basic Commissioning Info",
+            "type": "BasicCommissioningInfo",
+            "typeId": "(-1, -1)",
+            "description": "Basic Commissioning Info",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Regulatory Config",
+            "type": "RegulatoryLocationTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Regulatory Config",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Location Capability",
+            "type": "RegulatoryLocationTypeEnum",
+            "typeId": "(-1, -1)",
+            "description": "Location Capability",
+            "isRequired": true,
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Supports Concurrent Connection",
+            "type": "boolean",
+            "typeId": "(0, 1)",
+            "description": "Supports Concurrent Connection",
+            "isRequired": true,
+            "dataInfo": null
+        }
+    ],
+    "commands": [
+        {
+            "epcOrId": "0x00",
+            "name": "Arm Fail Safe",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Arm the persistent fail-safe timer with an expiry time of now + ExpiryLengthSeconds using device clock",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x01",
+            "name": "Arm Fail Safe Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Success/failure response for ArmFailSafe command",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x02",
+            "name": "Set Regulatory Config",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Set the regulatory configuration to be used during commissioning",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x03",
+            "name": "Set Regulatory Config Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Success/failure response for SetRegulatoryConfig command",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x04",
+            "name": "Commissioning Complete",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Signals the Server that the Client has successfully completed all steps of Commissioning/Recofiguration needed during fail-safe period.",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        },
+        {
+            "epcOrId": "0x05",
+            "name": "Commissioning Complete Response",
+            "type": "",
+            "typeId": "(-2, -2)",
+            "description": "Indicates to client whether CommissioningComplete command succeeded",
+            "isRequired": [
+                true
+            ],
+            "dataInfo": null
+        }
+    ],
+    "nameMatterExact": "General Commissioning"
+}
