@@ -54,14 +54,70 @@ req/
 }
 
 
-// pattern 2
-/
-    create_list, delete_list
+// new pattern
 
-/{device_id}
-    ?
-    create_list, delete_list
+/elwa/<client_token>/<device_id>/<prop_name>/<cmd>
+
+    client_id -> from AS? or hard code
+    decvice_id -> register by controler
+    prop_name -> register by controler when create device
+    cmd -> cre/del/upd/exe
 
 
-/{device_id}/{property_id}
-    update, operate
+
+create new device
+    controler -> server
+    /elwa/<client_token>/<device_id>/cre
+        {
+            "dd": {},
+            "props": {}
+        }
+
+    if success
+        no return
+
+    if failed
+        return {failed: <device_id>,code: <code>, reason:<reason>}
+
+
+delete device
+    controler -> server
+    /elwa/<client_token>/<device_id>/del
+        {
+            "device": decive_id
+        }
+
+    if success
+        no return
+        
+    if failed
+        return {failed: <device_id>,code: <code>, reason:<reason>}
+
+
+update decvice property value
+    controler -> server
+    /elwa/<client_token>/<device_id>/<prop_name>/upd
+        {
+            "<prop_name>": new_value
+        }
+
+    if success
+        no return
+        
+    if failed
+        return {failed: <device_id>,code: <code>, reason:<reason>}
+
+
+
+operate device
+    server -> controler
+    /elwa/<client_token>/<device_id>/<prop_name>/exe
+        {
+            "<prop_name>": new_value
+        }
+
+    if success
+        no return
+        
+    if failed
+        return {failed: <device_id>,code: <code>, reason:<reason>}
